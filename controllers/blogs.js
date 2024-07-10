@@ -2,6 +2,13 @@ const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 const { v4: uuidv4 } = require("uuid");
 const BlogModel = require("../models/blog");
 const s3Client = new S3Client({ region: process.env.AWS_REGION });
+const sanitizeHTML = require('sanitize-html');
+
+
+
+
+
+
 
 const createNewBlog = async (req, res) => {
   const { title, content } = req.body;
@@ -11,6 +18,16 @@ const createNewBlog = async (req, res) => {
   if (!title || !content || !req.file) {
     return res.status(400).json({ error: "missing fields" });
   }
+
+    // Sanitize the content
+    const sanitizedContent = sanitizeHtml(content, {
+        allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'img' ]),
+        allowedAttributes: {
+          ...sanitizeHtml.defaults.allowedAttributes,
+          'img': [ 'src', 'alt', 'title', 'width', 'height' ]
+        },
+      });
+    
   // Check if a photo file is submitted
   if (!req.file)
     return res.status(400).json({ error: "Please Submit a Photo!" });
@@ -31,7 +48,7 @@ const createNewBlog = async (req, res) => {
     const data = await s3Client.send(command);
     const newBlog = await BlogModel.create({
       title,
-      content,
+      content: sanitizedContent,
       img: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
     });
     res
