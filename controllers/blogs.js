@@ -2,13 +2,7 @@ const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 const { v4: uuidv4 } = require("uuid");
 const BlogModel = require("../models/blog");
 const s3Client = new S3Client({ region: process.env.AWS_REGION });
-const sanitizeHTML = require('sanitize-html');
-
-
-
-
-
-
+const sanitizeHTML = require("sanitize-html");
 
 const createNewBlog = async (req, res) => {
   const { title, content } = req.body;
@@ -19,15 +13,9 @@ const createNewBlog = async (req, res) => {
     return res.status(400).json({ error: "missing fields" });
   }
 
-    // Sanitize the content
-    const sanitizedContent = sanitizeHtml(content, {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'img' ]),
-        allowedAttributes: {
-          ...sanitizeHtml.defaults.allowedAttributes,
-          'img': [ 'src', 'alt', 'title', 'width', 'height' ]
-        },
-      });
-    
+  // Sanitize the content
+  const sanitizedContent = sanitize(content);
+
   // Check if a photo file is submitted
   if (!req.file)
     return res.status(400).json({ error: "Please Submit a Photo!" });
@@ -82,4 +70,19 @@ const getMyBlogs = async (req, res) => {
 module.exports = {
   createNewBlog,
   getMyBlogs,
+};
+
+///////////////////////////
+// functions
+///////////////////////////
+
+export const sanitize = (content) => {
+  const sanitizedContent = sanitizeHTML(content, {
+    allowedTags: sanitizeHTML.defaults.allowedTags.concat(["img"]),
+    allowedAttributes: {
+      ...sanitizeHTML.defaults.allowedAttributes,
+      img: ["src", "alt", "title", "width", "height"],
+    },
+  });
+  return sanitizedContent;
 };
