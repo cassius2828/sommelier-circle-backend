@@ -68,9 +68,22 @@ const getMyBlogs = async (req, res) => {
   }
 };
 
+const getSingleBlog = async (req,res) => {
+const {blogId} = req.params;
+try {
+    const selectedBlog = await BlogModel.findById(blogId);
+    if(!selectedBlog){
+        return res.status(404).json({error:'cannot find the selected blog'})
+    }
+    res.status(200).json(selectedBlog);
+} catch (err) {
+    res.status(500).json({error: 'Cannot retrieve blog'})
+}
+}
+
 module.exports = {
   createNewBlog,
-  getMyBlogs,
+  getMyBlogs,getSingleBlog
 };
 
 ///////////////////////////
