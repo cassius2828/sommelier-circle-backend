@@ -4,8 +4,11 @@ const BlogModel = require("../models/blog");
 const s3Client = new S3Client({ region: process.env.AWS_REGION });
 const sanitizeHTML = require("sanitize-html");
 
-const createNewBlog = async (req, res) => {
-  const { title, content,owner } = req.body;
+///////////////////////////
+// ? POST | New Blog
+///////////////////////////
+const postNewBlog = async (req, res) => {
+  const { title, content, owner } = req.body;
 
   console.log(title, " <-- title");
   console.log(content, " <-- content");
@@ -49,7 +52,9 @@ const createNewBlog = async (req, res) => {
     res.status(500).json({ error: "Unable to create new blog" });
   }
 };
-
+///////////////////////////
+// GET | User's Blogs
+///////////////////////////
 const getMyBlogs = async (req, res) => {
   const { userId } = req.params;
   try {
@@ -67,37 +72,73 @@ const getMyBlogs = async (req, res) => {
     res.status(500).json({ error: "An error occurred while retrieving blogs" });
   }
 };
-
-const getSingleBlog = async (req,res) => {
-const {blogId} = req.params;
-try {
+///////////////////////////
+// GET | Show Blog
+///////////////////////////
+const getSingleBlog = async (req, res) => {
+  const { blogId } = req.params;
+  try {
     const selectedBlog = await BlogModel.findById(blogId);
-    if(!selectedBlog){
-        return res.status(404).json({error:'cannot find the selected blog'})
+    if (!selectedBlog) {
+      return res.status(404).json({ error: "cannot find the selected blog" });
     }
     res.status(200).json(selectedBlog);
-} catch (err) {
-    res.status(500).json({error: 'Cannot retrieve blog'})
-}
-}
+  } catch (err) {
+    res.status(500).json({ error: "Cannot retrieve blog" });
+  }
+};
 
+///////////////////////////
+// ! DELETE | Delete Blog
+///////////////////////////
+const deleteBlog = async (req, res) => {
+  const { blogId } = req.params;
+  const userId = req.user.user._id
+
+  try {
+    const blogToDelete = await BlogModel.findById(blogId);
+    if (!blogToDelete) {
+      return res.status(404).json({ error: "cannot find blog to delete" });
+    }
+    // if the user who is trying to delete is not the owner of the blog then return
+    console.log(blogToDelete.owner, ' blog owmer')
+    console.log(userId, ' userId')
+    if (blogToDelete.owner.toString() !== userId.toString()) {
+      return res
+        .status(400)
+        .json({ error: "You are not authorized to delete this blog" });
+    }
+    // otherwise, delete the blog
+    await BlogModel.findByIdAndDelete(blogId);
+    res
+      .status(200)
+      .json({ message: "blog successfully deleted", blog: blogToDelete });
+  } catch (err) {
+    console.error("Error deleting blog:", err.message);
+    console.error("Error stack:", err.stack);
+    res.status(500).json({ error: `Cannot delete blog: ${err.message}` });
+  }
+};
 module.exports = {
-  createNewBlog,
-  getMyBlogs,getSingleBlog
+  postNewBlog,
+  getMyBlogs,
+  getSingleBlog,
+  deleteBlog,
 };
 
 ///////////////////////////
 // functions
 ///////////////////////////
 
+// sanitize html
 const sanitize = (content) => {
-    const sanitizedContent = sanitizeHTML(content, {
-      allowedTags: sanitizeHTML.defaults.allowedTags.concat(["img"]),
-      allowedAttributes: {
-        '*': ['class', 'style'], // Allow 'class' and 'style' on any tag
-        ...sanitizeHTML.defaults.allowedAttributes,
-        img: ["src", "alt", "title", "width", "height"],
-      },
-    });
-    return sanitizedContent;
-  };
+  const sanitizedContent = sanitizeHTML(content, {
+    allowedTags: sanitizeHTML.defaults.allowedTags.concat(["img"]),
+    allowedAttributes: {
+      "*": ["class", "style"], // Allow 'class' and 'style' on any tag
+      ...sanitizeHTML.defaults.allowedAttributes,
+      img: ["src", "alt", "title", "width", "height"],
+    },
+  });
+  return sanitizedContent;
+};
