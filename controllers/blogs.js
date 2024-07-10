@@ -5,7 +5,8 @@ const s3Client = new S3Client({ region: process.env.AWS_REGION });
 const sanitizeHTML = require("sanitize-html");
 
 const createNewBlog = async (req, res) => {
-  const { title, content } = req.body;
+  const { title, content,owner } = req.body;
+
   console.log(title, " <-- title");
   console.log(content, " <-- content");
   console.log(req.file, " <-- file");
@@ -35,6 +36,7 @@ const createNewBlog = async (req, res) => {
     // Upload the file to S3
     const data = await s3Client.send(command);
     const newBlog = await BlogModel.create({
+      owner,
       title,
       content: sanitizedContent,
       img: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
@@ -49,8 +51,7 @@ const createNewBlog = async (req, res) => {
 };
 
 const getMyBlogs = async (req, res) => {
-  const userId = req.user._id;
-
+  const { userId } = req.params;
   try {
     const userBlogs = await BlogModel.find({ owner: userId });
 
@@ -76,13 +77,14 @@ module.exports = {
 // functions
 ///////////////////////////
 
-export const sanitize = (content) => {
-  const sanitizedContent = sanitizeHTML(content, {
-    allowedTags: sanitizeHTML.defaults.allowedTags.concat(["img"]),
-    allowedAttributes: {
-      ...sanitizeHTML.defaults.allowedAttributes,
-      img: ["src", "alt", "title", "width", "height"],
-    },
-  });
-  return sanitizedContent;
-};
+const sanitize = (content) => {
+    const sanitizedContent = sanitizeHTML(content, {
+      allowedTags: sanitizeHTML.defaults.allowedTags.concat(["img"]),
+      allowedAttributes: {
+        '*': ['class', 'style'], // Allow 'class' and 'style' on any tag
+        ...sanitizeHTML.defaults.allowedAttributes,
+        img: ["src", "alt", "title", "width", "height"],
+      },
+    });
+    return sanitizedContent;
+  };

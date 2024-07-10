@@ -7,6 +7,6 @@ const blogsRouter = require("../controllers/blogs");
 const verifyToken = require("../middleware/verify-token");
 
 router.post("/", upload.single("img"),blogsRouter.createNewBlog);
-router.get('/my-blogs', verifyToken, blogsRouter.getMyBlogs)
+router.get('/user-blogs/:userId', verifyToken, blogsRouter.getMyBlogs)
 
 module.exports = router;
