@@ -15,6 +15,7 @@ mongoose.connection.on("connected", () => {
 const testJWTRouter = require("./routes/test-jwt");
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profiles");
+const blogRouter = require("./routes/blogs");
 const morgan = require("morgan");
 
 // anything with app.use is middlware
@@ -27,6 +28,7 @@ app.use("/test-jwt", testJWTRouter);
 app.use("/auth", authRouter);
 
 app.use("/profiles", profileRouter);
+app.use("/blogs", blogRouter);
 
 app.listen(3000, () => {
   console.log("The express app is ready!");

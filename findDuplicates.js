@@ -1,13 +1,14 @@
 const wines = require('./wineData')
+const critics = require('./criticData')
 
-function findDuplicates(wines) {
+function findDuplicates(arr) {
     const duplicates = [];
     const seen = new Set();
   
-    wines.forEach(wine => {
-      const identifier = `${wine.name}-${wine.year}`;
+    arr.forEach(item => {
+      const identifier = `${item.name}-${item.year}`;
       if (seen.has(identifier)) {
-        duplicates.push(wine);
+        duplicates.push(item);
       } else {
         seen.add(identifier);
       }
@@ -19,4 +20,4 @@ function findDuplicates(wines) {
   }
 
   
-  findDuplicates(wines);
+  findDuplicates(critics);

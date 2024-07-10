@@ -335,3 +335,5 @@ const critics = [
     experience: 25,
   },
 ];
+
+module.exports = critics

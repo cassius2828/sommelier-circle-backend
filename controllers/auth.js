@@ -19,7 +19,7 @@ async function login(req, res) {
 
   try {
     // Find the user by username
-    const user = await UserModel.findOne({ username: username });
+    const user = await UserModel.findOne({ username });
 
     // Check if user exists and if the password is correct
     if (user && bcrypt.compareSync(password, user.password)) {
@@ -39,10 +39,10 @@ async function login(req, res) {
 }
 
 ///////////////////////////
-// User Signup Function
+// User Signup Function         
 ///////////////////////////
 async function signup(req, res) {
-  let { username, password } = req.body;
+  let { username, password, email } = req.body;
 
   console.log(req.body, req.file);
   try {
@@ -78,8 +78,10 @@ async function signup(req, res) {
 
       // Create a new user in the database
       const createdUser = await UserModel.create({
-        ...req.body,
-        photoUrl: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
+        username,
+        email,
+        password,
+        profileImg: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
       });
 
       // Generate a JWT token with the created user data
