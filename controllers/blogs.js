@@ -53,18 +53,51 @@ const postNewBlog = async (req, res) => {
     res.status(500).json({ error: "Unable to create new blog" });
   }
 };
+
+///////////////////////////
+// GET | All Blogs
+///////////////////////////
+const getAllBlogs = async (req, res) => {
+
+  try {
+    let blogs = await BlogModel.find({}).populate({
+      path: 'owner',
+      select: 'username profileImg'
+    });
+
+    //
+    if (!blogs) {
+      return res
+        .status(404)
+        .json({ error: "No blogs array was able to be found" });
+    }
+    if (blogs.length === 0) {
+      return res.status(200).json([]);
+    }
+    blogs = getRelativeTime(blogs);
+    res.status(200).json(blogs);
+  } catch (err) {
+    console.error("Error retrieving user blogs:", err);
+    res.status(500).json({ error: "An error occurred while retrieving blogs" });
+  }
+};
 ///////////////////////////
 // GET | User's Blogs
 ///////////////////////////
 const getMyBlogs = async (req, res) => {
   const { userId } = req.params;
+  console.log(userId);
   try {
     let userBlogs = await BlogModel.find({ owner: userId });
 
-    if (userBlogs.length === 0) {
+    //
+    if (!userBlogs) {
       return res
         .status(404)
         .json({ error: "No blogs found for the current user" });
+    }
+    if (userBlogs.length === 0) {
+      return res.status(200).json([]);
     }
     userBlogs = getRelativeTime(userBlogs);
     res.status(200).json(userBlogs);
@@ -161,12 +194,10 @@ const putEditBlog = async (req, res) => {
           .status(200)
           .json({ message: "Successfully updated blog", blog: updatedBlog });
       } catch (err) {
-        res
-          .status(500)
-          .json({
-            error:
-              "Server issues trying to update document's title and content keys",
-          });
+        res.status(500).json({
+          error:
+            "Server issues trying to update document's title and content keys",
+        });
       }
     } else {
       try {
@@ -201,12 +232,10 @@ const putEditBlog = async (req, res) => {
         });
       } catch (err) {
         console.error("Error updating blog:", err);
-        res
-          .status(500)
-          .json({
-            error:
-              "Unable to update blog document's img, title, and content keys",
-          });
+        res.status(500).json({
+          error:
+            "Unable to update blog document's img, title, and content keys",
+        });
       }
       // Create the file path and parameters for S3 upload
     }
@@ -215,12 +244,14 @@ const putEditBlog = async (req, res) => {
     res.status(500).json({ error: "Unable to update blog" });
   }
 };
+
+
 module.exports = {
   postNewBlog,
   getMyBlogs,
   getSingleBlog,
   deleteBlog,
-  putEditBlog,
+  putEditBlog,getAllBlogs
 };
 
 ///////////////////////////
