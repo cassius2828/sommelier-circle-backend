@@ -3,6 +3,7 @@ const { v4: uuidv4 } = require("uuid");
 const BlogModel = require("../models/blog");
 const s3Client = new S3Client({ region: process.env.AWS_REGION });
 const sanitizeHTML = require("sanitize-html");
+const { formatDistanceToNow } = require("date-fns");
 
 ///////////////////////////
 // ? POST | New Blog
@@ -58,14 +59,14 @@ const postNewBlog = async (req, res) => {
 const getMyBlogs = async (req, res) => {
   const { userId } = req.params;
   try {
-    const userBlogs = await BlogModel.find({ owner: userId });
+    let userBlogs = await BlogModel.find({ owner: userId });
 
     if (userBlogs.length === 0) {
       return res
         .status(404)
         .json({ error: "No blogs found for the current user" });
     }
-
+    userBlogs = getRelativeTime(userBlogs);
     res.status(200).json(userBlogs);
   } catch (err) {
     console.error("Error retrieving user blogs:", err);
@@ -82,7 +83,11 @@ const getSingleBlog = async (req, res) => {
     if (!selectedBlog) {
       return res.status(404).json({ error: "cannot find the selected blog" });
     }
-    res.status(200).json(selectedBlog);
+    // turn to array for function to work properly
+    let selectedBlogArr = [selectedBlog];
+    selectedBlogArr = getRelativeTime(selectedBlogArr);
+
+    res.status(200).json(selectedBlogArr[0]);
   } catch (err) {
     res.status(500).json({ error: "Cannot retrieve blog" });
   }
@@ -156,45 +161,54 @@ const putEditBlog = async (req, res) => {
           .status(200)
           .json({ message: "Successfully updated blog", blog: updatedBlog });
       } catch (err) {
-        res.status(500).json({error:"Server issues trying to update document's title and content keys"})
+        res
+          .status(500)
+          .json({
+            error:
+              "Server issues trying to update document's title and content keys",
+          });
       }
     } else {
-        try {
-                 const filePath = `sommelier-circle/blog-headers/${uuidv4()}-${title}-${
-        file.originalname
-      }`;
-      const params = {
-        Bucket: process.env.BUCKET_NAME,
-        Key: filePath,
-        Body: file.buffer,
-      };
+      try {
+        const filePath = `sommelier-circle/blog-headers/${uuidv4()}-${title}-${
+          file.originalname
+        }`;
+        const params = {
+          Bucket: process.env.BUCKET_NAME,
+          Key: filePath,
+          Body: file.buffer,
+        };
 
-      // Initialize the S3 PutObjectCommand
-      const command = new PutObjectCommand(params);
+        // Initialize the S3 PutObjectCommand
+        const command = new PutObjectCommand(params);
 
-      // Upload the file to S3
-      const data = await s3Client.send(command);
+        // Upload the file to S3
+        const data = await s3Client.send(command);
 
-      const updatedBlog = await BlogModel.findByIdAndUpdate(
-        blogId,
-        {
-          title,
-          content,
-          img: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
-        },
-        { new: true }
-      );
+        const updatedBlog = await BlogModel.findByIdAndUpdate(
+          blogId,
+          {
+            title,
+            content,
+            img: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
+          },
+          { new: true }
+        );
 
-      return res.status(200).json({
-        message: "Successfully updated blog with new photo",
-        blog: updatedBlog,
-      }); 
-        } catch (err) {
-            console.error("Error updating blog:", err);
-            res.status(500).json({ error: "Unable to update blog document's img, title, and content keys" }); 
-        }
+        return res.status(200).json({
+          message: "Successfully updated blog with new photo",
+          blog: updatedBlog,
+        });
+      } catch (err) {
+        console.error("Error updating blog:", err);
+        res
+          .status(500)
+          .json({
+            error:
+              "Unable to update blog document's img, title, and content keys",
+          });
+      }
       // Create the file path and parameters for S3 upload
-
     }
   } catch (err) {
     console.error("Error updating blog:", err);
@@ -225,3 +239,31 @@ const sanitize = (content) => {
   });
   return sanitizedContent;
 };
+
+// gets relative time to display on UI
+function getRelativeTime(arr) {
+  return arr.map((blog) => {
+    // Convert Mongoose document to a plain JavaScript object
+    const blogObject = blog.toObject();
+
+    // Add relative times
+    if (blogObject.createdAt) {
+      blogObject.relativeTime = formatDistanceToNow(
+        new Date(blogObject.createdAt),
+        {
+          addSuffix: true,
+        }
+      );
+    }
+    if (blogObject.updatedAt) {
+      blogObject.updatedTime = formatDistanceToNow(
+        new Date(blogObject.updatedAt),
+        {
+          addSuffix: true,
+        }
+      );
+    }
+
+    return blogObject;
+  });
+}
