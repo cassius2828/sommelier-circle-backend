@@ -93,7 +93,7 @@ const getSingleBlog = async (req, res) => {
 ///////////////////////////
 const deleteBlog = async (req, res) => {
   const { blogId } = req.params;
-  const userId = req.user.user._id
+  const userId = req.user.user._id;
 
   try {
     const blogToDelete = await BlogModel.findById(blogId);
@@ -101,8 +101,8 @@ const deleteBlog = async (req, res) => {
       return res.status(404).json({ error: "cannot find blog to delete" });
     }
     // if the user who is trying to delete is not the owner of the blog then return
-    console.log(blogToDelete.owner, ' blog owmer')
-    console.log(userId, ' userId')
+    console.log(blogToDelete.owner, " blog owmer");
+    console.log(userId, " userId");
     if (blogToDelete.owner.toString() !== userId.toString()) {
       return res
         .status(400)
@@ -119,11 +119,94 @@ const deleteBlog = async (req, res) => {
     res.status(500).json({ error: `Cannot delete blog: ${err.message}` });
   }
 };
+
+///////////////////////////
+// * PUT | Edit Blog
+///////////////////////////
+const putEditBlog = async (req, res) => {
+  const { blogId } = req.params;
+  const userId = req.user.user._id;
+  let { title, content } = req.body;
+  content = sanitize(content);
+  const { file } = req;
+
+  try {
+    // find the blog to update
+    const blogToUpdate = await BlogModel.findById(blogId);
+    if (!blogToUpdate) {
+      return res.status(404).json({ error: "Cannot find blog to update" });
+    }
+    // check if user is authorized to edit this blog
+    if (blogToUpdate.owner.toString() !== userId.toString()) {
+      return res
+        .status(400)
+        .json({ error: "user is not authorized to edit this blog" });
+    }
+
+    // check to see if the photo will be upgraded or not
+    if (!file) {
+      try {
+        // if there is no file, then update the title and content then return the doc
+        const updatedBlog = await BlogModel.findByIdAndUpdate(
+          blogId,
+          { title, content },
+          { new: true }
+        );
+        return res
+          .status(200)
+          .json({ message: "Successfully updated blog", blog: updatedBlog });
+      } catch (err) {
+        res.status(500).json({error:"Server issues trying to update document's title and content keys"})
+      }
+    } else {
+        try {
+                 const filePath = `sommelier-circle/blog-headers/${uuidv4()}-${title}-${
+        file.originalname
+      }`;
+      const params = {
+        Bucket: process.env.BUCKET_NAME,
+        Key: filePath,
+        Body: file.buffer,
+      };
+
+      // Initialize the S3 PutObjectCommand
+      const command = new PutObjectCommand(params);
+
+      // Upload the file to S3
+      const data = await s3Client.send(command);
+
+      const updatedBlog = await BlogModel.findByIdAndUpdate(
+        blogId,
+        {
+          title,
+          content,
+          img: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
+        },
+        { new: true }
+      );
+
+      return res.status(200).json({
+        message: "Successfully updated blog with new photo",
+        blog: updatedBlog,
+      }); 
+        } catch (err) {
+            console.error("Error updating blog:", err);
+            res.status(500).json({ error: "Unable to update blog document's img, title, and content keys" }); 
+        }
+      // Create the file path and parameters for S3 upload
+
+    }
+  } catch (err) {
+    console.error("Error updating blog:", err);
+    res.status(500).json({ error: "Unable to update blog" });
+  }
+};
 module.exports = {
   postNewBlog,
   getMyBlogs,
   getSingleBlog,
   deleteBlog,
+  putEditBlog,
 };
 
 ///////////////////////////
