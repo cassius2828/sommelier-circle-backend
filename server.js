@@ -18,6 +18,7 @@ const testJWTRouter = require("./routes/test-jwt");
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profiles");
 const blogRouter = require("./routes/blogs");
+const wineRouter = require("./routes/wines");
 const morgan = require("morgan");
 const CriticModel = require("./models/critic");
 
@@ -32,6 +33,7 @@ app.use("/auth", authRouter);
 
 app.use("/profiles", profileRouter);
 app.use("/blogs", blogRouter);
+app.use("/wines", wineRouter);
 
 app.listen(3000, () => {
   console.log("The express app is ready!");

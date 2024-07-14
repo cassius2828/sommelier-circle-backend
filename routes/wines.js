@@ -4,8 +4,9 @@ const wineCtrl = require('../controllers/wines')
 
 
 
+router.get('/search', wineCtrl.getAllWines)
+router.get('/:wineId', wineCtrl.getSelectedWine)
 
-router.get('/:wineId', wineCtrl.profile)
 
 
 module.exports = router
