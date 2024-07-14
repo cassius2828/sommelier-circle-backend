@@ -5,7 +5,9 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const morgon = require("morgan");
-
+const Wine = require('./models/wine');
+const wineData = require('./wineData')
+const criticData = require('./criticData')
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
@@ -17,6 +19,7 @@ const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profiles");
 const blogRouter = require("./routes/blogs");
 const morgan = require("morgan");
+const CriticModel = require("./models/critic");
 
 // anything with app.use is middlware
 app.use(cors());
