@@ -21,6 +21,7 @@ router.get("/", blogsRouter.getAllBlogs);
 ///////////////////////////
 router.get("/:blogId", blogsRouter.getSingleBlog);
 
+
 ///////////////////////////
 // * PUT | Edit Blog
 ///////////////////////////

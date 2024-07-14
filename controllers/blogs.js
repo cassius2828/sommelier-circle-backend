@@ -11,58 +11,74 @@ const { formatDistanceToNow } = require("date-fns");
 const postNewBlog = async (req, res) => {
   const { title, content, owner } = req.body;
 
+  // Debugging logs for input data
   console.log(title, " <-- title");
   console.log(content, " <-- content");
   console.log(req.file, " <-- file");
-  if (!title || !content || !req.file) {
+
+  // Check for missing fields
+  if (!title || !content) {
     return res.status(400).json({ error: "missing fields" });
   }
 
   // Sanitize the content
   const sanitizedContent = sanitize(content);
 
-  // Check if a photo file is submitted
-  if (!req.file)
-    return res.status(400).json({ error: "Please Submit a Photo!" });
-
-  // Create the file path and parameters for S3 upload
-  const filePath = `sommelier-circle/blog-headers/${uuidv4()}-${title}-${
-    req.file.originalname
-  }`;
-  const params = {
-    Bucket: process.env.BUCKET_NAME,
-    Key: filePath,
-    Body: req.file.buffer,
-  };
-  // Initialize the S3 PutObjectCommand
-  const command = new PutObjectCommand(params);
-  try {
-    // Upload the file to S3
-    const data = await s3Client.send(command);
-    const newBlog = await BlogModel.create({
-      owner,
-      title,
-      content: sanitizedContent,
-      img: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
-    });
-    res
-      .status(200)
-      .json({ message: "Successfully created new blog", blog: newBlog });
-  } catch (err) {
-    console.error("Error creating blog:", err);
-    res.status(500).json({ error: "Unable to create new blog" });
+  // Check if a file is included in the request
+  if (req.file) {
+    // Generate the file path for S3 upload
+    const filePath = `sommelier-circle/blog-headers/${uuidv4()}-${title}-${req.file.originalname}`;
+    const params = {
+      Bucket: process.env.BUCKET_NAME,
+      Key: filePath,
+      Body: req.file.buffer,
+    };
+    // Initialize the S3 PutObjectCommand
+    const command = new PutObjectCommand(params);
+    try {
+      // Upload the file to S3
+      const data = await s3Client.send(command);
+      // Create a new blog with the image
+      const newBlog = await BlogModel.create({
+        owner,
+        title,
+        content: sanitizedContent,
+        img: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
+      });
+      res
+        .status(200)
+        .json({ message: "Successfully created new blog | Image received", blog: newBlog });
+    } catch (err) {
+      console.error("Error creating blog:", err);
+      res.status(500).json({ error: "Unable to create new blog" });
+    }
+  } else {
+    try {
+      // Create a new blog without an image
+      const newBlog = await BlogModel.create({
+        owner,
+        title,
+        content: sanitizedContent,
+      });
+      res
+        .status(200)
+        .json({ message: "Successfully created new blog | No Image given", blog: newBlog });
+    } catch (err) {
+      console.error("Error creating blog:", err);
+      res.status(500).json({ error: "Unable to create new blog" });
+    }
   }
 };
+
 
 ///////////////////////////
 // GET | All Blogs
 ///////////////////////////
 const getAllBlogs = async (req, res) => {
-
   try {
     let blogs = await BlogModel.find({}).populate({
-      path: 'owner',
-      select: 'username profileImg'
+      path: "owner",
+      select: "username profileImg",
     });
 
     //
@@ -88,7 +104,10 @@ const getMyBlogs = async (req, res) => {
   const { userId } = req.params;
   console.log(userId);
   try {
-    let userBlogs = await BlogModel.find({ owner: userId });
+    let userBlogs = await BlogModel.find({ owner: userId }).populate({
+      path: "owner",
+      select: "username profileImg",
+    });
 
     //
     if (!userBlogs) {
@@ -112,7 +131,10 @@ const getMyBlogs = async (req, res) => {
 const getSingleBlog = async (req, res) => {
   const { blogId } = req.params;
   try {
-    const selectedBlog = await BlogModel.findById(blogId);
+    const selectedBlog = await BlogModel.findById(blogId).populate({
+      path: "owner",
+      select: "username profileImg",
+    });
     if (!selectedBlog) {
       return res.status(404).json({ error: "cannot find the selected blog" });
     }
@@ -245,13 +267,14 @@ const putEditBlog = async (req, res) => {
   }
 };
 
-
 module.exports = {
   postNewBlog,
   getMyBlogs,
   getSingleBlog,
   deleteBlog,
-  putEditBlog,getAllBlogs
+  putEditBlog,
+  getAllBlogs,
+ 
 };
 
 ///////////////////////////
