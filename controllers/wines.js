@@ -28,8 +28,57 @@ const getSelectedWine = async (req, res) => {
   }
 };
 
+const postFilterWineResults = async (req, res) => {
+  const { grape, region, style, price, rating } = req.body;
+  console.log(price, " <-- price");
+  console.log(rating, " <-- rating");
+  try {
+    let wines = await WineModel.find({});
+
+    if (grape) {
+      wines = wines.filter((wine) => wine.grape === grape);
+    }
+    if (region) {
+      wines = wines.filter((wine) => wine.region === region);
+    }
+    if (style) {
+      wines = wines.filter((wine) => wine.style === style);
+    }
+    if (price) {
+      if (price === "low") {
+        wines = wines.sort((a, b) => a.avgPrice - b.avgPrice);
+      } else {
+        wines = wines.sort((a, b) => b.avgPrice - a.avgPrice);
+      }
+    }
+    if (rating) {
+      if (rating === "100") {
+        wines = wines.filter((wine) => wine.criticScore === 100);
+      } else if (rating === "95+") {
+        wines = wines.filter((wine) => wine.criticScore > 94);
+      } else if (rating === "90-94") {
+        wines = wines.filter(
+          (wine) => wine.criticScore > 89 && wine.criticScore < 95
+        );
+      } else if (rating === "85-89") {
+        wines = wines.filter(
+          (wine) => wine.criticScore > 84 && wine.criticScore < 90
+        );
+      } else {
+        wines = wines.filter((wine) => wine.criticScore < 85);
+      }
+    }
+
+    res.status(200).json(wines);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: `Unable to filter wine data` });
+  }
+};
+
 module.exports = {
   getWineCategoryPage,
   getAllWines,
   getSelectedWine,
+  postFilterWineResults,
 };

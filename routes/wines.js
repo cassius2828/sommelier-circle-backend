@@ -5,6 +5,7 @@ const wineCtrl = require('../controllers/wines')
 
 
 router.get('/search', wineCtrl.getAllWines)
+router.post('/search', wineCtrl.postFilterWineResults)
 router.get('/:wineId', wineCtrl.getSelectedWine)
 
 

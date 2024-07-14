@@ -25,7 +25,7 @@ const CriticModel = require("./models/critic");
 // anything with app.use is middlware
 app.use(cors());
 app.use(express.json());
-app.use(morgan());
+// app.use(morgan());
 
 // Routes go here
 app.use("/test-jwt", testJWTRouter);
@@ -38,3 +38,15 @@ app.use("/wines", wineRouter);
 app.listen(3000, () => {
   console.log("The express app is ready!");
 });
+
+// const logUniqueGrapeValues = (wines) => {
+//   const uniqueGrapes = new Set();
+
+//   wines.forEach(wine => {
+//     uniqueGrapes.add(wine.winery);
+//   });
+
+//   console.log([...uniqueGrapes]);
+// };
+
+// logUniqueGrapeValues(wineData);
