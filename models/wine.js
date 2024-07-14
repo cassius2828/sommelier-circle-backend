@@ -21,6 +21,8 @@ const wineSchema = new mongoose.Schema({
   grape: { type: String, required: true },
   avgPrice: { type: Number },
   img: { type: String, required: true },
+  linkToPurchase: { type: String },
+
 });
 
 const WineModel = mongoose.model("Wine", wineSchema);
