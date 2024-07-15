@@ -1,5 +1,5 @@
 const WineModel = require("../models/wine");
-const diacritics = require('diacritics')
+const diacritics = require("diacritics");
 const getWineCategoryPage = (req, res) => {};
 
 const getAllWines = async (req, res) => {
@@ -29,9 +29,7 @@ const getSelectedWine = async (req, res) => {
 };
 
 const postFilterWineResults = async (req, res) => {
-  const { grape, region, style, price, rating,query } = req.body;
-
- 
+  const { grape, region, style, price, rating, query } = req.body;
 
   try {
     let wines = await WineModel.find({});
@@ -43,7 +41,9 @@ const postFilterWineResults = async (req, res) => {
       wines = wines.filter((wine) => wine.region === region);
     }
     if (style) {
-      wines = wines.filter((wine) => wine.category.toLocaleLowerCase() === style);
+      wines = wines.filter(
+        (wine) => wine.category.toLocaleLowerCase() === style
+      );
     }
     if (price) {
       if (price === "low") {
@@ -61,24 +61,118 @@ const postFilterWineResults = async (req, res) => {
         wines = wines.filter(
           (wine) => wine.criticScore > 89 && wine.criticScore < 95
         );
-      } 
+      }
     }
-if(query){
-    wines = wines.filter(wine => {
-        const normalizedStr = diacritics.remove(wine.name)
-        return normalizedStr.toLowerCase().includes(query)
-    })
-}
+    if (query) {
+      wines = wines.filter((wine) => {
+        const normalizedStr = diacritics.remove(wine.name);
+        return normalizedStr.toLowerCase().includes(query);
+      });
+    }
     res.status(200).json(wines);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: `Unable to filter wine data` });
   }
 };
+const getWinesByStyle = async (req, res) => {
+  let { style } = req.params;
+  const firstLetter = style.split("")[0].toUpperCase();
+  console.log(firstLetter);
+  style = style.split("");
+  style.splice(0, 1, firstLetter);
+  style = style.join("");
 
+  try {
+    const wines = await WineModel.find({ category: style });
+    if (!wines) {
+      return res
+        .status(404)
+        .json({ error: "Could not find any wines in specified category" });
+    }
+    console.log(wines.length);
+    res.status(200).json(wines);
+  } catch (err) {
+    console.error(err);
+    console.log(`Error getting wines by their category`);
+  }
+};
+const getWinesByGrape = async (req, res) => {
+  let { grape } = req.params;
+  if (grape.includes("-")) {
+    grape = handleSplitParam(grape);
+  } else {
+    grape = transformFirstLetterToUpperCase(grape);
+  }
+
+  try {
+    const wines = await WineModel.find({ grape });
+    if (!wines) {
+      return res
+        .status(404)
+        .json({ error: "Could not find any wines in specified category" });
+    }
+    console.log(wines.length);
+    res.status(200).json(wines);
+    // res.status(200).json({ message: "hit" });
+  } catch (err) {
+    console.error(err);
+    console.log(`Error getting wines by their category`);
+  }
+};
+const getWinesByRegion = async (req, res) => {
+  let { category } = req.params;
+  const firstLetter = category.split("")[0].toUpperCase();
+  console.log(firstLetter);
+  category = category.split("");
+  category.splice(0, 1, firstLetter);
+  category = category.join("");
+
+  try {
+    const wines = await WineModel.find({ category });
+    if (!wines) {
+      return res
+        .status(404)
+        .json({ error: "Could not find any wines in specified category" });
+    }
+    console.log(wines.length);
+    res.status(200).json(wines);
+  } catch (err) {
+    console.error(err);
+    console.log(`Error getting wines by their category`);
+  }
+};
 module.exports = {
   getWineCategoryPage,
   getAllWines,
   getSelectedWine,
   postFilterWineResults,
+  getWinesByStyle,
+  getWinesByGrape,
+  getWinesByRegion,
+};
+
+///////////////////////////
+// functions
+///////////////////////////
+
+const handleSplitParam = (param) => {
+  param = param.split("-");
+  let firstWord = param[0];
+  let secondWord = param[1];
+  firstWord = transformFirstLetterToUpperCase(firstWord);
+  secondWord = transformFirstLetterToUpperCase(secondWord);
+  return firstWord + " " + secondWord;
+};
+
+const transformFirstLetterToUpperCase = (word) => {
+  word = word.split("");
+
+  // First Letter Of Word
+  let FLOW = word[0].toUpperCase();
+
+  word.splice(0, 1, FLOW);
+  word = word.join("");
+
+  return word;
 };
