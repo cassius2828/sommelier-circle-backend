@@ -9,8 +9,6 @@ const Wine = require("./models/wine");
 const wineData = require("./wineData");
 const criticData = require("./criticData");
 
-const port = process.env.PORT ? process.env.PORT : 3000;
-
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
@@ -38,8 +36,13 @@ app.use("/profiles", profileRouter);
 app.use("/blogs", blogRouter);
 app.use("/wines", wineRouter);
 
-app.listen(port ? port : 3000, () => {
-  console.log("The express app is ready!");
+// Fallback route for undefined routes
+app.use((req, res, next) => {
+  res.status(404).send("Route not found");
+});
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Running on port ${process.env.PORT}`);
 });
 
 // const logUniqueGrapeValues = (wines) => {
