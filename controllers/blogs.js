@@ -27,7 +27,9 @@ const postNewBlog = async (req, res) => {
   // Check if a file is included in the request
   if (req.file) {
     // Generate the file path for S3 upload
-    const filePath = `sommelier-circle/blog-headers/${uuidv4()}-${title}-${req.file.originalname}`;
+    const filePath = `sommelier-circle/blog-headers/${uuidv4()}-${title}-${
+      req.file.originalname
+    }`;
     const params = {
       Bucket: process.env.BUCKET_NAME,
       Key: filePath,
@@ -45,9 +47,10 @@ const postNewBlog = async (req, res) => {
         content: sanitizedContent,
         img: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
       });
-      res
-        .status(200)
-        .json({ message: "Successfully created new blog | Image received", blog: newBlog });
+      res.status(200).json({
+        message: "Successfully created new blog | Image received",
+        blog: newBlog,
+      });
     } catch (err) {
       console.error("Error creating blog:", err);
       res.status(500).json({ error: "Unable to create new blog" });
@@ -60,9 +63,10 @@ const postNewBlog = async (req, res) => {
         title,
         content: sanitizedContent,
       });
-      res
-        .status(200)
-        .json({ message: "Successfully created new blog | No Image given", blog: newBlog });
+      res.status(200).json({
+        message: "Successfully created new blog | No Image given",
+        blog: newBlog,
+      });
     } catch (err) {
       console.error("Error creating blog:", err);
       res.status(500).json({ error: "Unable to create new blog" });
@@ -70,18 +74,18 @@ const postNewBlog = async (req, res) => {
   }
 };
 
-
 ///////////////////////////
 // GET | All Blogs
 ///////////////////////////
 const getAllBlogs = async (req, res) => {
+  const adminId = "669190f598a19fabd8baa1a4";
   try {
-    let blogs = await BlogModel.find({}).populate({
+    // finds all blogs except for those created by the admin
+    let blogs = await BlogModel.find({ owner: { $ne: adminId } }).populate({
       path: "owner",
       select: "username profileImg",
     });
 
-    //
     if (!blogs) {
       return res
         .status(404)
@@ -274,7 +278,6 @@ module.exports = {
   deleteBlog,
   putEditBlog,
   getAllBlogs,
- 
 };
 
 ///////////////////////////
