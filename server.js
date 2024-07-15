@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-
+const path = require('path')
 const Wine = require("./models/wine");
 const wineData = require("./wineData");
 const criticData = require("./criticData");
