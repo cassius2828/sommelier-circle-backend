@@ -104,13 +104,12 @@ const getWinesByGrape = async (req, res) => {
   } else {
     grape = transformFirstLetterToUpperCase(grape);
   }
-
   try {
     const wines = await WineModel.find({ grape });
     if (!wines) {
       return res
         .status(404)
-        .json({ error: "Could not find any wines in specified category" });
+        .json({ error: "Could not find any wines in specified grape" });
     }
     console.log(wines.length);
     res.status(200).json(wines);
@@ -121,26 +120,26 @@ const getWinesByGrape = async (req, res) => {
   }
 };
 const getWinesByRegion = async (req, res) => {
-  let { category } = req.params;
-  const firstLetter = category.split("")[0].toUpperCase();
-  console.log(firstLetter);
-  category = category.split("");
-  category.splice(0, 1, firstLetter);
-  category = category.join("");
-
-  try {
-    const wines = await WineModel.find({ category });
-    if (!wines) {
-      return res
-        .status(404)
-        .json({ error: "Could not find any wines in specified category" });
+    let { region } = req.params;
+    if (region.includes("-")) {
+      region = handleSplitParam(region);
+    } else {
+      region = transformFirstLetterToUpperCase(region);
     }
-    console.log(wines.length);
-    res.status(200).json(wines);
-  } catch (err) {
-    console.error(err);
-    console.log(`Error getting wines by their category`);
-  }
+    try {
+      const wines = await WineModel.find({ region });
+      if (!wines) {
+        return res
+          .status(404)
+          .json({ error: "Could not find any wines in specified region" });
+      }
+      console.log(wines.length);
+      res.status(200).json(wines);
+      // res.status(200).json({ message: "hit" });
+    } catch (err) {
+      console.error(err);
+      console.log(`Error getting wines by their category`);
+    }
 };
 module.exports = {
   getWineCategoryPage,
