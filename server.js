@@ -4,10 +4,13 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-const morgon = require("morgan");
-const Wine = require('./models/wine');
-const wineData = require('./wineData')
-const criticData = require('./criticData')
+
+const Wine = require("./models/wine");
+const wineData = require("./wineData");
+const criticData = require("./criticData");
+
+const port = process.env.PORT ? process.env.PORT : 3000;
+
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
@@ -35,7 +38,7 @@ app.use("/profiles", profileRouter);
 app.use("/blogs", blogRouter);
 app.use("/wines", wineRouter);
 
-app.listen(3000, () => {
+app.listen(port ? port : 3000, () => {
   console.log("The express app is ready!");
 });
 
