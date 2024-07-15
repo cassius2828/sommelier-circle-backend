@@ -8,7 +8,7 @@ const path = require('path')
 const Wine = require("./models/wine");
 const wineData = require("./wineData");
 const criticData = require("./criticData");
-
+const PORT = process.env.PORT || 3000;
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
@@ -44,7 +44,7 @@ app.use("/wines", wineRouter);
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "dist", "index.html"));
 });
-app.listen(process.env.PORT || 3000, () => {
+app.listen(PORT, () => {
   console.log(`Running on port ${process.env.PORT}`);
 });
 
