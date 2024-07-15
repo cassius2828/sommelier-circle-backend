@@ -42,7 +42,7 @@ const postFilterWineResults = async (req, res) => {
       wines = wines.filter((wine) => wine.region === region);
     }
     if (style) {
-      wines = wines.filter((wine) => wine.style === style);
+      wines = wines.filter((wine) => wine.category.toLocaleLowerCase() === style);
     }
     if (price) {
       if (price === "low") {
