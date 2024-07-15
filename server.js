@@ -36,14 +36,7 @@ app.use("/profiles", profileRouter);
 app.use("/blogs", blogRouter);
 app.use("/wines", wineRouter);
 
-// // Fallback route for undefined routes
-// app.use((req, res, next) => {
-//   res.status(404).send("Route not found");
-// });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
-});
 app.listen(PORT, () => {
   console.log(`Running on port ${process.env.PORT}`);
 });
