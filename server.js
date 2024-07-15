@@ -22,7 +22,7 @@ const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profiles");
 const blogRouter = require("./routes/blogs");
 const wineRouter = require("./routes/wines");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const CriticModel = require("./models/critic");
 
 // anything with app.use is middlware
