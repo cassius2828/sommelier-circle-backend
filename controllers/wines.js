@@ -1,5 +1,5 @@
 const WineModel = require("../models/wine");
-
+const diacritics = require('diacritics')
 const getWineCategoryPage = (req, res) => {};
 
 const getAllWines = async (req, res) => {
@@ -29,9 +29,10 @@ const getSelectedWine = async (req, res) => {
 };
 
 const postFilterWineResults = async (req, res) => {
-  const { grape, region, style, price, rating } = req.body;
-  console.log(price, " <-- price");
-  console.log(rating, " <-- rating");
+  const { grape, region, style, price, rating,query } = req.body;
+
+ 
+
   try {
     let wines = await WineModel.find({});
 
@@ -56,19 +57,18 @@ const postFilterWineResults = async (req, res) => {
         wines = wines.filter((wine) => wine.criticScore === 100);
       } else if (rating === "95+") {
         wines = wines.filter((wine) => wine.criticScore > 94);
-      } else if (rating === "90-94") {
+      } else {
         wines = wines.filter(
           (wine) => wine.criticScore > 89 && wine.criticScore < 95
         );
-      } else if (rating === "85-89") {
-        wines = wines.filter(
-          (wine) => wine.criticScore > 84 && wine.criticScore < 90
-        );
-      } else {
-        wines = wines.filter((wine) => wine.criticScore < 85);
-      }
+      } 
     }
-
+if(query){
+    wines = wines.filter(wine => {
+        const normalizedStr = diacritics.remove(wine.name)
+        return normalizedStr.toLowerCase().includes(query)
+    })
+}
     res.status(200).json(wines);
   } catch (err) {
     console.error(err);
