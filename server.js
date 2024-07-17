@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-const path = require('path')
+const path = require("path");
 const Wine = require("./models/wine");
 const wineData = require("./wineData");
 const criticData = require("./criticData");
@@ -20,6 +20,7 @@ const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profiles");
 const blogRouter = require("./routes/blogs");
 const wineRouter = require("./routes/wines");
+const googlePlacesRouter = require("./routes/google-places");
 // const morgan = require("morgan");
 const CriticModel = require("./models/critic");
 
@@ -35,10 +36,10 @@ app.use("/auth", authRouter);
 app.use("/profiles", profileRouter);
 app.use("/blogs", blogRouter);
 app.use("/wines", wineRouter);
-
+app.use("/google", googlePlacesRouter);
 
 app.listen(PORT, () => {
-  console.log(`Running on port ${process.env.PORT}`);
+  console.log(`Running on port ${PORT}`);
 });
 
 // const logUniqueGrapeValues = (wines) => {
