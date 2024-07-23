@@ -1,5 +1,8 @@
 const UserModel = require("../models/user");
 
+///////////////////////////
+// GET | Get user profile
+///////////////////////////
 async function profile(req, res) {
   try {
     // find the user by their id!
@@ -22,6 +25,9 @@ async function profile(req, res) {
   }
 }
 
+///////////////////////////
+// ? POST | Follow another user
+///////////////////////////
 const postFollowUser = async (req, res) => {
   const { otherUser } = req.params;
   const userId = req.user.user._id;
@@ -53,6 +59,10 @@ const postFollowUser = async (req, res) => {
     res.status(500).json({ error: "Unable to follow targeted user" });
   }
 };
+
+///////////////////////////
+// ? POST | Unfollow another user
+///////////////////////////
 const postUnfollowUser = async (req, res) => {
   const { otherUser } = req.params;
   const userId = req.user.user._id;
@@ -85,7 +95,9 @@ const postUnfollowUser = async (req, res) => {
     res.status(500).json({ error: "Unable to unfollow targeted user" });
   }
 };
-
+///////////////////////////
+// GET | Search Users
+///////////////////////////
 const getSearchUsers = async (req, res) => {
   const { query } = req.params;
   // ? for some reason this causes an error with search value and string for the profile function??
