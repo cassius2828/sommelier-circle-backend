@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const GOOGLE_PLACES_BASE_URL = `https://maps.googleapis.com/maps/api/place`;
-
+const GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 ///////////////////////////
 // GET | Nearby Establishments
 ///////////////////////////
@@ -71,7 +71,7 @@ const getSearchQueryLocationResults = async (req, res) => {
             types: "restaurant|bar|tourist_attraction|route|point_of_interest",
             keyword: "wine",
             components: `country:${country}`,
-            key: process.env.GOOGLE_PLACES_API_KEY,
+            key: GOOGLE_PLACES_API_KEY,
             sessiontoken,
           },
         }
@@ -93,16 +93,35 @@ const getSearchQueryLocationResults = async (req, res) => {
   }
 };
 
+///////////////////////////
+// GET | Place Details
+///////////////////////////
+const getPlaceDetails = async (req, res) => {
+  const { placeId } = req.query;
+  console.log(placeId, " <-- place_id");
+  try {
+    const response = await axios.get(
+      `${GOOGLE_PLACES_BASE_URL}/details/json?place_id=${placeId}&key=${GOOGLE_PLACES_API_KEY}`
+    );
+    res.status(200).json(response.data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      error: "Unable to retrieve place details from google places api",
+    });
+  }
+};
+
 module.exports = {
   getNearbySearches,
   getPhotoOfRoom,
   getSearchQueryLocationResults,
+  getPlaceDetails,
 };
 
 ///////////////////////////
 // Functions
 ///////////////////////////
-
 
 // generate uuid
 function generateSessionToken() {
