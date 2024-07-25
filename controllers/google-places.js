@@ -53,20 +53,35 @@ const getPhotoOfRoom = async (req, res) => {
     });
   }
 };
-
+///////////////////////////
+// GET | AutoComplete Search Results
+///////////////////////////
 const getSearchQueryLocationResults = async (req, res) => {
-  const { query } = req.params;
-  // ? for some reason this causes an error with search value and string for the profile function??
+  const { query, country } = req.query;
 
   try {
-    const locations = await UserModel.find({
-      username: { $regex: query, $options: "i" },
-    });
-  res.status(200).json({ message: "hit" });
-    // res.status(200).json(locations);
-  }
- 
-   catch (err) {
+    if (query.length > 3) {
+      // generate new session token to track sesssion lengths
+      const sessiontoken = generateSessionToken();
+      const response = await axios.get(
+        `https://maps.googleapis.com/maps/api/place/autocomplete/json`,
+        {
+          params: {
+            input: query,
+            type: ["restaurant", "bar", "liquor_store"],
+            keyword: "wine",
+            components: `country:${country}`,
+            key: process.env.GOOGLE_PLACES_API_KEY,
+            sessiontoken,
+          },
+        }
+      );
+      console.log(response.data);
+      return res.status(200).json(response.data);
+    } else {
+      return res.status(400).json([]);
+    }
+  } catch (err) {
     console.error(
       `Error fetching query results for wine locations: ${err.message}`,
       err
@@ -83,3 +98,17 @@ module.exports = {
   getPhotoOfRoom,
   getSearchQueryLocationResults,
 };
+
+///////////////////////////
+// Functions
+///////////////////////////
+
+
+// generate uuid
+function generateSessionToken() {
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    var r = (Math.random() * 16) | 0,
+      v = c == "x" ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
