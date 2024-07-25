@@ -68,7 +68,7 @@ const getSearchQueryLocationResults = async (req, res) => {
         {
           params: {
             input: query,
-            type: ["restaurant", "bar", "liquor_store"],
+            types: "restaurant|bar|tourist_attraction|route|point_of_interest",
             keyword: "wine",
             components: `country:${country}`,
             key: process.env.GOOGLE_PLACES_API_KEY,
