@@ -31,14 +31,21 @@ const getNearbySearches = async (req, res) => {
 // GET | Photo of Establishment
 ///////////////////////////
 const getPhotoOfRoom = async (req, res) => {
-  const { photo_reference, key } = req.query;
-
+  const { photo_reference, key, deviceWidth } = req.query;
+  let url;
   try {
     if (!photo_reference) {
       return res.status(400).json({ error: "No photo reference was found" });
     }
+// sizes of device from frontend to ensure photo quality
+    if (deviceWidth === "mobile") {
+      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=425&photo_reference=${photo_reference}&key=${key}`;
+    } else if (deviceWidth === "desktop") {
+      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=2500&photo_reference=${photo_reference}&key=${key}`;
+    } else {
+      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=800&photo_reference=${photo_reference}&key=${key}`;
+    }
 
-    const url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=400&photo_reference=${photo_reference}&key=${key}`;
     const response = await axios.get(url, { responseType: "arraybuffer" });
 
     const base64Image = Buffer.from(response.data, "binary").toString("base64");
