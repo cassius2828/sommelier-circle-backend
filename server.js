@@ -9,12 +9,19 @@ const Wine = require("./models/wine");
 const wineData = require("./wineData");
 const criticData = require("./criticData");
 const PORT = process.env.PORT || 3000;
+
+///////////////////////////
+// Connect to DB
+///////////////////////////
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
+///////////////////////////
+// Routers
+///////////////////////////
 const testJWTRouter = require("./routes/test-jwt");
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profiles");
@@ -24,12 +31,16 @@ const googlePlacesRouter = require("./routes/google-places");
 // const morgan = require("morgan");
 const CriticModel = require("./models/critic");
 
-// anything with app.use is middlware
+///////////////////////////
+// Middleware
+///////////////////////////
 app.use(cors());
 app.use(express.json());
 // app.use(morgan());
 
-// Routes go here
+///////////////////////////
+// Routes
+///////////////////////////
 app.use("/test-jwt", testJWTRouter);
 app.use("/auth", authRouter);
 
@@ -38,6 +49,9 @@ app.use("/blogs", blogRouter);
 app.use("/wines", wineRouter);
 app.use("/google", googlePlacesRouter);
 
+///////////////////////////
+// Run Server
+///////////////////////////
 app.listen(PORT, () => {
   console.log(`Running on port ${PORT}`);
 });

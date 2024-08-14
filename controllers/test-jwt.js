@@ -13,6 +13,7 @@ function verify(req, res) {
 }
 
 function sign(req, res) {
+  console.log('=======================\n================')
   // simulating a created user from the db
   const user = {
     id: 1,
@@ -22,7 +23,7 @@ function sign(req, res) {
   // (login/signup) we create our JWT TOKEN
 
   const token = jwt.sign({ user }, process.env.JWT_SECRET);
-
+console.log('SIGNING TOKEN!!!', token)
   res.json({ token });
 }
 
