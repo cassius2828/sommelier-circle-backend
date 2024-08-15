@@ -78,7 +78,7 @@ const postFilterWineResults = async (req, res) => {
 const getWinesByStyle = async (req, res) => {
   let { style } = req.params;
   const firstLetter = style.split("")[0].toUpperCase();
-  console.log(firstLetter);
+  // console.log(firstLetter);
   style = style.split("");
   style.splice(0, 1, firstLetter);
   style = style.join("");
@@ -90,11 +90,11 @@ const getWinesByStyle = async (req, res) => {
         .status(404)
         .json({ error: "Could not find any wines in specified category" });
     }
-    console.log(wines.length);
+    // console.log(wines.length);
     res.status(200).json(wines);
   } catch (err) {
     console.error(err);
-    console.log(`Error getting wines by their category`);
+    res.status(500).json({ error: `Error getting wines by their style` });
   }
 };
 const getWinesByGrape = async (req, res) => {
@@ -111,35 +111,37 @@ const getWinesByGrape = async (req, res) => {
         .status(404)
         .json({ error: "Could not find any wines in specified grape" });
     }
-    console.log(wines.length);
+    // console.log(wines.length);
     res.status(200).json(wines);
     // res.status(200).json({ message: "hit" });
   } catch (err) {
     console.error(err);
-    console.log(`Error getting wines by their category`);
+    res.status(500).json({ error: `Error getting wines by their grape` });
+
   }
 };
 const getWinesByRegion = async (req, res) => {
-    let { region } = req.params;
-    if (region.includes("-")) {
-      region = handleSplitParam(region);
-    } else {
-      region = transformFirstLetterToUpperCase(region);
+  let { region } = req.params;
+  if (region.includes("-")) {
+    region = handleSplitParam(region);
+  } else {
+    region = transformFirstLetterToUpperCase(region);
+  }
+  try {
+    const wines = await WineModel.find({ region });
+    if (!wines) {
+      return res
+        .status(404)
+        .json({ error: "Could not find any wines in specified region" });
     }
-    try {
-      const wines = await WineModel.find({ region });
-      if (!wines) {
-        return res
-          .status(404)
-          .json({ error: "Could not find any wines in specified region" });
-      }
-      console.log(wines.length);
-      res.status(200).json(wines);
-      // res.status(200).json({ message: "hit" });
-    } catch (err) {
-      console.error(err);
-      console.log(`Error getting wines by their category`);
-    }
+    // console.log(wines.length);
+    res.status(200).json(wines);
+    // res.status(200).json({ message: "hit" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: `Error getting wines by their region` });
+
+  }
 };
 module.exports = {
   getWineCategoryPage,
