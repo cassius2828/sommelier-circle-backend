@@ -1,7 +1,7 @@
 ///////////////////////////
 // AWS SDK and Event Model
 ///////////////////////////
-const {  S3Client,PutObjectCommand } = require("@aws-sdk/client-s3");
+const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 
 const { v4: uuidv4 } = require("uuid");
 const Event = require("../models/event");
@@ -11,8 +11,8 @@ const s3Client = new S3Client({ region: process.env.AWS_REGION });
 
 const postCreateEventPosting = async (req, res) => {
   console.log(req.body, " <-- req.body");
-console.log(req, '<-- request')
-  console.log(req.file, ' <-- req.file')
+  console.log(req, "<-- request");
+  console.log(req.file, " <-- req.file");
   try {
     // Create the file path and parameters for S3 upload
     const filePath = `sommelier-circle/event-imgs/${uuidv4()}-${
@@ -46,6 +46,56 @@ console.log(req, '<-- request')
     res.status(500).json({ error: "unable to create new event " });
   }
 };
+const getExploreEvents = async (req, res) => {
+  const { userId } = req.query;
+
+  try {
+    const userEvents = await Event.find({ owner: { $ne: userId } });
+    if (userEvents.length === 0) {
+      return res.status(400).json({
+        message:
+          "No events were found. Encourage your peers to create an event for the community!",
+      });
+    }
+    res.status(200).json(userEvents);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "unable to get all non-user events " });
+  }
+};
+
+const getUserEvents = async (req, res) => {
+  const { userId } = req.query;
+  console.log(userId);
+  try {
+    const userEvents = await Event.find({ owner: userId });
+    if (userEvents.length === 0) {
+      return res.status(400).json({
+        message: "No events were found. Create your first event now!",
+      });
+    }
+    res.status(200).json(userEvents);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "unable to get all user events " });
+  }
+};
+
+const getEventDetails = async (req, res) => {
+  const { eventId } = req.params;
+  try {
+    const event = await Event.findById(eventId);
+    if (!event) {
+      return res.status(400).json({
+        message: "Could not find the event specified in the params",
+      });
+    }
+    res.status(200).json(event);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "unable to get all user events " });
+  }
+};
 
 // const deleteAllEvents = async (req,res) => {
 //   try {
@@ -59,4 +109,6 @@ console.log(req, '<-- request')
 // deleteAllEvents()
 module.exports = {
   postCreateEventPosting,
+  getUserEvents,
+  getExploreEvents,getEventDetails
 };

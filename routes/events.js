@@ -12,4 +12,8 @@ router.post(
   eventCtrl.postCreateEventPosting
 );
 
+router.get('/', eventCtrl.getExploreEvents)
+router.get('/user-events', eventCtrl.getUserEvents)
+router.get('/:eventId', eventCtrl.getEventDetails)
+
 module.exports = router;
