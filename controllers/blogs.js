@@ -12,9 +12,9 @@ const postNewBlog = async (req, res) => {
   const { title, content, owner } = req.body;
 
   // Debugging logs for input data
-  console.log(title, " <-- title");
-  console.log(content, " <-- content");
-  console.log(req.file, " <-- file");
+  // console.log(title, " <-- title");
+  // console.log(content, " <-- content");
+  // console.log(req.file, " <-- file");
 
   // Check for missing fields
   if (!title || !content) {
@@ -108,7 +108,7 @@ const getAllBlogs = async (req, res) => {
 ///////////////////////////
 const getMyBlogs = async (req, res) => {
   const { userId } = req.params;
-  console.log(userId);
+  // console.log(userId);
   try {
     let userBlogs = await BlogModel.find({ owner: userId }).populate({
       path: "owner",
@@ -167,8 +167,8 @@ const deleteBlog = async (req, res) => {
       return res.status(404).json({ error: "cannot find blog to delete" });
     }
     // if the user who is trying to delete is not the owner of the blog then return
-    console.log(blogToDelete.owner, " blog owmer");
-    console.log(userId, " userId");
+    // console.log(blogToDelete.owner, " blog owmer");
+    // console.log(userId, " userId");
     if (blogToDelete.owner.toString() !== userId.toString()) {
       return res
         .status(400)

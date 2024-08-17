@@ -23,7 +23,7 @@ function sign(req, res) {
   // (login/signup) we create our JWT TOKEN
 
   const token = jwt.sign({ user }, process.env.JWT_SECRET);
-console.log('SIGNING TOKEN!!!', token)
+// console.log('SIGNING TOKEN!!!', token)
   res.json({ token });
 }
 

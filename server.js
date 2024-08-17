@@ -25,6 +25,7 @@ mongoose.connection.on("connected", () => {
 const testJWTRouter = require("./routes/test-jwt");
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profiles");
+const eventRouter = require("./routes/events");
 const blogRouter = require("./routes/blogs");
 const wineRouter = require("./routes/wines");
 const googlePlacesRouter = require("./routes/google-places");
@@ -45,6 +46,7 @@ app.use("/test-jwt", testJWTRouter);
 app.use("/auth", authRouter);
 
 app.use("/profiles", profileRouter);
+app.use("/events", eventRouter);
 app.use("/blogs", blogRouter);
 app.use("/wines", wineRouter);
 app.use("/google", googlePlacesRouter);
