@@ -9,6 +9,9 @@ const Event = require("../models/event");
 // Initialize the S3 client with the region from environment variables
 const s3Client = new S3Client({ region: process.env.AWS_REGION });
 
+///////////////////////////
+// ? POST | Create Event Posting
+///////////////////////////
 const postCreateEventPosting = async (req, res) => {
   console.log(req.body, " <-- req.body");
   console.log(req, "<-- request");
@@ -46,6 +49,10 @@ const postCreateEventPosting = async (req, res) => {
     res.status(500).json({ error: "unable to create new event " });
   }
 };
+
+///////////////////////////
+// GET | Explore Events
+///////////////////////////
 const getExploreEvents = async (req, res) => {
   const { userId } = req.query;
 
@@ -64,6 +71,9 @@ const getExploreEvents = async (req, res) => {
   }
 };
 
+///////////////////////////
+// GET | User Events
+///////////////////////////
 const getUserEvents = async (req, res) => {
   const { userId } = req.query;
   console.log(userId);
@@ -81,6 +91,9 @@ const getUserEvents = async (req, res) => {
   }
 };
 
+///////////////////////////
+// GET | Event Details
+///////////////////////////
 const getEventDetails = async (req, res) => {
   const { eventId } = req.params;
   try {
@@ -107,8 +120,62 @@ const getEventDetails = async (req, res) => {
 //   }
 // }
 // deleteAllEvents()
+
+///////////////////////////
+// * PUT | Edit Event
+///////////////////////////
+const putEditEvent = async (req, res) => {
+  const { eventId } = req.params;
+
+  try {
+    // Find the event by ID
+    const event = await Event.findById(eventId);
+    if (!event) {
+      return res.status(404).json({ error: "Event not found" });
+    }
+
+    // Check if a new file is uploaded and no existing photo is present
+    let photoUrl = event.photo; // Default to existing photo
+
+    if (req.file && !event.photo) {
+      const filePath = `sommelier-circle/event-imgs/${uuidv4()}-${req.file.originalname}`;
+      const params = {
+        Bucket: process.env.BUCKET_NAME,
+        Key: filePath,
+        Body: req.file.buffer,
+      };
+
+      // Upload the file to S3
+      const command = new PutObjectCommand(params);
+      await s3Client.send(command);
+
+      // Construct the photo URL
+      photoUrl = `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`;
+    }
+
+    // Update the event with new data
+    const updatedEvent = await Event.findByIdAndUpdate(
+      eventId,
+      {
+        ...req.body,
+        photo: photoUrl, // Use the new photo URL or the existing one
+      },
+      { new: true } // Return the updated document
+    );
+
+    // Respond with the updated event
+    res.status(200).json(updatedEvent);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Unable to edit event" });
+  }
+};
+
+
 module.exports = {
   postCreateEventPosting,
   getUserEvents,
-  getExploreEvents,getEventDetails
+  getExploreEvents,
+  getEventDetails,
+  putEditEvent,
 };

@@ -12,8 +12,14 @@ router.post(
   eventCtrl.postCreateEventPosting
 );
 
-router.get('/', eventCtrl.getExploreEvents)
-router.get('/user-events', eventCtrl.getUserEvents)
-router.get('/:eventId', eventCtrl.getEventDetails)
+router.get("/", eventCtrl.getExploreEvents);
+router.get("/user-events", eventCtrl.getUserEvents);
+router.get("/:eventId", eventCtrl.getEventDetails);
+router.put(
+  "/:eventId",
+  upload.single("photo"),
+  verifyToken,
+  eventCtrl.putEditEvent
+);
 
 module.exports = router;
