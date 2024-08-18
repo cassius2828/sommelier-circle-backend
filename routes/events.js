@@ -13,6 +13,7 @@ router.post(
 );
 
 router.get("/", eventCtrl.getExploreEvents);
+router.get("/filter-events/city", eventCtrl.getFilterExploreEvents);
 router.get("/user-events", eventCtrl.getUserEvents);
 router.get("/:eventId", eventCtrl.getEventDetails);
 router.put(

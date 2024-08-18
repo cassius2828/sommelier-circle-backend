@@ -57,17 +57,38 @@ const getExploreEvents = async (req, res) => {
   const { userId } = req.query;
 
   try {
-    const userEvents = await Event.find({ owner: { $ne: userId } });
-    if (userEvents.length === 0) {
+    const exploreEvents = await Event.find({ owner: { $ne: userId } });
+    if (exploreEvents.length === 0) {
       return res.status(400).json({
         message:
           "No events were found. Encourage your peers to create an event for the community!",
       });
     }
-    res.status(200).json(userEvents);
+    res.status(200).json(exploreEvents);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "unable to get all non-user events " });
+  }
+};
+
+///////////////////////////
+// GET | Filter Explore Events by City
+///////////////////////////
+const getFilterExploreEvents = async (req, res) => {
+  const { userId,city } = req.query;
+
+  try {
+    const filteredByCityExploreEvents = await Event.find({ owner: { $ne: userId }, city });
+    if (filteredByCityExploreEvents.length === 0) {
+      return res.status(400).json({
+        message:
+          "No events were found. Encourage your peers to create an event for the community!",
+      });
+    }
+    res.status(200).json(filteredByCityExploreEvents);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: `unable to get filtered events by ${city} ` });
   }
 };
 
@@ -177,5 +198,5 @@ module.exports = {
   getUserEvents,
   getExploreEvents,
   getEventDetails,
-  putEditEvent,
+  putEditEvent,getFilterExploreEvents
 };
