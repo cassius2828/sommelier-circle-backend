@@ -54,10 +54,23 @@ const postCreateEventPosting = async (req, res) => {
 // GET | Explore Events
 ///////////////////////////
 const getExploreEvents = async (req, res) => {
-  const { userId } = req.query;
-
+  const { userId, searchQuery } = req.query;
+  console.log(req.query, " <-- req.qeury");
+  console.log(searchQuery, " <-- search query");
   try {
-    const exploreEvents = await Event.find({ owner: { $ne: userId } });
+    let query = { owner: { $ne: userId } };
+
+    if (searchQuery) {
+      // Normalize the event names in the database query
+      const normalizedSearchQuery = searchQuery.toLowerCase();
+
+      query.eventName = {
+        $regex: normalizedSearchQuery.replace(/and/g, "&"),
+        $options: "i",
+      };
+    }
+    const exploreEvents = await Event.find(query);
+
     if (exploreEvents.length === 0) {
       return res.status(400).json({
         message:
@@ -75,10 +88,13 @@ const getExploreEvents = async (req, res) => {
 // GET | Filter Explore Events by City
 ///////////////////////////
 const getFilterExploreEvents = async (req, res) => {
-  const { userId,city } = req.query;
+  const { userId, city } = req.query;
 
   try {
-    const filteredByCityExploreEvents = await Event.find({ owner: { $ne: userId }, city });
+    const filteredByCityExploreEvents = await Event.find({
+      owner: { $ne: userId },
+      city,
+    });
     if (filteredByCityExploreEvents.length === 0) {
       return res.status(400).json({
         message:
@@ -88,7 +104,9 @@ const getFilterExploreEvents = async (req, res) => {
     res.status(200).json(filteredByCityExploreEvents);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: `unable to get filtered events by ${city} ` });
+    res
+      .status(500)
+      .json({ error: `unable to get filtered events by ${city} ` });
   }
 };
 
@@ -96,10 +114,21 @@ const getFilterExploreEvents = async (req, res) => {
 // GET | User Events
 ///////////////////////////
 const getUserEvents = async (req, res) => {
-  const { userId } = req.query;
-  console.log(userId);
+  const { userId, searchQuery } = req.query;
+  console.log(searchQuery);
   try {
-    const userEvents = await Event.find({ owner: userId });
+    let query = { owner: userId };
+    if (searchQuery) {
+      // Normalize the event names in the database query
+      const normalizedSearchQuery = searchQuery.toLowerCase();
+
+      query.eventName = {
+        $regex: normalizedSearchQuery.replace(/and/g, "&"),
+        $options: "i",
+      };
+    }
+
+    const userEvents = await Event.find(query);
     if (userEvents.length === 0) {
       return res.status(400).json({
         message: "No events were found. Create your first event now!",
@@ -159,7 +188,9 @@ const putEditEvent = async (req, res) => {
     let photoUrl = event.photo; // Default to existing photo
 
     if (req.file && !event.photo) {
-      const filePath = `sommelier-circle/event-imgs/${uuidv4()}-${req.file.originalname}`;
+      const filePath = `sommelier-circle/event-imgs/${uuidv4()}-${
+        req.file.originalname
+      }`;
       const params = {
         Bucket: process.env.BUCKET_NAME,
         Key: filePath,
@@ -192,11 +223,11 @@ const putEditEvent = async (req, res) => {
   }
 };
 
-
 module.exports = {
   postCreateEventPosting,
   getUserEvents,
   getExploreEvents,
   getEventDetails,
-  putEditEvent,getFilterExploreEvents
+  putEditEvent,
+  getFilterExploreEvents,
 };
