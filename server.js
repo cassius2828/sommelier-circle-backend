@@ -27,6 +27,7 @@ const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profiles");
 const eventRouter = require("./routes/events");
 const blogRouter = require("./routes/blogs");
+const criticRouter = require("./routes/critics");
 const wineRouter = require("./routes/wines");
 const googlePlacesRouter = require("./routes/google-places");
 // const morgan = require("morgan");
@@ -48,6 +49,7 @@ app.use("/auth", authRouter);
 app.use("/profiles", profileRouter);
 app.use("/events", eventRouter);
 app.use("/blogs", blogRouter);
+app.use("/critics", criticRouter);
 app.use("/wines", wineRouter);
 app.use("/google", googlePlacesRouter);
 
