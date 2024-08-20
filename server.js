@@ -59,15 +59,3 @@ app.use("/google", googlePlacesRouter);
 app.listen(PORT, () => {
   console.log(`Running on port ${PORT}`);
 });
-
-// const logUniqueGrapeValues = (wines) => {
-//   const uniqueGrapes = new Set();
-
-//   wines.forEach(wine => {
-//     uniqueGrapes.add(wine.winery);
-//   });
-
-//   console.log([...uniqueGrapes]);
-// };
-
-// logUniqueGrapeValues(wineData);

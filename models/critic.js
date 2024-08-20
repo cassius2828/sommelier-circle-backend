@@ -16,6 +16,11 @@ const criticSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  img: String,
+  bio: {
+    type: String,
+    required: true,
+  },
 });
 
 const CriticModel = mongoose.model("Critic", criticSchema);
