@@ -4,16 +4,17 @@ const UserModel = require("../models/user");
 // GET | Get user profile
 ///////////////////////////
 async function profile(req, res) {
+  const { userId } = req.params;
   try {
     // find the user by their id!
-    const userDoc = await UserModel.findById(req.params.userId);
+    const userDoc = await UserModel.findById(userId).select('-password');
     // if not user doc is found thrown an error
     if (!userDoc) {
       res.status(404);
       throw new Error("Profile not found.");
     }
-
     // send back the user
+    
     res.json(userDoc);
   } catch (err) {
     console.log(err);
@@ -115,9 +116,30 @@ const getSearchUsers = async (req, res) => {
   }
 };
 
+///////////////////////////
+// * PUT | Edit User Info
+///////////////////////////
+const putEditUserInfo = async (req, res) => {
+  const { userId } = req.params;
+  try {
+    const updatedUserDoc = await UserModel.findByIdAndUpdate(userId, req.body, {
+      new: true,
+    });
+
+    if (!updatedUserDoc) {
+      return res.status(400).json({ message: "Updated user doc is not found" });
+    }
+    res.status(200).json(updatedUserDoc);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: `Unable to edit user info` });
+  }
+};
+
 module.exports = {
   profile,
   postFollowUser,
   postUnfollowUser,
   getSearchUsers,
+  putEditUserInfo,
 };

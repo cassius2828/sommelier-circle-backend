@@ -59,3 +59,22 @@ app.use("/google", googlePlacesRouter);
 app.listen(PORT, () => {
   console.log(`Running on port ${PORT}`);
 });
+// const UserModel = require('./models/user')
+// async function addFieldsToExistingUsers() {
+//   try {
+//     await UserModel.updateMany(
+//       {},
+//       {
+//         $set: {
+       
+         
+//           googleId: '',
+//         },
+//       }
+//     );
+//     console.log('Updated all users with new fields.');
+//   } catch (err) {
+//     console.error('Error updating users:', err);
+//   }
+// }
+// addFieldsToExistingUsers()
