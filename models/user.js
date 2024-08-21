@@ -1,19 +1,26 @@
 const mongoose = require("mongoose");
-
+const crypto = require("crypto");
+const bcrypt = require("bcrypt");
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
   },
+  displayedName: {
+    type: String,
+  },
   password: {
     type: String,
-    
+    required: true,
   },
   email: {
     type: String,
-    
+    unique: true,
   },
-  googleId: String, 
+  googleId: {
+    type: String,
+    default: "",
+  },
   favorites: {
     wines: [{ type: mongoose.Schema.Types.ObjectId, ref: "Wine" }],
     rooms: [{ type: mongoose.Schema.Types.ObjectId, ref: "Room" }],
@@ -56,6 +63,28 @@ userSchema.set("toObject", {
     return ret; // then just returns the document
   },
 });
+
+userSchema.set("toJSON", {
+  transform: (doc, ret) => {
+    delete ret.password;
+    return ret;
+  },
+});
+
+// Pre-save middleware to set displayedName to username if not provided
+userSchema.pre('save', async function(next) {
+	if (!this.displayedName) {
+	  this.displayedName = this.username;
+	}
+	// Hash password if it's new or modified
+	if (this.isModified('password')) {
+	  const salt = await bcrypt.genSalt(10);
+	  this.password = await bcrypt.hash(this.password, salt);
+	}
+	next();
+  });
+  
+
 
 // const UserModel = mongoose.model('User', userSchema)
 // module.exports = UserModel

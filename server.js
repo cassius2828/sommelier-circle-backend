@@ -4,10 +4,9 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-const path = require("path");
-const Wine = require("./models/wine");
-const wineData = require("./wineData");
-const criticData = require("./criticData");
+const cookieParser = require("cookie-parser");
+const passport = require("./config/googlePassport"); // Require the Passport config
+const session = require("express-session");
 const PORT = process.env.PORT || 3000;
 
 ///////////////////////////
@@ -34,10 +33,32 @@ const googlePlacesRouter = require("./routes/google-places");
 const CriticModel = require("./models/critic");
 
 ///////////////////////////
+// Google Passport
+///////////////////////////
+// Initialize session
+app.use(
+  session({
+    secret: process.env.JWT_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+// Initialize Passport and session
+app.use(passport.initialize());
+app.use(passport.session());
+
+///////////////////////////
 // Middleware
 ///////////////////////////
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:5173',
+    credentials: true,
+  })
+);
 app.use(express.json());
+app.use(cookieParser());
 // app.use(morgan());
 
 ///////////////////////////
@@ -66,8 +87,7 @@ app.listen(PORT, () => {
 //       {},
 //       {
 //         $set: {
-       
-         
+
 //           googleId: '',
 //         },
 //       }
