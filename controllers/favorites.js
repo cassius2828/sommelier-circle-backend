@@ -8,7 +8,7 @@ const getUserFavorites = async (req, res, favoriteType) => {
   const { userId } = req.query;
   try {
     // get user
-    const user = await User.findById(userId);
+    const user = await User.findById(userId).populate(`favorites.${favoriteType}`);
     // check if user exists
     if (!user) {
       return res
