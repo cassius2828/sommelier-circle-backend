@@ -46,10 +46,22 @@ const userSchema = new mongoose.Schema({
     default: 0,
   },
   socialMedia: {
-    twitter: String,
-    instagram: String,
-    facebook: String,
-    linkedIn: String,
+    twitter: {
+      username: String,
+      link: String,
+    },
+    instagram: {
+      username: String,
+      link: String,
+    },
+    facebook: {
+      username: String,
+      link: String,
+    },
+    linkedIn: {
+      username: String,
+      link: String,
+    },
   },
   bio: {
     type: String,
@@ -72,19 +84,17 @@ userSchema.set("toJSON", {
 });
 
 // Pre-save middleware to set displayedName to username if not provided
-userSchema.pre('save', async function(next) {
-	if (!this.displayedName) {
-	  this.displayedName = this.username;
-	}
-	// Hash password if it's new or modified
-	if (this.isModified('password')) {
-	  const salt = await bcrypt.genSalt(10);
-	  this.password = await bcrypt.hash(this.password, salt);
-	}
-	next();
-  });
-  
-
+userSchema.pre("save", async function (next) {
+  if (!this.displayedName) {
+    this.displayedName = this.username;
+  }
+  // Hash password if it's new or modified
+  if (this.isModified("password")) {
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+  }
+  next();
+});
 
 // const UserModel = mongoose.model('User', userSchema)
 // module.exports = UserModel

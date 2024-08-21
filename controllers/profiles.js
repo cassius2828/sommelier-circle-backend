@@ -7,14 +7,14 @@ async function profile(req, res) {
   const { userId } = req.params;
   try {
     // find the user by their id!
-    const userDoc = await UserModel.findById(userId).select('-password');
+    const userDoc = await UserModel.findById(userId).select("-password");
     // if not user doc is found thrown an error
     if (!userDoc) {
       res.status(404);
       throw new Error("Profile not found.");
     }
     // send back the user
-    
+
     res.json(userDoc);
   } catch (err) {
     console.log(err);
@@ -120,9 +120,24 @@ const getSearchUsers = async (req, res) => {
 // * PUT | Edit User Info
 ///////////////////////////
 const putEditUserInfo = async (req, res) => {
+  // TODO: Add ability to upload photo (and delete current photo from s3 bucket)
   const { userId } = req.params;
+  const { username, displayedName, email } = req.body;
+  const { twitter, instagram, facebook, linkedIn } = req.body.socialMedia;
+  const formData = {
+    username,
+    displayedName,
+    email,
+    socialMedia: {
+      twitter: { username: twitter.username, link: twitter.link },
+      instagram: { username: instagram.username, link: instagram.link },
+      facebook: { username: facebook.username, link: facebook.link },
+      linkedIn: { username: linkedIn.username, link: linkedIn.link },
+    },
+  };
+  console.log(twitter.username, " <-- twitter username");
   try {
-    const updatedUserDoc = await UserModel.findByIdAndUpdate(userId, req.body, {
+    const updatedUserDoc = await UserModel.findByIdAndUpdate(userId, formData, {
       new: true,
     });
 

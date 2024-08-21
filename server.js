@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 const passport = require("./config/googlePassport"); // Require the Passport config
 const session = require("express-session");
 const PORT = process.env.PORT || 3000;
-
+const UserModel = require('./models/user')
 ///////////////////////////
 // Connect to DB
 ///////////////////////////
