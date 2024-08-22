@@ -100,3 +100,4 @@ app.listen(PORT, () => {
 //   }
 // }
 // addFieldsToExistingUsers()
+// Function to update user favorites

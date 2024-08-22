@@ -3,7 +3,6 @@ const router = express.Router();
 const Blog = require("../models/blog");
 const Critic = require("../models/critic");
 const Event = require("../models/event");
-const Room = require("../models/room");
 const Wine = require("../models/wine");
 const favCtrl = require("../controllers/favorites");
 
@@ -52,16 +51,12 @@ router.delete("/events", (req, res) =>
 
 ///////////////////////////
 // ==================================
-// ROOMS
+// LOCATIONS
 // ==================================
 ///////////////////////////
-router.get("/rooms", (req, res) => favCtrl.getUserFavorites(req, res, "rooms"));
-router.post("/rooms", (req, res) =>
-  favCtrl.postAddToFavorites(req, res, Room, "rooms")
-);
-router.delete("/rooms", (req, res) =>
-  favCtrl.deleteRemoveFromFavorites(req, res, Room, "rooms")
-);
+router.get("/locations", favCtrl.getLocationsUserFavorites);
+router.post("/locations", favCtrl.postLocationsAddToFavorites);
+router.delete("/locations", favCtrl.deleteLocationsRemoveFromFavorites);
 
 ///////////////////////////
 // ==================================

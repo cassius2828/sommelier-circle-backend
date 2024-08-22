@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
   },
   favorites: {
     wines: [{ type: mongoose.Schema.Types.ObjectId, ref: "Wine" }],
-    rooms: [{ type: mongoose.Schema.Types.ObjectId, ref: "Room" }],
+    locations:[String],
     critics: [{ type: mongoose.Schema.Types.ObjectId, ref: "Critic" }],
     blogs: [{ type: mongoose.Schema.Types.ObjectId, ref: "Blog" }],
     events: [{ type: mongoose.Schema.Types.ObjectId, ref: "Event" }],
