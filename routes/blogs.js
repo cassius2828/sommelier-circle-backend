@@ -17,15 +17,23 @@ router.post("/", upload.single("img"), blogsRouter.postNewBlog);
 router.get("/", blogsRouter.getAllBlogs);
 
 ///////////////////////////
+// GET | All Blogs
+///////////////////////////
+router.get("/landing", blogsRouter.getLandingBlogs);
+///////////////////////////
 // GET | Show Blog
 ///////////////////////////
 router.get("/:blogId", blogsRouter.getSingleBlog);
 
-
 ///////////////////////////
 // * PUT | Edit Blog
 ///////////////////////////
-router.put("/:blogId", upload.single("img"), verifyToken, blogsRouter.putEditBlog);
+router.put(
+  "/:blogId",
+  upload.single("img"),
+  verifyToken,
+  blogsRouter.putEditBlog
+);
 
 ///////////////////////////
 // ! DELETE | Delete Blog
@@ -38,6 +46,5 @@ router.delete("/:blogId", verifyToken, blogsRouter.deleteBlog);
 router.get("/user-blogs/:userId", verifyToken, blogsRouter.getMyBlogs);
 
 module.exports = router;
-
 
 module.exports = router;

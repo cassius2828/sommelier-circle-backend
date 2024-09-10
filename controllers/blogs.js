@@ -103,6 +103,37 @@ const getAllBlogs = async (req, res) => {
     res.status(500).json({ error: "An error occurred while retrieving blogs" });
   }
 };
+
+///////////////////////////
+// GET | Landing Blogs
+///////////////////////////
+const getLandingBlogs = async (req, res) => {
+  const adminId = "669190f598a19fabd8baa1a4";
+  try {
+    // finds all blogs except for those created by the admin
+    let blogs = await BlogModel.find({ owner: { $ne: adminId } })
+      .limit()
+      .populate({
+        path: "owner",
+        select: "username profileImg",
+      })
+      .sort({ createdAt: -1 });
+
+    if (!blogs) {
+      return res
+        .status(404)
+        .json({ error: "No blogs array was able to be found" });
+    }
+    if (blogs.length === 0) {
+      return res.status(200).json([]);
+    }
+    blogs = getRelativeTime(blogs);
+    res.status(200).json(blogs);
+  } catch (err) {
+    console.error("Error retrieving user blogs:", err);
+    res.status(500).json({ error: "An error occurred while retrieving blogs" });
+  }
+};
 ///////////////////////////
 // GET | User's Blogs
 ///////////////////////////
@@ -274,24 +305,21 @@ const putEditBlog = async (req, res) => {
 };
 
 const getFeaturedBlogs = async (req, res) => {
-  const featuredBlogsIds = [
-    '1', '2', '3' 
-  ]
+  const featuredBlogsIds = ["1", "2", "3"];
 
   try {
     const featuredBlogs = await BlogModel.aggregate([
       {
-        $match: { _id: { $in: featuredBlogsIds } }
-      }
+        $match: { _id: { $in: featuredBlogsIds } },
+      },
     ]);
 
     res.status(200).json(featuredBlogs);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Unable to retrieve featured blogs' });
+    res.status(500).json({ error: "Unable to retrieve featured blogs" });
   }
 };
-
 
 module.exports = {
   postNewBlog,
@@ -299,7 +327,9 @@ module.exports = {
   getSingleBlog,
   deleteBlog,
   putEditBlog,
-  getAllBlogs,getFeaturedBlogs
+  getAllBlogs,
+  getFeaturedBlogs,
+  getLandingBlogs,
 };
 
 ///////////////////////////
