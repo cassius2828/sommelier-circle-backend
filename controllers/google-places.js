@@ -30,14 +30,14 @@ const getNearbySearches = async (req, res) => {
 ///////////////////////////
 // GET | Photo of Establishment
 ///////////////////////////
-const getPhotoOfRoom = async (req, res) => {
+const getPhotoOfLocation = async (req, res) => {
   const { photo_reference, key, deviceWidth } = req.query;
   let url;
   try {
     if (!photo_reference) {
       return res.status(400).json({ error: "No photo reference was found" });
     }
-// sizes of device from frontend to ensure photo quality
+    // sizes of device from frontend to ensure photo quality
     if (deviceWidth === "mobile") {
       url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=425&photo_reference=${photo_reference}&key=${key}`;
     } else if (deviceWidth === "desktop") {
@@ -121,7 +121,7 @@ const getPlaceDetails = async (req, res) => {
 
 module.exports = {
   getNearbySearches,
-  getPhotoOfRoom,
+  getPhotoOfLocation,
   getSearchQueryLocationResults,
   getPlaceDetails,
 };

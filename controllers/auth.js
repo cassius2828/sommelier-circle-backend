@@ -39,7 +39,7 @@ async function login(req, res) {
 }
 
 ///////////////////////////
-// User Signup Function         
+// User Signup Function
 ///////////////////////////
 async function signup(req, res) {
   let { username, password, email } = req.body;
@@ -105,7 +105,33 @@ async function signup(req, res) {
   }
 }
 
+///////////////////////////
+// GET | Token From OAuth login
+///////////////////////////
+const getTokenFromOAuthLogin = async (req, res) => {
+  const token = req.cookies.jwt;
+  if (token) {
+   
+    res.status(200).json({ token });
+  } else {
+    res.status(401).json({ message: " Not Authenticated" });
+  }
+};
+
+///////////////////////////
+// GET | Google Callback
+///////////////////////////
+const getGoogleCallback = async (req, res) => {
+  const token = jwt.sign({ user: req.user }, process.env.JWT_SECRET);
+  res.cookie("jwt", token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+  });
+  res.redirect("http://localhost:5173/");
+};
 module.exports = {
   signup,
   login,
+  getTokenFromOAuthLogin,
+  getGoogleCallback,
 };
