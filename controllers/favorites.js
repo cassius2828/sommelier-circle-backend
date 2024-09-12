@@ -5,11 +5,22 @@ const User = require("../models/user");
 ///////////////////////////
 const getUserFavorites = async (req, res, favoriteType) => {
   const { userId } = req.query;
+  let user;
   try {
     // get user
-    const user = await User.findById(userId).populate(
-      `favorites.${favoriteType}`
-    );
+    if (favoriteType === "blogs" || favoriteType === 'events') {
+       user = await User.findById(userId).populate({
+        path: `favorites.${favoriteType}`,
+        populate: {
+          path: "owner",
+          select: "username profileImg",
+        },
+      });
+    } else {
+       user = await User.findById(userId).populate(
+        `favorites.${favoriteType}`
+      );
+    }
     // check if user exists
     if (!user) {
       return res
