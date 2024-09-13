@@ -1,5 +1,8 @@
 const User = require("../models/user");
+const axios = require("axios");
 
+const GOOGLE_PLACES_BASE_URL = `https://maps.googleapis.com/maps/api/place`;
+const GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 ///////////////////////////
 // GET | User Favorites
 ///////////////////////////
@@ -8,8 +11,8 @@ const getUserFavorites = async (req, res, favoriteType) => {
   let user;
   try {
     // get user
-    if (favoriteType === "blogs" || favoriteType === 'events') {
-       user = await User.findById(userId).populate({
+    if (favoriteType === "blogs" || favoriteType === "events") {
+      user = await User.findById(userId).populate({
         path: `favorites.${favoriteType}`,
         populate: {
           path: "owner",
@@ -17,9 +20,7 @@ const getUserFavorites = async (req, res, favoriteType) => {
         },
       });
     } else {
-       user = await User.findById(userId).populate(
-        `favorites.${favoriteType}`
-      );
+      user = await User.findById(userId).populate(`favorites.${favoriteType}`);
     }
     // check if user exists
     if (!user) {
@@ -161,31 +162,6 @@ const deleteRemoveFromFavorites = async (req, res, model, favoriteType) => {
 };
 
 ///////////////////////////
-// GET | User Favorites | LOCATIONS
-///////////////////////////
-const getLocationsUserFavorites = async (req, res) => {
-  const { userId } = req.query;
-  try {
-    const user = await User.findById(userId);
-    if (!user) {
-      return res
-        .status(404)
-        .json({ message: `Cannot find user with id of ${userId}` });
-    }
-    // TODO: set up google places api to handle array of place_ids to send data back to client
-    // right now we have an array of place_id. In order to get the data we want on the frontend
-    // we will need to call the google places api to get the response we want to send the acutal data back to the client
-
-    // res.status(200).json(user.favorites.locations)
-  } catch (err) {
-    console.error(err);
-    res
-      .status(500)
-      .json({ error: `Unable to get user's favorite locations list` });
-  }
-};
-
-///////////////////////////
 // ? POST | Add to favorites | LOCATIONS
 ///////////////////////////
 
@@ -255,11 +231,64 @@ const deleteLocationsRemoveFromFavorites = async (req, res) => {
   }
 };
 
+///////////////////////////
+// GET | User Favorites | LOCATIONS
+///////////////////////////
+const getLocationsUserFavorites = async (req, res) => {
+  const { userId } = req.query;
+  try {
+    // Fetch the user by ID
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({
+        message: `Cannot find user with id of ${userId}`,
+      });
+    }
+    console.log(user.favorites, ' <-- user.favorites')
+
+    // Extract placeIdArray from user's favorites
+    const placeIdArray = user.favorites?.locations;
+    console.log(placeIdArray, ' <-- place id array')
+    if (!placeIdArray || placeIdArray.length < 1) {
+      return res.status(404).json({
+        message: "Favorite locations list is empty",
+      });
+    }
+
+    // Fetch place details for each place_id using Google Places API
+    const favoritePlacesDetailsResponse = await Promise.all(
+      placeIdArray.map(async (place) => {
+        const response = await axios.post(
+          `${GOOGLE_PLACES_BASE_URL}/details/json?place_id=${place}&key=${GOOGLE_PLACES_API_KEY}`
+        );
+        console.log(response.data, ' <-- indv response from google place locaiton api')
+        return response.data;
+      })
+    );
+
+    // If no data is returned from Google Places API
+    if (favoritePlacesDetailsResponse.length === 0) {
+      return res.status(400).json({
+        message:
+          "Unable to get data from Google Places API to convert place_id to place details for each location in the user's favorites",
+      });
+    }
+
+    // Return the favorite places details
+    res.status(200).json(favoritePlacesDetailsResponse);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      error: "Unable to retrieve place details from Google Places API",
+    });
+  }
+};
+
 module.exports = {
   deleteRemoveFromFavorites,
-  getUserFavorites,
-  postAddToFavorites,
   deleteLocationsRemoveFromFavorites,
+  getUserFavorites,
   getLocationsUserFavorites,
+  postAddToFavorites,
   postLocationsAddToFavorites,
 };
