@@ -151,10 +151,37 @@ const putEditUserInfo = async (req, res) => {
   }
 };
 
+const checkUserHasSocialMediaPlatform = async (req, res) => {
+  const { platform } = req.query;
+  const { userId } = req.params;
+  try {
+    const user = await UserModel.findById(userId);
+    if (!user) {
+      return res.status(404).json({ error: "User does not exist." });
+    }
+    if (
+      !user.socialMedia[platform].username ||
+      !user.socialMedia[platform].link
+    ) {
+      return res.status(400).json({
+        error: `User is missing either a username or a link for ${platform}`,
+      });
+    }
+    res.status(200).json({
+      message: `User does have ${platform} credentials in thier profile`,
+    });
+  } catch (err) {
+    res.status(500).json({
+      error: `Unable to check if user has ${platform}. Error: ${err}`,
+    });
+  }
+};
+
 module.exports = {
   profile,
   postFollowUser,
   postUnfollowUser,
   getSearchUsers,
   putEditUserInfo,
+  checkUserHasSocialMediaPlatform,
 };
