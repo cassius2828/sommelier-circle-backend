@@ -53,7 +53,7 @@ const getPhotoOfLocation = async (req, res) => {
 
     res.status(200).json(`data:${mimeType};base64,${base64Image}`);
   } catch (err) {
-    // console.error(`Error fetching photo: ${err.message}`, err);
+    console.error(`Error fetching photo: ${err.message}`, err);
     res.status(500).json({
       error: "Cannot retrieve photos from Google Places photo_reference",
       details: err.message,
@@ -83,16 +83,16 @@ const getSearchQueryLocationResults = async (req, res) => {
           },
         }
       );
-      // console.log(response.data);
+      console.log(response.data);
       return res.status(200).json(response.data);
     } else {
       return res.status(400).json([]);
     }
   } catch (err) {
-    // console.error(
-    //   `Error fetching query results for wine locations: ${err.message}`,
-    //   err
-    // );
+    console.error(
+      `Error fetching query results for wine locations: ${err.message}`,
+      err
+    );
     res.status(500).json({
       error: "Cannot retrieve query results for wine locations",
       details: err.message,
@@ -112,7 +112,7 @@ const getPlaceDetails = async (req, res) => {
     );
     res.status(200).json(response.data);
   } catch (err) {
-    // console.error(err);
+    console.error(err);
     res.status(500).json({
       error: "Unable to retrieve place details from google places api",
     });
