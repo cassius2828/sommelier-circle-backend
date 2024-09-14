@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 const passport = require("./config/googlePassport"); // Require the Passport config
 const session = require("express-session");
 const PORT = process.env.PORT || 3000;
-const UserModel = require('./models/user')
+const UserModel = require("./models/user");
 ///////////////////////////
 // Connect to DB
 ///////////////////////////
@@ -52,12 +52,7 @@ app.use(passport.session());
 ///////////////////////////
 // Middleware
 ///////////////////////////
-app.use(
-  cors({
-    origin: 'http://localhost:5173',
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 // app.use(morgan());
