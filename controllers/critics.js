@@ -8,6 +8,7 @@ const getAllCritics = async (req, res) => {
   const limit = 9;
   const skip = (page - 1) * limit;
   try {
+    // find 9 ciritics at a time
     const critics = await Critic.find({}).skip(skip).limit(limit);
     if (critics.length == 0) {
       return res
@@ -25,6 +26,7 @@ const getAllCritics = async (req, res) => {
 ///////////////////////////
 const getFeaturedCritics = async (req, res) => {
   try {
+    // select first 3 critics
     const critics = await Critic.aggregate([
       {
         $limit: 3,

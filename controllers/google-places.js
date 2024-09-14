@@ -83,7 +83,6 @@ const getSearchQueryLocationResults = async (req, res) => {
           },
         }
       );
-      console.log(response.data);
       return res.status(200).json(response.data);
     } else {
       return res.status(400).json([]);
@@ -105,7 +104,7 @@ const getSearchQueryLocationResults = async (req, res) => {
 ///////////////////////////
 const getPlaceDetails = async (req, res) => {
   const { placeId } = req.query;
-  console.log(placeId, " <-- place_id");
+
   try {
     const response = await axios.get(
       `${GOOGLE_PLACES_BASE_URL}/details/json?place_id=${placeId}&key=${GOOGLE_PLACES_API_KEY}`

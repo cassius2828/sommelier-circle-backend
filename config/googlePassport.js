@@ -2,7 +2,7 @@
 
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const UserModel = require("../models/user"); // Adjust the path to your UserModel
+const UserModel = require("../models/user");
 const nodemailer = require("nodemailer");
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_OAUTH_CLIENT_ID;
@@ -16,8 +16,8 @@ passport.use(
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        let user = await UserModel.findOne({ email:profile.emails[0].value });
-        // let user = await UserModel.findOne({ googleId: profile.id });
+        let user = await UserModel.findOne({ email: profile.emails[0].value });
+
         if (!user) {
           const randomPassword = crypto.randomBytes(8).toString("hex");
           // this will generate random trail after first name for unique username
@@ -35,12 +35,13 @@ passport.use(
             profileImg: profile.photos[0].value,
             password: randomPassword,
           });
-        //   save so we can use the user to access the email property and send the password 
+          //   save so we can use the user to access the email property and send the password
           await user.save();
           await sendPasswordEmail(user.email, randomPassword);
-        } else if(user && !user.googleId) { // if user exists but does not have googleid yet then add it
-user.googleId = profile.id
-await user.save()
+        } else if (user && !user.googleId) {
+          // if user exists but does not have googleid yet then add it
+          user.googleId = profile.id;
+          await user.save();
         }
         return done(null, user);
       } catch (err) {
@@ -62,7 +63,7 @@ async function sendPasswordEmail(email, password) {
     },
   });
 
-//   mail options
+  //   mail options
   let mailOptions = {
     from: process.env.ADMIN_EMAIL,
     to: email,
@@ -71,7 +72,6 @@ async function sendPasswordEmail(email, password) {
   };
   await transporter.sendMail(mailOptions);
 }
-
 
 //////////////////////////////////////////////////////
 // Serialize and deserialize user instances to and from the session

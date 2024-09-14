@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
   },
   favorites: {
     wines: [{ type: mongoose.Schema.Types.ObjectId, ref: "Wine" }],
-    locations:[String],
+    locations: [String],
     critics: [{ type: mongoose.Schema.Types.ObjectId, ref: "Critic" }],
     blogs: [{ type: mongoose.Schema.Types.ObjectId, ref: "Blog" }],
     events: [{ type: mongoose.Schema.Types.ObjectId, ref: "Event" }],
@@ -95,8 +95,5 @@ userSchema.pre("save", async function (next) {
   }
   next();
 });
-
-// const UserModel = mongoose.model('User', userSchema)
-// module.exports = UserModel
 
 module.exports = mongoose.model("User", userSchema);

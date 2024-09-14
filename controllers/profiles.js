@@ -1,4 +1,5 @@
 const UserModel = require("../models/user");
+
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 const { v4: uuidv4 } = require("uuid");
 
@@ -19,10 +20,8 @@ async function profile(req, res) {
       throw new Error("Profile not found.");
     }
     // send back the user
-
     res.json(userDoc);
   } catch (err) {
-    // console.log(err);
     if (res.statusCode === 404) {
       res.status(404).json({ error: err.message });
     } else {
@@ -61,7 +60,7 @@ const postFollowUser = async (req, res) => {
     await otherUserDoc.save();
     res.status(200).json({ message: "Successfully followed the user" });
   } catch (err) {
-    // console.error(err);
+    console.error(err);
     res.status(500).json({ error: "Unable to follow targeted user" });
   }
 };
@@ -97,7 +96,7 @@ const postUnfollowUser = async (req, res) => {
     await otherUserDoc.save();
     res.status(200).json({ message: "Successfully unfollowed the user" });
   } catch (err) {
-    // console.error(err);
+    console.error(err);
     res.status(500).json({ error: "Unable to unfollow targeted user" });
   }
 };
@@ -106,8 +105,6 @@ const postUnfollowUser = async (req, res) => {
 ///////////////////////////
 const getSearchUsers = async (req, res) => {
   const { query } = req.params;
-  // ? for some reason this causes an error with search value and string for the profile function??
-
   try {
     const users = await UserModel.find({
       username: { $regex: query, $options: "i" },
@@ -125,115 +122,59 @@ const getSearchUsers = async (req, res) => {
 // * PUT | Edit User Info
 ///////////////////////////
 const putEditUserInfo = async (req, res) => {
-  // TODO: Add ability to upload photo (and delete current photo from s3 bucket)
-  console.log(req.body, "<-- req.body");
-  console.log(req.file, " <-- req.file");
   const { userId } = req.params;
-  const { username, displayedName, email } = req.body;
   const {
-    twitterUsername,
-    twitterLink,
-    instagramUsername,
-    instagramLink,
-    facebookUsername,
+    displayedName,
+    email,
     facebookLink,
-    linkedInUsername,
+    facebookUsername,
+    instagramLink,
+    instagramUsername,
     linkedInLink,
+    linkedInUsername,
+    twitterLink,
+    twitterUsername,
+    username,
   } = req.body;
-  let formData;
+
   try {
     const user = await UserModel.findById(userId);
     if (!user) {
       return res.status(404).json({ message: "No user was found" });
     }
+    // set up s3 variables
+    const filePath = `sommelier-circle/profile-imgs/${uuidv4()}-${
+      req.file.originalname
+    }`;
+    const params = {
+      Bucket: process.env.BUCKET_NAME,
+      Key: filePath,
+      Body: req.file.buffer,
+    };
+    const command = new PutObjectCommand(params);
+    const data = await s3.send(command);
 
-    let filePath = "";
-    let params;
-    //  = {
-    //   Bucket: process.env.BUCKET_NAME,
-    //   Key: filePath,
-    //   Body:req.file.buffer
-    // }
-    let command;
-    //  = new PutObjectCommand(params)
-    if (user.profileImg && !req.file) {
-      console.log("user has profile image and no file was sent");
-      formData = {
-        profileImg: user.profileImg,
-        username,
-        displayedName,
-        email,
-        socialMedia: {
-          twitter: { username: twitterUsername, link: twitterLink },
-          instagram: { username: instagramUsername, link: instagramLink },
-          facebook: { username: facebookUsername, link: facebookLink },
-          linkedIn: { username: linkedInUsername, link: linkedInLink },
-        },
-      };
-    } else {
-      console.log("file was sent");
+    const formData = {
+      profileImg: req.file
+        ? `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`
+        : user.profileImg,
+      username,
+      displayedName,
+      email,
+      socialMedia: {
+        twitter: { username: twitterUsername, link: twitterLink },
+        instagram: { username: instagramUsername, link: instagramLink },
+        facebook: { username: facebookUsername, link: facebookLink },
+        linkedIn: { username: linkedInUsername, link: linkedInLink },
+      },
+    };
 
-      filePath = `sommelier-circle/profile-imgs/${uuidv4()}-${
-        req.file.originalname
-      }`;
-      params = {
-        Bucket: process.env.BUCKET_NAME,
-        Key: filePath,
-        Body: req.file.buffer,
-      };
-      console.log(
-        `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazon.com/${filePath}`
-      );
-      command = new PutObjectCommand(params);
-      const data = await s3.send(command);
-
-      formData = {
-        profileImg: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
-        username,
-        displayedName,
-        email,
-        socialMedia: {
-          twitter: { username: twitterUsername, link: twitterLink },
-          instagram: { username: instagramUsername, link: instagramLink },
-          facebook: { username: facebookUsername, link: facebookLink },
-          linkedIn: { username: linkedInUsername, link: linkedInLink },
-        },
-      };
-    }
-    const updatedUserDoc = await UserModel.findByIdAndUpdate(userId, formData);
-    if (!updatedUserDoc) {
-      return res.status(400).json({ message: "Updated user doc is not found" });
-    }
-    res.status(200).json(updatedUserDoc);
+    user.set(formData);
+    await user.save();
+    res.status(200).json(user);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: `Unable to edit user info` });
-  }
-};
-
-const checkUserHasSocialMediaPlatform = async (req, res) => {
-  const { platform } = req.query;
-  const { userId } = req.params;
-  try {
-    const user = await UserModel.findById(userId);
-    if (!user) {
-      return res.status(404).json({ error: "User does not exist." });
-    }
-    if (
-      !user.socialMedia[platform].username ||
-      !user.socialMedia[platform].link
-    ) {
-      return res.status(400).json({
-        error: `User is missing either a username or a link for ${platform}`,
-      });
-    }
-    res.status(200).json({
-      message: `User does have ${platform} credentials in thier profile`,
-    });
-  } catch (err) {
-    res.status(500).json({
-      error: `Unable to check if user has ${platform}. Error: ${err}`,
-    });
   }
 };
 
@@ -243,5 +184,4 @@ module.exports = {
   postUnfollowUser,
   getSearchUsers,
   putEditUserInfo,
-  checkUserHasSocialMediaPlatform,
 };

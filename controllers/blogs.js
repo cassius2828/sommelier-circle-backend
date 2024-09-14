@@ -1,7 +1,9 @@
+// s3 configs
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 const { v4: uuidv4 } = require("uuid");
 const BlogModel = require("../models/blog");
 const s3Client = new S3Client({ region: process.env.AWS_REGION });
+// rich text editor and date packages
 const sanitizeHTML = require("sanitize-html");
 const { formatDistanceToNow } = require("date-fns");
 
@@ -10,11 +12,6 @@ const { formatDistanceToNow } = require("date-fns");
 ///////////////////////////
 const postNewBlog = async (req, res) => {
   const { title, content, owner } = req.body;
-
-  // Debugging logs for input data
-  // console.log(title, " <-- title");
-  // console.log(content, " <-- content");
-  // console.log(req.file, " <-- file");
 
   // Check for missing fields
   if (!title || !content) {
@@ -139,14 +136,13 @@ const getLandingBlogs = async (req, res) => {
 ///////////////////////////
 const getMyBlogs = async (req, res) => {
   const { userId } = req.params;
-  // console.log(userId);
+
   try {
     let userBlogs = await BlogModel.find({ owner: userId }).populate({
       path: "owner",
       select: "username profileImg",
     });
 
-    //
     if (!userBlogs) {
       return res
         .status(404)
@@ -168,6 +164,7 @@ const getMyBlogs = async (req, res) => {
 const getSingleBlog = async (req, res) => {
   const { blogId } = req.params;
   try {
+    // populate owner username and profile image for all blogs when viewing single blog
     const selectedBlog = await BlogModel.findById(blogId).populate({
       path: "owner",
       select: "username profileImg",
@@ -198,8 +195,6 @@ const deleteBlog = async (req, res) => {
       return res.status(404).json({ error: "cannot find blog to delete" });
     }
     // if the user who is trying to delete is not the owner of the blog then return
-    // console.log(blogToDelete.owner, " blog owmer");
-    // console.log(userId, " userId");
     if (blogToDelete.owner.toString() !== userId.toString()) {
       return res
         .status(400)
@@ -221,10 +216,13 @@ const deleteBlog = async (req, res) => {
 // * PUT | Edit Blog
 ///////////////////////////
 const putEditBlog = async (req, res) => {
+  // params
   const { blogId } = req.params;
   const userId = req.user.user._id;
+  // body
   let { title, content } = req.body;
   content = sanitize(content);
+  // photo
   const { file } = req;
 
   try {
@@ -304,10 +302,14 @@ const putEditBlog = async (req, res) => {
   }
 };
 
+///////////////////////////
+// GET | Featured Blogs
+///////////////////////////
 const getFeaturedBlogs = async (req, res) => {
   const featuredBlogsIds = ["1", "2", "3"];
 
   try {
+    // only select the first 3 blogs
     const featuredBlogs = await BlogModel.aggregate([
       {
         $match: { _id: { $in: featuredBlogsIds } },

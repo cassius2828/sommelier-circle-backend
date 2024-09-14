@@ -2,7 +2,6 @@
 // AWS SDK and Event Model
 ///////////////////////////
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
-
 const { v4: uuidv4 } = require("uuid");
 const Event = require("../models/event");
 
@@ -13,9 +12,6 @@ const s3Client = new S3Client({ region: process.env.AWS_REGION });
 // ? POST | Create Event Posting
 ///////////////////////////
 const postCreateEventPosting = async (req, res) => {
-  console.log(req.body, " <-- req.body");
-  console.log(req, "<-- request");
-  console.log(req.file, " <-- req.file");
   try {
     // Create the file path and parameters for S3 upload
     const filePath = `sommelier-circle/event-imgs/${uuidv4()}-${
@@ -39,10 +35,7 @@ const postCreateEventPosting = async (req, res) => {
     if (!newEvent) {
       return res.status(400).json({ error: "New event was cannot be found" });
     }
-    // const duplicateEvent = await Event.findOne(req.body);
-    // if (duplicateEvent) {
-    //   return res.status(400).json({ error: "Event already exist" });
-    // }
+
     res.status(200).json(newEvent);
   } catch (err) {
     console.error(err);
@@ -55,8 +48,7 @@ const postCreateEventPosting = async (req, res) => {
 ///////////////////////////
 const getExploreEvents = async (req, res) => {
   const { userId, searchQuery } = req.query;
-  console.log(req.query, " <-- req.qeury");
-  console.log(searchQuery, " <-- search query");
+
   try {
     let query = { owner: { $ne: userId } };
 
@@ -115,7 +107,7 @@ const getFilterExploreEvents = async (req, res) => {
 ///////////////////////////
 const getUserEvents = async (req, res) => {
   const { userId, searchQuery } = req.query;
-  console.log(searchQuery);
+
   try {
     let query = { owner: userId };
     if (searchQuery) {
@@ -160,16 +152,6 @@ const getEventDetails = async (req, res) => {
   }
 };
 
-// const deleteAllEvents = async (req,res) => {
-//   try {
-//     await Event.deleteMany({})
-//     console.log('deleted all events')
-//   } catch (err) {
-//     console.error(err);
-//     console.log(`Unable to delete all events`)
-//   }
-// }
-// deleteAllEvents()
 
 ///////////////////////////
 // * PUT | Edit Event

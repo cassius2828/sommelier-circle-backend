@@ -7,7 +7,6 @@ const upload = multer()
 
 
 router.get('/search/:query', profileCtrl.getSearchUsers)
-router.get('/social-media/:userId', profileCtrl.checkUserHasSocialMediaPlatform);
 router.post('/:userId/follow/:otherUser', verifyToken, profileCtrl.postFollowUser)
 router.post('/:userId/unfollow/:otherUser', verifyToken, profileCtrl.postUnfollowUser)
 router.put('/:userId', upload.single('photo'), profileCtrl.putEditUserInfo)

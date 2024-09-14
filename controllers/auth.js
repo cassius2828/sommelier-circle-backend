@@ -2,7 +2,6 @@
 // AWS SDK and User Model
 ///////////////////////////
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
-const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const UserModel = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -111,7 +110,6 @@ async function signup(req, res) {
 const getTokenFromOAuthLogin = async (req, res) => {
   const token = req.cookies.jwt;
   if (token) {
-   
     res.status(200).json({ token });
   } else {
     res.status(401).json({ message: " Not Authenticated" });
