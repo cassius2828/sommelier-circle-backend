@@ -6,7 +6,7 @@ const GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 // GET | Nearby Establishments
 ///////////////////////////
 const getNearbySearches = async (req, res) => {
-  const { lat, lng, radius, type, keyword,  } = req.query;
+  const { lat, lng, radius, type, keyword } = req.query;
 
   try {
     const response = await axios.get(
@@ -17,7 +17,7 @@ const getNearbySearches = async (req, res) => {
           radius,
           type,
           keyword,
-          key:GOOGLE_PLACES_API_KEY,
+          key: GOOGLE_PLACES_API_KEY,
         },
       }
     );
@@ -31,7 +31,7 @@ const getNearbySearches = async (req, res) => {
 // GET | Photo of Establishment
 ///////////////////////////
 const getPhotoOfLocation = async (req, res) => {
-  const { photo_reference,  deviceWidth } = req.query;
+  const { photo_reference, deviceWidth } = req.query;
   let url;
   try {
     if (!photo_reference) {
