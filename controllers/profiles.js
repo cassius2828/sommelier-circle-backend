@@ -1,4 +1,9 @@
 const UserModel = require("../models/user");
+const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
+const { v4: uuidv4 } = require("uuid");
+
+// initalize s3 instance
+const s3 = new S3Client({ region: process.env.AWS_REGION });
 
 ///////////////////////////
 // GET | Get user profile
@@ -17,7 +22,7 @@ async function profile(req, res) {
 
     res.json(userDoc);
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     if (res.statusCode === 404) {
       res.status(404).json({ error: err.message });
     } else {
@@ -56,7 +61,7 @@ const postFollowUser = async (req, res) => {
     await otherUserDoc.save();
     res.status(200).json({ message: "Successfully followed the user" });
   } catch (err) {
-    console.error(err);
+    // console.error(err);
     res.status(500).json({ error: "Unable to follow targeted user" });
   }
 };
@@ -92,7 +97,7 @@ const postUnfollowUser = async (req, res) => {
     await otherUserDoc.save();
     res.status(200).json({ message: "Successfully unfollowed the user" });
   } catch (err) {
-    console.error(err);
+    // console.error(err);
     res.status(500).json({ error: "Unable to unfollow targeted user" });
   }
 };
@@ -121,26 +126,81 @@ const getSearchUsers = async (req, res) => {
 ///////////////////////////
 const putEditUserInfo = async (req, res) => {
   // TODO: Add ability to upload photo (and delete current photo from s3 bucket)
+  console.log(req.body, "<-- req.body");
+  console.log(req.file, " <-- req.file");
   const { userId } = req.params;
   const { username, displayedName, email } = req.body;
-  const { twitter, instagram, facebook, linkedIn } = req.body.socialMedia;
-  const formData = {
-    username,
-    displayedName,
-    email,
-    socialMedia: {
-      twitter: { username: twitter.username, link: twitter.link },
-      instagram: { username: instagram.username, link: instagram.link },
-      facebook: { username: facebook.username, link: facebook.link },
-      linkedIn: { username: linkedIn.username, link: linkedIn.link },
-    },
-  };
-  console.log(twitter.username, " <-- twitter username");
+  const {
+    twitterUsername,
+    twitterLink,
+    instagramUsername,
+    instagramLink,
+    facebookUsername,
+    facebookLink,
+    linkedInUsername,
+    linkedInLink,
+  } = req.body;
+  let formData;
   try {
-    const updatedUserDoc = await UserModel.findByIdAndUpdate(userId, formData, {
-      new: true,
-    });
+    const user = await UserModel.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: "No user was found" });
+    }
 
+    let filePath = "";
+    let params;
+    //  = {
+    //   Bucket: process.env.BUCKET_NAME,
+    //   Key: filePath,
+    //   Body:req.file.buffer
+    // }
+    let command;
+    //  = new PutObjectCommand(params)
+    if (user.profileImg && !req.file) {
+      console.log("user has profile image and no file was sent");
+      formData = {
+        profileImg: user.profileImg,
+        username,
+        displayedName,
+        email,
+        socialMedia: {
+          twitter: { username: twitterUsername, link: twitterLink },
+          instagram: { username: instagramUsername, link: instagramLink },
+          facebook: { username: facebookUsername, link: facebookLink },
+          linkedIn: { username: linkedInUsername, link: linkedInLink },
+        },
+      };
+    } else {
+      console.log("file was sent");
+
+      filePath = `sommelier-circle/profile-imgs/${uuidv4()}-${
+        req.file.originalname
+      }`;
+      params = {
+        Bucket: process.env.BUCKET_NAME,
+        Key: filePath,
+        Body: req.file.buffer,
+      };
+      console.log(
+        `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazon.com/${filePath}`
+      );
+      command = new PutObjectCommand(params);
+      const data = await s3.send(command);
+
+      formData = {
+        profileImg: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
+        username,
+        displayedName,
+        email,
+        socialMedia: {
+          twitter: { username: twitterUsername, link: twitterLink },
+          instagram: { username: instagramUsername, link: instagramLink },
+          facebook: { username: facebookUsername, link: facebookLink },
+          linkedIn: { username: linkedInUsername, link: linkedInLink },
+        },
+      };
+    }
+    const updatedUserDoc = await UserModel.findByIdAndUpdate(userId, formData);
     if (!updatedUserDoc) {
       return res.status(400).json({ message: "Updated user doc is not found" });
     }
