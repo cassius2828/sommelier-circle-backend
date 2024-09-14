@@ -6,7 +6,7 @@ const GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 // GET | Nearby Establishments
 ///////////////////////////
 const getNearbySearches = async (req, res) => {
-  const { lat, lng, radius, type, keyword, key } = req.query;
+  const { lat, lng, radius, type, keyword,  } = req.query;
 
   try {
     const response = await axios.get(
@@ -17,7 +17,7 @@ const getNearbySearches = async (req, res) => {
           radius,
           type,
           keyword,
-          key,
+          key:GOOGLE_PLACES_API_KEY,
         },
       }
     );
@@ -31,7 +31,7 @@ const getNearbySearches = async (req, res) => {
 // GET | Photo of Establishment
 ///////////////////////////
 const getPhotoOfLocation = async (req, res) => {
-  const { photo_reference, key, deviceWidth } = req.query;
+  const { photo_reference,  deviceWidth } = req.query;
   let url;
   try {
     if (!photo_reference) {
@@ -39,11 +39,11 @@ const getPhotoOfLocation = async (req, res) => {
     }
     // sizes of device from frontend to ensure photo quality
     if (deviceWidth === "mobile") {
-      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=425&photo_reference=${photo_reference}&key=${key}`;
+      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=425&photo_reference=${photo_reference}&key=${GOOGLE_PLACES_API_KEY}`;
     } else if (deviceWidth === "desktop") {
-      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=2500&photo_reference=${photo_reference}&key=${key}`;
+      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=2500&photo_reference=${photo_reference}&key=${GOOGLE_PLACES_API_KEY}`;
     } else {
-      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=800&photo_reference=${photo_reference}&key=${key}`;
+      url = `${GOOGLE_PLACES_BASE_URL}/photo?maxwidth=800&photo_reference=${photo_reference}&key=${GOOGLE_PLACES_API_KEY}`;
     }
 
     const response = await axios.get(url, { responseType: "arraybuffer" });
