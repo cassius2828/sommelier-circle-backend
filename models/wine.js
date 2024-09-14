@@ -3,15 +3,16 @@ const mongoose = require("mongoose");
 const wineSchema = new mongoose.Schema({
   name: { type: String, required: true },
   category: { type: String, required: true },
-  year: { 
-    type: mongoose.Schema.Types.Mixed, 
+  year: {
+    type: mongoose.Schema.Types.Mixed,
     required: true,
     validate: {
-      validator: function(value) {
-        return typeof value === 'string' || typeof value === 'number';
+      validator: function (value) {
+        return typeof value === "string" || typeof value === "number";
       },
-      message: props => `${props.value} is not a valid year! Year must be a string or a number.`
-    }
+      message: (props) =>
+        `${props.value} is not a valid year! Year must be a string or a number.`,
+    },
   },
   region: { type: String, required: true },
   winery: { type: String },
@@ -22,7 +23,6 @@ const wineSchema = new mongoose.Schema({
   avgPrice: { type: Number },
   img: { type: String, required: true },
   linkToPurchase: { type: String },
-
 });
 
 const WineModel = mongoose.model("Wine", wineSchema);

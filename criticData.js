@@ -1,6 +1,3 @@
-
-
-
 const critics = [
   {
     name: "Robert Parker",

@@ -12,7 +12,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 400,
     img: "https://www.winemadeeasy.com/media/catalog/product/cache/400a650acef16caf799ce948294c4e36/l/a/lafite_rothschild_10_750.png",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjDsPrkpaWHAxV-NdQBHaVRA4AYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHjtjxsRPM7b9a-wJ1xeTRcuXO2BS_nufxXlssKYts2jd4ipzduoThoCAdkQAvD_BwE&sig=AOD64_0QwvuCHj-svI7rxgp3rrWBoqgKZQ&ctype=5&q=&nis=4&ved=2ahUKEwiqkvPkpaWHAxVg8MkDHWKNAYMQ9aACKAB6BAgBEA8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjDsPrkpaWHAxV-NdQBHaVRA4AYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHjtjxsRPM7b9a-wJ1xeTRcuXO2BS_nufxXlssKYts2jd4ipzduoThoCAdkQAvD_BwE&sig=AOD64_0QwvuCHj-svI7rxgp3rrWBoqgKZQ&ctype=5&q=&nis=4&ved=2ahUKEwiqkvPkpaWHAxVg8MkDHWKNAYMQ9aACKAB6BAgBEA8&adurl=",
   },
   {
     name: "Domaine de la Romanee-Conti",
@@ -27,7 +28,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 2000,
     img: "https://cdn.shoplightspeed.com/shops/611413/files/61668776/domaine-romaneee-conti-domaine-de-la-romanee-conti.jpg",
-    linkToPurchase: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thewinewave.com%2Fdomaine-de-la-romanee-conti-drc-2017-romanee-conti.html&psig=AOvVaw0oyuoeoKPw_0f1Hwh-E2NF&ust=1721004041274000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDP_uWlpYcDFQAAAAAdAAAAABAE",
+    linkToPurchase:
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thewinewave.com%2Fdomaine-de-la-romanee-conti-drc-2017-romanee-conti.html&psig=AOvVaw0oyuoeoKPw_0f1Hwh-E2NF&ust=1721004041274000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDP_uWlpYcDFQAAAAAdAAAAABAE",
   },
   {
     name: "Chateau d'Yquem",
@@ -42,7 +44,8 @@ const wines = [
     grape: "Semillon",
     avgPrice: 500,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSaWzjWZPRgIcx3IHG7oUavn53r2EMWokZ8B7yM3Fq5B9-dAaDJzLWwhHQAzyUuDbcWvlYzx9mmkVgeIQD7q-UhenwXe0I98qVIFkZiY6rQY9aRxy3D8HXKHaLO_UXSokqB&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiYwpKLpqWHAxUrLtQBHb1cD34YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGA_EvbulHDpB7uJgCI15o1uidGw_nfnl7Mvly3zKJT9ccO2W2A_PQBoCHSAQAvD_BwE&sig=AOD64_2IvW6AuWnLGz4Rs4wqoC_fsxTz5Q&ctype=5&q=&nis=4&ved=2ahUKEwjb7YuLpqWHAxWCLdAFHSfRC00Q9aACKAB6BAgBEBY&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiYwpKLpqWHAxUrLtQBHb1cD34YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGA_EvbulHDpB7uJgCI15o1uidGw_nfnl7Mvly3zKJT9ccO2W2A_PQBoCHSAQAvD_BwE&sig=AOD64_2IvW6AuWnLGz4Rs4wqoC_fsxTz5Q&ctype=5&q=&nis=4&ved=2ahUKEwjb7YuLpqWHAxWCLdAFHSfRC00Q9aACKAB6BAgBEBY&adurl=",
   },
 
   {
@@ -58,7 +61,8 @@ const wines = [
     grape: "Sauvignon Blanc",
     avgPrice: 30,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRHMaue98dYtcXvYtmkYPoDMVH6-R5jmgHtbMmUtgv1VzlfmVeoEWZD6zAo8xTsTpPH5vhUDeXIJmbmrda-rgU5A4Uhdid_Vwtfi2qAJhRRItAmB6_yW89SPWKJjx38IdW8IusE&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwii6sebpqWHAxXtdX8AHc0wAH8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBn5GmHf7_AJxA9E99MxGmQOy5R_MO2E08bGfIBuBZBrXbqbUbg0lRoC3ZkQAvD_BwE&sig=AOD64_3gP5M0eDfWHut1ZE7KwO_TVbQpXA&ctype=46&q=&ved=2ahUKEwjdg8GbpqWHAxUc4skDHV_VCmEQ9aACKAB6BAgCECE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwii6sebpqWHAxXtdX8AHc0wAH8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBn5GmHf7_AJxA9E99MxGmQOy5R_MO2E08bGfIBuBZBrXbqbUbg0lRoC3ZkQAvD_BwE&sig=AOD64_3gP5M0eDfWHut1ZE7KwO_TVbQpXA&ctype=46&q=&ved=2ahUKEwjdg8GbpqWHAxUc4skDHV_VCmEQ9aACKAB6BAgCECE&adurl=",
   },
   {
     name: "Chateau Ste. Michelle Eroica Riesling",
@@ -104,7 +108,8 @@ const wines = [
     grape: "Vidal Blanc",
     avgPrice: 50,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQo0z2FgMTFPMNm8OFXnUR5O5XYAAVaz-Z40eUXea-8gHwSJTqqmutFN4irOjF62kC5fKdW0CLKNatCKXbdprrOLVGs0rmOXGcsCiBTJtUPwmChrT0OonvAveqtbjLSZ2gi1oY2Og&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiGxo_CpqWHAxUvNtQBHdRbBG8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGq8sZfGy70StwbQHNI-6L_7qFJozWbiJi_B-5-R0IcxiGgNqf8NUhoC0Q4QAvD_BwE&sig=AOD64_1EMVdh2t9EPJx8pKpvlSGaw1l2BQ&ctype=46&q=&ved=2ahUKEwju6onCpqWHAxVY6skDHeqdDUMQ9aACKAB6BAgCECE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiGxo_CpqWHAxUvNtQBHdRbBG8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGq8sZfGy70StwbQHNI-6L_7qFJozWbiJi_B-5-R0IcxiGgNqf8NUhoC0Q4QAvD_BwE&sig=AOD64_1EMVdh2t9EPJx8pKpvlSGaw1l2BQ&ctype=46&q=&ved=2ahUKEwju6onCpqWHAxVY6skDHeqdDUMQ9aACKAB6BAgCECE&adurl=",
   },
   {
     name: "Veuve Clicquot Brut Yellow Label",
@@ -136,7 +141,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 300,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQTTjEUz404HGP1DoaozHrrEaOYWt5Q61odhSXS-7S64SMYCgyq98gSosmOnbnqLeoI-vaBM5epb7vXr5qU-VqCtzTmzwV0bliZiqxE9wbPVTlzFbNRIOow_Zcv54KT8m3nlKYrGus&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjr55PypqWHAxUyNtQBHWXUBV0YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHwQTiQp1GPl0XTroMOwp1Yy_j_S1cRltclAasaliMV86wt2wS3utBoC2wgQAvD_BwE&sig=AOD64_0rWrqGhrB4DJT0XTJf5xB3IQcH_g&ctype=46&q=&ved=2ahUKEwiA2o3ypqWHAxWJxskDHdjFBFQQ9aACKAB6BAgCEBc&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjr55PypqWHAxUyNtQBHWXUBV0YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHwQTiQp1GPl0XTroMOwp1Yy_j_S1cRltclAasaliMV86wt2wS3utBoC2wgQAvD_BwE&sig=AOD64_0rWrqGhrB4DJT0XTJf5xB3IQcH_g&ctype=46&q=&ved=2ahUKEwiA2o3ypqWHAxWJxskDHdjFBFQQ9aACKAB6BAgCEBc&adurl=",
   },
 
   {
@@ -152,7 +158,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 3000,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS5IBkD1M0SGiHWeZ1ZM-xbNv5LVXc1dFDIiZ_pxmPCKXGte-gk8EqHddw-Px2HvmggP6cOKjxp39nfTwkkak-ppyG0Ktx6Zt0Rkkoo9fY6bQT2qPwmn2bbSq_w2TTcO6TkSVApJfbaBz8&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwil6euAp6WHAxV8XX8AHQ9aC5gYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPAZArbqYvcBpJ3TCsCTC0ondwa2pMF0n9gHN2qRFW6swjwXh0DXeBoCXUEQAvD_BwE&sig=AOD64_0tleR-wlNFdSJgG_QSBNbJ7jR48w&ctype=5&q=&nis=4&ved=2ahUKEwjdruWAp6WHAxVU4ckDHYyFDgIQ9aACKAB6BAgFEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwil6euAp6WHAxV8XX8AHQ9aC5gYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPAZArbqYvcBpJ3TCsCTC0ondwa2pMF0n9gHN2qRFW6swjwXh0DXeBoCXUEQAvD_BwE&sig=AOD64_0tleR-wlNFdSJgG_QSBNbJ7jR48w&ctype=5&q=&nis=4&ved=2ahUKEwjdruWAp6WHAxVU4ckDHYyFDgIQ9aACKAB6BAgFEA4&adurl=",
   },
 
   {
@@ -168,7 +175,8 @@ const wines = [
     grape: "Sauvignon Blanc",
     avgPrice: 40,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRHMaue98dYtcXvYtmkYPoDMVH6-R5jmgHtbMmUtgv1VzlfmVeoEWZD6zAo8xTsTpPH5vhUDeXIJmbmrda-rgU5A4Uhdid_Vwtfi2qAJhRRItAmB6_yW89SPWKJjx38IdW8IusE&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi779WQp6WHAxUsN9QBHeBcAn4YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB5xbBqve4jY-B0PTorEuvjZO97zrn7OpHo-n_Z7LP8VQnqEuX5J7hoCkYEQAvD_BwE&sig=AOD64_11DYj2xrbe5KD6FaSRckXhY44uZw&ctype=46&q=&ved=2ahUKEwj8us6Qp6WHAxUaMdAFHellDpgQ9aACKAB6BAgBECE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi779WQp6WHAxUsN9QBHeBcAn4YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB5xbBqve4jY-B0PTorEuvjZO97zrn7OpHo-n_Z7LP8VQnqEuX5J7hoCkYEQAvD_BwE&sig=AOD64_11DYj2xrbe5KD6FaSRckXhY44uZw&ctype=46&q=&ved=2ahUKEwj8us6Qp6WHAxUaMdAFHellDpgQ9aACKAB6BAgBECE&adurl=",
   },
   {
     name: "Taittinger Comtes de Champagne",
@@ -200,7 +208,8 @@ const wines = [
     grape: "Zinfandel",
     avgPrice: 50,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRI-ASNpeN8CWCOaSl7SXiHSxjs6qoARgI1MuJej9idDFwSTXR5UOlcSjwI8TtsDix8ixqhPEJHIeh4S_Q97sDME9fqgV90lZMV3IXxHY6BuXBxdiXx5J8pwHaXR27_sfcIAeGgn7haJA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj_2Zq0p6WHAxVbbn8AHSGmByEYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNVdVdS2Eo0kb51MpCHCTHB8RtDnfymLR3WobtNsC5P7dYAsJuOZ7RoC49sQAvD_BwE&sig=AOD64_10JpzVlzDp2LBJkSVWgQkjpa_lHw&ctype=5&q=&nis=4&ved=2ahUKEwj_mpW0p6WHAxUAG9AFHcqIAc0Q9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj_2Zq0p6WHAxVbbn8AHSGmByEYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNVdVdS2Eo0kb51MpCHCTHB8RtDnfymLR3WobtNsC5P7dYAsJuOZ7RoC49sQAvD_BwE&sig=AOD64_10JpzVlzDp2LBJkSVWgQkjpa_lHw&ctype=5&q=&nis=4&ved=2ahUKEwj_mpW0p6WHAxUAG9AFHcqIAc0Q9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Elio Altare Barolo",
@@ -215,7 +224,8 @@ const wines = [
     grape: "Nebbiolo",
     avgPrice: 100,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSWfb4pdLXrjQv2RYFVPf9vgkkhwX0Uc8tejpEPJ6ENSWfdIJ-Zalblf56bTobm23Z1--kVHh1-a3hoxB8skDJgpCdZLJ9hykZlfZcuo-msbXZytMcRGsfn3CEdz4JDd2-GQgnkCZLG&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj6juvFp6WHAxWHNdQBHeBmCI8YABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPPTkyDQNanK6aDdPGCbJikb55-_aav-w_cQB3PJzEidQSU-AHm5SRoCbxEQAvD_BwE&sig=AOD64_2EoGMQ1ci-iVJpOe8BMB_lzE9Gmg&ctype=5&q=&nis=4&ved=2ahUKEwjCzuPFp6WHAxVd4skDHcbcAyYQ9aACKAB6BAgBEBw&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj6juvFp6WHAxWHNdQBHeBmCI8YABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPPTkyDQNanK6aDdPGCbJikb55-_aav-w_cQB3PJzEidQSU-AHm5SRoCbxEQAvD_BwE&sig=AOD64_2EoGMQ1ci-iVJpOe8BMB_lzE9Gmg&ctype=5&q=&nis=4&ved=2ahUKEwjCzuPFp6WHAxVd4skDHcbcAyYQ9aACKAB6BAgBEBw&adurl=",
   },
   {
     name: "Vega Sicilia Unico",
@@ -230,7 +240,8 @@ const wines = [
     grape: "Tempranillo",
     avgPrice: 400,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQxizg1CXuynXRKJnb2q4p2X99vbgNYXfz-HUKbaxTfpbQbeO4JDE_PNOVpmYmIvhhy5X7AWe2-EAfxD7EL1Iym0F6ovSfGkuRXYlq2YihjD6u9tu3q9_X3I-OH8zwGv7xk&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiwp4rXp6WHAxVLNtQBHYxsBI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFuLdqE_NZ9bbgZCp5t6cMGmySvSNktyhw5G3iE1MjSUnfZfuM7W_xoCnsUQAvD_BwE&sig=AOD64_2vd-yZb8WB5DqiRAUjXoFpvARNTA&ctype=5&q=&nis=4&ved=2ahUKEwiugITXp6WHAxXe78kDHW_SADcQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiwp4rXp6WHAxVLNtQBHYxsBI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFuLdqE_NZ9bbgZCp5t6cMGmySvSNktyhw5G3iE1MjSUnfZfuM7W_xoCnsUQAvD_BwE&sig=AOD64_2vd-yZb8WB5DqiRAUjXoFpvARNTA&ctype=5&q=&nis=4&ved=2ahUKEwiugITXp6WHAxXe78kDHW_SADcQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Kistler Chardonnay",
@@ -245,7 +256,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 80,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQkN6-kjc_UPrmqpiEsK3T5WFNNG7yx0guyLXiQzR0CJdV795a2czaMYmGCJR9sSb7d09vXXXMftKWuXUttNOHpmnbUJbORPftliK54NmRkbcos7s1d4msnMfzsNHHKlHhTpAkrscT_vQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiJko3rp6WHAxXPLdQBHVZHDH0YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAR99t92KBnKul53CgFXfjP2JC0GAGq46VjGgCj2E1DHjR8puSu78xoCztQQAvD_BwE&sig=AOD64_1mKdQ015N9s7lzFnaS4MVtv0l_AA&ctype=5&q=&nis=4&ved=2ahUKEwics4brp6WHAxVg6ckDHcdzCJYQ9aACKAB6BAgHEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiJko3rp6WHAxXPLdQBHVZHDH0YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAR99t92KBnKul53CgFXfjP2JC0GAGq46VjGgCj2E1DHjR8puSu78xoCztQQAvD_BwE&sig=AOD64_1mKdQ015N9s7lzFnaS4MVtv0l_AA&ctype=5&q=&nis=4&ved=2ahUKEwics4brp6WHAxVg6ckDHcdzCJYQ9aACKAB6BAgHEA4&adurl=",
   },
 
   {
@@ -261,7 +273,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 200,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT9AlTSYHBu01Y_jg_DN0mGQWzGLQs5ODSkc6DOYM-wFo2x-gT0Tjy7WsnV7U4hq2VGRF7sHMZAEF6Q-YziP8f8soxbIwfcBpwNhchVrQJ3Njk-wqaG0oGOezpUp9VsdriQPATM0Rxrgw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi94vL_p6WHAxWHNdQBHeBmCI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNCmiN-T-GoQCs1Wuon_HhpLuHtwMkbmGtb19C9EUNpJTA9XKdGoYBoCv1IQAvD_BwE&sig=AOD64_0QPzFXsXFef8ukp0mD-8VLOGpCww&ctype=46&q=&ved=2ahUKEwjoxef_p6WHAxWr6ckDHSn1BOEQ9aACKAB6BAgBEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi94vL_p6WHAxWHNdQBHeBmCI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNCmiN-T-GoQCs1Wuon_HhpLuHtwMkbmGtb19C9EUNpJTA9XKdGoYBoCv1IQAvD_BwE&sig=AOD64_0QPzFXsXFef8ukp0mD-8VLOGpCww&ctype=46&q=&ved=2ahUKEwjoxef_p6WHAxWr6ckDHSn1BOEQ9aACKAB6BAgBEBM&adurl=",
   },
   {
     name: "Clos Apalta",
@@ -276,7 +289,8 @@ const wines = [
     grape: "Carmenere",
     avgPrice: 120,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRhYUXi4lCxB0HtfI9UCejZK5HlrG1t0OTmZG5NKO3aH-n4RCDJXbyaASRmKidLhgVvdwfVM8hunIdzzyVuUpqaDQSt_O7TTyV_l8LbubgpjSJsOioDw9_W_xaW2YhSwYML_ktiKwAZGQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwio6IioqKWHAxVYONQBHY1uCHcYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLxzUMWRw2rJYrnvwbf2GErZooUwj0sL1pTR_wYSKx44NHSolEsB6hoCpOwQAvD_BwE&sig=AOD64_1M6NyhoPAH-rP36TZ1Qtmg0P58Fw&ctype=5&q=&nis=4&ved=2ahUKEwjd5IGoqKWHAxUlG9AFHV7DBVsQ9aACKAB6BAgEEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwio6IioqKWHAxVYONQBHY1uCHcYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLxzUMWRw2rJYrnvwbf2GErZooUwj0sL1pTR_wYSKx44NHSolEsB6hoCpOwQAvD_BwE&sig=AOD64_1M6NyhoPAH-rP36TZ1Qtmg0P58Fw&ctype=5&q=&nis=4&ved=2ahUKEwjd5IGoqKWHAxUlG9AFHV7DBVsQ9aACKAB6BAgEEA4&adurl=",
   },
   {
     name: "Far Niente Chardonnay",
@@ -291,7 +305,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 70,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS_2n3Fi3osbU4zwmMBI3_q3KYY5uwgEWJstv9pzUGKkUE_Wrwu46KM5EdJWvk_1vYsEQFWvSsqFMuCDMQKntDni9VmVghz2DiapFJLsZUFyxnJjSYeRkot1UA4XBslgw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiojZK5qKWHAxV0NtQBHWw7DbYYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK6bCLRhNC4io93K5m9_ddfzubxeHOKisaWq-1RV3F8owTyQHQ68JhoCBvYQAvD_BwE&sig=AOD64_1dDHO0gBAracfn9DB3boQyLJR7ww&ctype=46&q=&ved=2ahUKEwij5Yu5qKWHAxWHMtAFHeGkDAcQ9aACKAB6BAgHEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiojZK5qKWHAxV0NtQBHWw7DbYYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK6bCLRhNC4io93K5m9_ddfzubxeHOKisaWq-1RV3F8owTyQHQ68JhoCBvYQAvD_BwE&sig=AOD64_1dDHO0gBAracfn9DB3boQyLJR7ww&ctype=46&q=&ved=2ahUKEwij5Yu5qKWHAxWHMtAFHeGkDAcQ9aACKAB6BAgHEBM&adurl=",
   },
   {
     name: "Tignanello",
@@ -306,7 +321,8 @@ const wines = [
     grape: "Sangiovese",
     avgPrice: 150,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTsnVvVhhbXhs1KPQguF4Rgd-Tl6v1z0o8nPal2UAemSfggNiL9zuZtVebzNQtLutd2uyN6McbP2Q8gACiJqzMsfDXGaEkAwIVlpKAaQlKnLU8kENt4xtKS4lUvdkF4Ahajl5lW2o3c&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiTv4fIqKWHAxUlN9QBHY0HCZ8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBrWlwd5rk4JmfP6JBQqNijjJrOOEuwrr-W5y0jFojSg5x1-Vf5RyhoCC5cQAvD_BwE&sig=AOD64_18RKzFdhrMdynYIZIPRAFY4H4Gew&ctype=5&q=&nis=4&ved=2ahUKEwiTw4HIqKWHAxUn78kDHRMBBOUQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiTv4fIqKWHAxUlN9QBHY0HCZ8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBrWlwd5rk4JmfP6JBQqNijjJrOOEuwrr-W5y0jFojSg5x1-Vf5RyhoCC5cQAvD_BwE&sig=AOD64_18RKzFdhrMdynYIZIPRAFY4H4Gew&ctype=5&q=&nis=4&ved=2ahUKEwiTw4HIqKWHAxUn78kDHRMBBOUQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Joseph Phelps Insignia",
@@ -321,7 +337,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 250,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR86PcsHhHM3GMe5EU1vULwgDC0kzhyY7mi3ywft9nvW21Y7kX5WppNGaEOzkDJlcsrMdsDIBhlkpM_Djlq__Ezp4NRcI0Rzqpr8G3a3MVwgzfFus8vrlYblvLAs3uQcWchAMUi_tYXlQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjMprfXqKWHAxWESH8AHZRQD4AYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEtJqnkDq8NgS3fCd_6d6BicOlie-YWKK0JBVZD_IcfE0xtn7eo3aRoCdzoQAvD_BwE&sig=AOD64_2MzVfQG9Skc9QGrYkR2OYm1ibezQ&ctype=5&q=&nis=4&ved=2ahUKEwi87K_XqKWHAxVUMNAFHSEvBXkQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjMprfXqKWHAxWESH8AHZRQD4AYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEtJqnkDq8NgS3fCd_6d6BicOlie-YWKK0JBVZD_IcfE0xtn7eo3aRoCdzoQAvD_BwE&sig=AOD64_2MzVfQG9Skc9QGrYkR2OYm1ibezQ&ctype=5&q=&nis=4&ved=2ahUKEwi87K_XqKWHAxVUMNAFHSEvBXkQ9aACKAB6BAgBEA4&adurl=",
   },
 
   {
@@ -337,7 +354,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 100,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSjjxj7m3fNV7v5gZOXqJKHhQgrxGmIQndFEoe1nA53EMlVOvzkLRMijdmMkzvE83SVajbExLEVKkpiktAhmqKhnBAuVrkQ8EGO5xJ9bSE-97ieTQpD5xIcy-IRwWJaozuZmRiMeGLiiA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwja6ezmqKWHAxUINtQBHSxyB7YYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHJQ50Vz8lzYyfvk41PJTDnjf0h06btbDRRLSwBvTAcqSODNHfkmkxoC5lUQAvD_BwE&sig=AOD64_3RlEB8uyD0VgleRcHZsejAaEvghQ&ctype=46&q=&ved=2ahUKEwiP1-XmqKWHAxWB5ckDHb4xDF0Q9aACKAB6BAgGEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwja6ezmqKWHAxUINtQBHSxyB7YYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHJQ50Vz8lzYyfvk41PJTDnjf0h06btbDRRLSwBvTAcqSODNHfkmkxoC5lUQAvD_BwE&sig=AOD64_3RlEB8uyD0VgleRcHZsejAaEvghQ&ctype=46&q=&ved=2ahUKEwiP1-XmqKWHAxWB5ckDHb4xDF0Q9aACKAB6BAgGEBA&adurl=",
   },
   {
     name: "Louis Roederer Cristal",
@@ -352,7 +370,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 300,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQf2zD96OllFkF1afwXKXICvvLEMJdWKHycC3gMxtjG8zTa7NfIVhJAmJdbLlMdAeMkDe7KqzDyky_DtIfpZ3GpckVTY-bx77qaeWJLqV3YYXNl66e_Eft8k-H6RqtOLgsmcGKS7fgs0Q0&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwirqIL4qKWHAxU6N9QBHT66Di0YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMQUwqqfpmp8T6z6vEiFA9nfVRUM21Y1StzIxpS0lo_0DiI0U8y2fxoCESMQAvD_BwE&sig=AOD64_0zZYASiy37farwjU5VYNJQiFTUSg&ctype=46&q=&ved=2ahUKEwia__r3qKWHAxX1G9AFHYv8CoQQ9aACKAB6BAgCEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwirqIL4qKWHAxU6N9QBHT66Di0YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMQUwqqfpmp8T6z6vEiFA9nfVRUM21Y1StzIxpS0lo_0DiI0U8y2fxoCESMQAvD_BwE&sig=AOD64_0zZYASiy37farwjU5VYNJQiFTUSg&ctype=46&q=&ved=2ahUKEwia__r3qKWHAxX1G9AFHYv8CoQQ9aACKAB6BAgCEBM&adurl=",
   },
   {
     name: "Taylor Fladgate Vintage Port",
@@ -367,7 +386,8 @@ const wines = [
     grape: "Touriga Nacional",
     avgPrice: 120,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTNd1jfSmIRGLimeZVG2iUhYmUwmGgU_N_Xi2DDsfAIZ8HW1qkfSCIVEpz524Ii-PO98vyQr8Qvagvz1LQJtKH5nplxZOLA8LhSqH7vzOEbJEGNF5t-qwaVysEOsirA90CRDlrHgSI&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjG1pGJqaWHAxXLNtQBHYaZCo4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK86upRLyJOVsEPFJEnVR8atzjEheOOrWTM_IA9ySJf7iHdm5dGNtxoCII4QAvD_BwE&sig=AOD64_3ljhvC6Rp81AefsXRpkdvexMlwaQ&ctype=5&q=&nis=4&ved=2ahUKEwi10omJqaWHAxX74MkDHcLSDIYQ9aACKAB6BAgGEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjG1pGJqaWHAxXLNtQBHYaZCo4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK86upRLyJOVsEPFJEnVR8atzjEheOOrWTM_IA9ySJf7iHdm5dGNtxoCII4QAvD_BwE&sig=AOD64_3ljhvC6Rp81AefsXRpkdvexMlwaQ&ctype=5&q=&nis=4&ved=2ahUKEwi10omJqaWHAxX74MkDHcLSDIYQ9aACKAB6BAgGEA4&adurl=",
   },
 
   {
@@ -383,7 +403,8 @@ const wines = [
     grape: "Nebbiolo",
     avgPrice: 180,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSGCX57F2GDkE2X3MOcxlBF0w4WoS5sa5act6fAdaIRQo42_GPER8jKZ7njOSRtnGZcoMQXyklL1mf-lgWWRVziE-rG50Z-AdOKjeZWfCCya3ujTShJKq6mRguRXxkFzldYdm_FqJIL&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjt-oqXqaWHAxVwOdQBHXVIBnwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGL9G3nOwYCsPtumPOgmCddrWo2voOCVLbWdRXTHxVPIqmq9cpJc1qBoC6ggQAvD_BwE&sig=AOD64_2Jc3YcKz-wuvNwIjZJ8GpSyYIv7w&ctype=5&q=&nis=4&ved=2ahUKEwj32ISXqaWHAxVq48kDHV0FBXoQ9aACKAB6BAgEEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjt-oqXqaWHAxVwOdQBHXVIBnwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGL9G3nOwYCsPtumPOgmCddrWo2voOCVLbWdRXTHxVPIqmq9cpJc1qBoC6ggQAvD_BwE&sig=AOD64_2Jc3YcKz-wuvNwIjZJ8GpSyYIv7w&ctype=5&q=&nis=4&ved=2ahUKEwj32ISXqaWHAxVq48kDHV0FBXoQ9aACKAB6BAgEEA4&adurl=",
   },
   {
     name: "Piper-Heidsieck Brut",
@@ -398,7 +419,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 50,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSi4dcN2yStlxka7UZhVBdE_7YCTa8GLdanBAKG6wfTDBhyeCk4dWyqdzn088ZQZS_eGWwtck3Ry2usPcsR8O-cJPVHxrmYuEWPQQ3DWGs9KQiHXy0tPTqtrQXeuEZdz_Xdni2W5BlvWg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwit-s-xqaWHAxVjysIEHUKOC7AYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCKn5smpgw5KRwg5IcjrQpRBjS-FscEXiTQ2gfY7u_OBws9Yv_955xoCwMkQAvD_BwE&sig=AOD64_37dab4FVHC3Wzuul9Drldgp6Vy8w&ctype=46&q=&ved=2ahUKEwjf-8ixqaWHAxX7KkQIHQi3C6UQ9aACKAB6BAgEEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwit-s-xqaWHAxVjysIEHUKOC7AYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCKn5smpgw5KRwg5IcjrQpRBjS-FscEXiTQ2gfY7u_OBws9Yv_955xoCwMkQAvD_BwE&sig=AOD64_37dab4FVHC3Wzuul9Drldgp6Vy8w&ctype=46&q=&ved=2ahUKEwjf-8ixqaWHAxX7KkQIHQi3C6UQ9aACKAB6BAgEEBM&adurl=",
   },
   {
     name: "Chateau de Beaucastel Chateauneuf-du-Pape",
@@ -413,7 +435,8 @@ const wines = [
     grape: "Grenache",
     avgPrice: 90,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQxYqMepJUoLHm4pUe6yH1AnuqqRmVvMHWlViBKeCHVDX2Hd9fgMHVzhsN5gbHAbKNuUtMRiUB-Yd7JPBDecExWahCD2ORpAWyrA6vn8Ih48Gn4Jj_TutKpmCuPcxHcHyTPjhgK8A&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiVjvfGqaWHAxUg1MIEHZoGDTIYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGI2n2dWlrHKmEGb5ez6LqToa5GUTegzFiOf3gLvUQMAtjQX_-a7YvBoCmb8QAvD_BwE&sig=AOD64_0e9vslFxvKOVWtT9o4h9EFL7B_qw&ctype=46&q=&ved=2ahUKEwj37e7GqaWHAxXoJEQIHZGSAiQQ9aACKAB6BAgCEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiVjvfGqaWHAxUg1MIEHZoGDTIYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGI2n2dWlrHKmEGb5ez6LqToa5GUTegzFiOf3gLvUQMAtjQX_-a7YvBoCmb8QAvD_BwE&sig=AOD64_0e9vslFxvKOVWtT9o4h9EFL7B_qw&ctype=46&q=&ved=2ahUKEwj37e7GqaWHAxXoJEQIHZGSAiQQ9aACKAB6BAgCEBA&adurl=",
   },
 
   {
@@ -429,7 +452,8 @@ const wines = [
     grape: "Shiraz",
     avgPrice: 600,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS7ijaIlPrLHnUjnfFF6V6vxPyH4q-kovq5dWZpA-cn51uqm7LyGkxQRhQNrRHcOwam8P08XevfFiYW6PzCVzRbJXolYJgexYPWatYFWVCHjSG62SJZi3BHbVN8MeLAZQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjm75zWqaWHAxUXD60GHQ1-Aj0YABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK5VSZOEpqp8bdECiRxEv6Mj9V1YI5XhgGWO8wsnEJe3ovlzmvX_OxoCHwcQAvD_BwE&sig=AOD64_0YraZTwf33Hkd_cE_52XJSrN7cPQ&ctype=5&q=&nis=4&ved=2ahUKEwiG9JXWqaWHAxXOJEQIHWUgBP0Q9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjm75zWqaWHAxUXD60GHQ1-Aj0YABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK5VSZOEpqp8bdECiRxEv6Mj9V1YI5XhgGWO8wsnEJe3ovlzmvX_OxoCHwcQAvD_BwE&sig=AOD64_0YraZTwf33Hkd_cE_52XJSrN7cPQ&ctype=5&q=&nis=4&ved=2ahUKEwiG9JXWqaWHAxXOJEQIHWUgBP0Q9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Bollinger Special Cuvée",
@@ -444,7 +468,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 60,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRZl29JzkZ3g2huZbgl_q1uC3_5HiEut0hkJ3s3znDA0JHSoVLFGHLou_gRVuN9Ra3ttfNQ-SOc_91h1jrbyEd905hCCx78SlE_XkmVzYBgoX-VFzNNL362xs5ZNgprdg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjJ5OviqaWHAxWQIK0GHWg1B8UYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDmnGydtVItHB3HgThAWdkRDpBbznFANenmFOqSdMzc_IoGqigz5gBoC4b4QAvD_BwE&sig=AOD64_0lB5HhAQPV9UjlfBuDhFaq92L8VQ&ctype=46&q=&ved=2ahUKEwiimeTiqaWHAxWVEkQIHT8ZDssQ9aACKAB6BAgGEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjJ5OviqaWHAxWQIK0GHWg1B8UYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDmnGydtVItHB3HgThAWdkRDpBbznFANenmFOqSdMzc_IoGqigz5gBoC4b4QAvD_BwE&sig=AOD64_0lB5HhAQPV9UjlfBuDhFaq92L8VQ&ctype=46&q=&ved=2ahUKEwiimeTiqaWHAxWVEkQIHT8ZDssQ9aACKAB6BAgGEBM&adurl=",
   },
   {
     name: "Chateau d'Yquem",
@@ -459,7 +484,8 @@ const wines = [
     grape: "Sauvignon Blanc",
     avgPrice: 500,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQCkLf_hnjMWvEw3-ZYzST9YLJ8KdVmAARgjgdE6-njeyw6SqneHJSJ_CSEcbNQNrUOS8xPz7daAxD7MVTUYOQot7WoF8bLJCzAp3YLVmJZisthxQYkv_vpbesD3pyk63Ea3_TA8A&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjbvfzvqaWHAxVkL60GHT1XAs8YABADGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDhyfPzLLF4plqL2tWt89WqXvdvg98pgcFZFIzT-SsIjb11BMNO9QhoC8sAQAvD_BwE&sig=AOD64_1gX4gA-8ELg-1Xef64e6fzbZ7yhg&ctype=5&q=&nis=4&ved=2ahUKEwiK4vXvqaWHAxUOJEQIHRlvD9sQ9aACKAB6BAgCEBU&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjbvfzvqaWHAxVkL60GHT1XAs8YABADGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDhyfPzLLF4plqL2tWt89WqXvdvg98pgcFZFIzT-SsIjb11BMNO9QhoC8sAQAvD_BwE&sig=AOD64_1gX4gA-8ELg-1Xef64e6fzbZ7yhg&ctype=5&q=&nis=4&ved=2ahUKEwiK4vXvqaWHAxUOJEQIHRlvD9sQ9aACKAB6BAgCEBU&adurl=",
   },
   {
     name: "Ridge Monte Bello",
@@ -474,7 +500,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 250,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSJaHVGEmFsh_I6WO7sKQyCRun5MHw52s448DrPkK7DHuMmfXWZYcvPzkEFIUw7ZGsKL_TUrk5kXrjzkj4n_WPAAJD6pKwn2qizx0NG9WtEHD_pI85rpW_0jnnT9UuUAPIeQxCd3YZASA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjVrZf_qaWHAxWcIq0GHTeIDqEYABAFGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGjAjIZ9ly7fcxUO3tUUh426VcySaxrPsZ_cfSllWYnRRwX563IlWhoCIlQQAvD_BwE&sig=AOD64_31CpOLKRvmBfRaLcbQA7yz0Ew0GQ&ctype=46&q=&ved=2ahUKEwiZlZD_qaWHAxWJI0QIHSzDBO0Q9aACKAB6BAgDECI&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjVrZf_qaWHAxWcIq0GHTeIDqEYABAFGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGjAjIZ9ly7fcxUO3tUUh426VcySaxrPsZ_cfSllWYnRRwX563IlWhoCIlQQAvD_BwE&sig=AOD64_31CpOLKRvmBfRaLcbQA7yz0Ew0GQ&ctype=46&q=&ved=2ahUKEwiZlZD_qaWHAxWJI0QIHSzDBO0Q9aACKAB6BAgDECI&adurl=",
   },
   {
     name: "Domaines Ott Château de Selle Rosé",
@@ -489,7 +516,8 @@ const wines = [
     grape: "Grenache",
     avgPrice: 45,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSM4AIQdlO98QGjpgRyCVjwj5t5CNUQugAXTwIyiN-ChqMHrkNYsf4kMlcVXDY4nBfldj3T-OeLo_-QlojjQp_-qGr3JSscyklvuIrdX5SSOpi8nir8VwoGdwO152awoSOyBYP9h2wMBqg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj7i7KXqqWHAxVg1cIEHXGiDwcYABAHGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMuE-v3WM-BLSn9zf-Tab6g75emm_uP9EgM7i1mRMTvHNrUtfCLUChoCqh0QAvD_BwE&sig=AOD64_1pprvypnHYRT8jWL6PyDoJW2-3vg&ctype=5&q=&nis=4&ved=2ahUKEwiTh6qXqqWHAxUSmO4BHTVhBucQ9aACKAB6BAgHEDE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj7i7KXqqWHAxVg1cIEHXGiDwcYABAHGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMuE-v3WM-BLSn9zf-Tab6g75emm_uP9EgM7i1mRMTvHNrUtfCLUChoCqh0QAvD_BwE&sig=AOD64_1pprvypnHYRT8jWL6PyDoJW2-3vg&ctype=5&q=&nis=4&ved=2ahUKEwiTh6qXqqWHAxUSmO4BHTVhBucQ9aACKAB6BAgHEDE&adurl=",
   },
   {
     name: "Henschke Hill of Grace",
@@ -504,7 +532,8 @@ const wines = [
     grape: "Shiraz",
     avgPrice: 700,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSQOOoIjI9xDOx857D9lQr_6mUU8JJlsp-1vZdkTz3QO1e7tkWrMpoF5nVnDxELJrAUpcOEM5z-6FkWxt64ipJyYfuNDx3q_rtiTeu5RvbNpT6AK5MMLsRXOUWX-peLV3JitDEkRWMMiQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjx_sCvqqWHAxVvBK0GHcIiDGoYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGC--KUPzlxuwWV4e3ncb_7sfeO1W880TITM7CSGly-76A3P3SUK6tRoCmgIQAvD_BwE&sig=AOD64_1ZEGRTnIgKwvjeAGIt0KlpsWFwkw&ctype=5&q=&nis=4&ved=2ahUKEwi17rivqqWHAxWVLEQIHemTA10Q9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjx_sCvqqWHAxVvBK0GHcIiDGoYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGC--KUPzlxuwWV4e3ncb_7sfeO1W880TITM7CSGly-76A3P3SUK6tRoCmgIQAvD_BwE&sig=AOD64_1ZEGRTnIgKwvjeAGIt0KlpsWFwkw&ctype=5&q=&nis=4&ved=2ahUKEwi17rivqqWHAxWVLEQIHemTA10Q9aACKAB6BAgBEA4&adurl=",
   },
 
   {
@@ -520,7 +549,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 55,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRocRtbiylrGWKBde50bA4TzKako8gOLd6KegIItcl2Kir24xiiDqYhYOxQGdVh69JUAWcfVBxhtPrvD_JPhmMrvbiP621CIxsngDR-uIKNDsou3_FcHIMpuLghDTBvXuaZ2And4Q&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj5j6fDqqWHAxXdBa0GHWRQByEYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCXFCb1FYuBPt4vs_Pn6Llzr3hrQ-2mUvVX-4b0Ibc9EthCTQGP0XxoCV_MQAvD_BwE&sig=AOD64_2SLW9EmI_YrVWY8wqlbQI3A-jrUg&ctype=46&q=&ved=2ahUKEwj07aDDqqWHAxXKLEQIHcLNDtUQ9aACKAB6BAgCEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj5j6fDqqWHAxXdBa0GHWRQByEYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCXFCb1FYuBPt4vs_Pn6Llzr3hrQ-2mUvVX-4b0Ibc9EthCTQGP0XxoCV_MQAvD_BwE&sig=AOD64_2SLW9EmI_YrVWY8wqlbQI3A-jrUg&ctype=46&q=&ved=2ahUKEwj07aDDqqWHAxXKLEQIHcLNDtUQ9aACKAB6BAgCEBA&adurl=",
   },
   {
     name: "Dom Perignon",
@@ -535,7 +565,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 180,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSoERRh1sn4eABoMJcrtIpd_S0Wu5YHxcjWqRTfm5TyDr5Ejk20h1E1tMwwM7vNpaUYOgjvjLe5Q3r2SyhsvlGpGNl03mPc21hX4ULC1xD8ixcATabQNvZ_aLOnMJpepAkfkT0Se8MEuQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiTlLHXqqWHAxUg1MIEHZoGDTIYABADGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGq06KQP_2R1ABiXqR7kO0orCevGQbXrMEE6pCcuv6_QcKDXtw4qzxoCtBoQAvD_BwE&sig=AOD64_3Fj98LI5pOL34bN7460H022dwAAg&ctype=46&q=&ved=2ahUKEwi--arXqqWHAxUrL0QIHYDGAsQQzzkoAXoECAIQFg&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiTlLHXqqWHAxUg1MIEHZoGDTIYABADGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGq06KQP_2R1ABiXqR7kO0orCevGQbXrMEE6pCcuv6_QcKDXtw4qzxoCtBoQAvD_BwE&sig=AOD64_3Fj98LI5pOL34bN7460H022dwAAg&ctype=46&q=&ved=2ahUKEwi--arXqqWHAxUrL0QIHYDGAsQQzzkoAXoECAIQFg&adurl=",
   },
   {
     name: "Chateau Ste. Michelle Riesling",
@@ -566,7 +597,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 450,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRZ5S5z_SQohwvEFcoIlF8vaVUBNurpF5Ug9GEzIaH2TVFps99D6lorJk91AT_Ieo4jAdpvaUhZznG9TB3yQla0LTjC0x2SIbZq1hFgQ8PQv3jMxkE2TIvyY3VGRZnn6Dm0bFwrxmirmg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiNlMD2qqWHAxVlDa0GHd_-CREYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLQMFA-dUbw7bJhXcKvH9MPUpQwCrsN9qeBq17IdNdxCm7J9P3w3WhoCfmoQAvD_BwE&sig=AOD64_0VX62Q9CCWe1GPLD3gpzjA32EjOQ&ctype=5&q=&nis=4&ved=2ahUKEwiVq7j2qqWHAxWWlu4BHbQdBigQ9aACKAB6BAgHEA8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiNlMD2qqWHAxVlDa0GHd_-CREYABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLQMFA-dUbw7bJhXcKvH9MPUpQwCrsN9qeBq17IdNdxCm7J9P3w3WhoCfmoQAvD_BwE&sig=AOD64_0VX62Q9CCWe1GPLD3gpzjA32EjOQ&ctype=5&q=&nis=4&ved=2ahUKEwiVq7j2qqWHAxWWlu4BHbQdBigQ9aACKAB6BAgHEA8&adurl=",
   },
   {
     name: "Château d'Yquem",
@@ -581,7 +613,8 @@ const wines = [
     grape: "Sauvignon Blanc",
     avgPrice: 350,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTHv_TsqY3h7B3NaKyWTonvnJL2L1haxKjYMugTHLDxrGW70BBApdD2jng893zeml11MsT5T_6WsFhqOlsNywa37V1a75v5RFHutMzKJE-V1uAsF9kTjFzoeDiMng2GcoBRdw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiDluWQq6WHAxWgDq0GHa_7By8YABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDxkTvuOwQryLNI5taRABWDbQxbIuq9gWgOxcqbX2DzMphB55YYpBRoCqqwQAvD_BwE&sig=AOD64_18KLMXuDks3cTd9XzGh5vPlhe-mQ&ctype=5&q=&nis=4&ved=2ahUKEwiZ396Qq6WHAxWQJEQIHVy_CvYQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiDluWQq6WHAxWgDq0GHa_7By8YABABGgJwdg&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDxkTvuOwQryLNI5taRABWDbQxbIuq9gWgOxcqbX2DzMphB55YYpBRoCqqwQAvD_BwE&sig=AOD64_18KLMXuDks3cTd9XzGh5vPlhe-mQ&ctype=5&q=&nis=4&ved=2ahUKEwiZ396Qq6WHAxWQJEQIHVy_CvYQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Roederer Estate L'Ermitage",
@@ -596,7 +629,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 70,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSPpkqM1lPz7heX590AneSVIWHu0YFWyJxBUNfUpy1olhuygBHlY8XfsUUNZOwhPP1BCtryNHFiAaYf6Xedsik94X1NLfYrk9quENVxyV8fFKYqRI17VEOGPOn0VBYMT__VXJhAvguuqGE&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwid_OWqq6WHAxVxS38AHRnYBr8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJveptmLWhVD20B8xZXNoic11dpECR4M7ycJ_Imz8aR0EMU9UkLeCBoCcc8QAvD_BwE&sig=AOD64_1vxr6QR11g3BFRCuQ-4rttAnCt9Q&ctype=46&q=&ved=2ahUKEwjR_9-qq6WHAxV96ckDHan1A0oQ9aACKAB6BAgCEB4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwid_OWqq6WHAxVxS38AHRnYBr8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJveptmLWhVD20B8xZXNoic11dpECR4M7ycJ_Imz8aR0EMU9UkLeCBoCcc8QAvD_BwE&sig=AOD64_1vxr6QR11g3BFRCuQ-4rttAnCt9Q&ctype=46&q=&ved=2ahUKEwjR_9-qq6WHAxV96ckDHan1A0oQ9aACKAB6BAgCEB4&adurl=",
   },
   {
     name: "Château Palmer",
@@ -611,7 +645,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 300,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRmVtZq1PuRwOfPtSoytXbg-um2PpTuQjsrWQ--Tm0WelZAsNF1oxeeYg17yFtdmOjifsDbK2SHRHJ_hFf1E5mmhEUQeMt8h1AU-YQlYuukxRp2MQGvn66Q3cv7o-1c5TWQGqc0r8lz0g&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwinruDcq6WHAxXQc38AHcZ6BQ8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEklrRNcq-cY9Dn7ggyXEYf1cNdoIAFtz8WSYBSnGxraqp6AD8vbRBoCMxkQAvD_BwE&sig=AOD64_1iV5uIuDGgD7e3fTNv0Wqklh786g&ctype=46&q=&ved=2ahUKEwj2qdncq6WHAxXe38kDHcO4DLcQ9aACKAB6BAgCEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwinruDcq6WHAxXQc38AHcZ6BQ8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEklrRNcq-cY9Dn7ggyXEYf1cNdoIAFtz8WSYBSnGxraqp6AD8vbRBoCMxkQAvD_BwE&sig=AOD64_1iV5uIuDGgD7e3fTNv0Wqklh786g&ctype=46&q=&ved=2ahUKEwj2qdncq6WHAxXe38kDHcO4DLcQ9aACKAB6BAgCEBA&adurl=",
   },
 
   {
@@ -627,7 +662,8 @@ const wines = [
     grape: "Shiraz",
     avgPrice: 80,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTXIvunWC5RbxE1EgLx4b1bMjt1xzRBLlK2vpfXcEQkOtoy-QwWPwuhDEfOARmY5IiTaR5la-Ntx6jYavpNTGTaw3yNCMwbR3YPKbb1zXnPtP03fgWFIqls-LDivgbmqvYB&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiThs7rq6WHAxW9NtQBHaaeDJYYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGO2-fhibBFdqz5xnfVaP1dXgtkibaTTHuwdyLahJ23xAWGUu1KT2khoCqzoQAvD_BwE&sig=AOD64_3fvMOB5-Ol5n-BvNqunzChwEz9VQ&ctype=5&q=&nis=4&ved=2ahUKEwiq68frq6WHAxX64skDHX_9CCAQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiThs7rq6WHAxW9NtQBHaaeDJYYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGO2-fhibBFdqz5xnfVaP1dXgtkibaTTHuwdyLahJ23xAWGUu1KT2khoCqzoQAvD_BwE&sig=AOD64_3fvMOB5-Ol5n-BvNqunzChwEz9VQ&ctype=5&q=&nis=4&ved=2ahUKEwiq68frq6WHAxX64skDHX_9CCAQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Bollinger La Grande Année",
@@ -642,7 +678,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 150,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTBiOhN0JIA4MvcWjYWcJMYxeFyBbwifcsDIqrqHVvI4MfEJvT3pyBaSL9JsP4Se4vcbdDyNyCjwV6ng5Le0wzoDMeqZ6hOw5Uwkkt4EYYdmrVVTU6EE3pvL_LQtkhyFyyeW7nKN1w0t-w&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiv1e_6q6WHAxUsdn8AHbMWATUYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJkH85pJNvFUTfU05BHOEj6wERLUyC0Q3Ik3CTIS5SiRRIhO0360nRoCSzYQAvD_BwE&sig=AOD64_2b-Muf5rgt0QvgTGasfFQnfDx_6A&ctype=46&q=&ved=2ahUKEwjVlOb6q6WHAxWNJNAFHSUDAd0Q9aACKAB6BAgBEBI&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiv1e_6q6WHAxUsdn8AHbMWATUYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJkH85pJNvFUTfU05BHOEj6wERLUyC0Q3Ik3CTIS5SiRRIhO0360nRoCSzYQAvD_BwE&sig=AOD64_2b-Muf5rgt0QvgTGasfFQnfDx_6A&ctype=46&q=&ved=2ahUKEwjVlOb6q6WHAxWNJNAFHSUDAd0Q9aACKAB6BAgBEBI&adurl=",
   },
   {
     name: "Château Pichon Longueville",
@@ -657,7 +694,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 180,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQv7VTFa8T3p5lC30H59lXE3GT9d5KgsaterOab57WpL09Fk8Yu-j4IMW_1Si1-uMviAhK5BG1yeAB5P1BJP2BmRToUWvYXcJ_n9aqNYEyLadaxSl2pqGDDr6n9mZqrIHCPHal1USp9qA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwif0OGIrKWHAxVYONQBHY1uCHcYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB0RRRl54w3Xzhj_8JSf8WDhjj4w0pQ-6TL4tWIGai8spN-_Qjg1hhoCgawQAvD_BwE&sig=AOD64_3BI6et9P33zezMDZwkR859aenR_w&ctype=5&q=&nis=4&ved=2ahUKEwjX4NqIrKWHAxUQ48kDHf2iDNYQ9aACKAB6BAgDECA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwif0OGIrKWHAxVYONQBHY1uCHcYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB0RRRl54w3Xzhj_8JSf8WDhjj4w0pQ-6TL4tWIGai8spN-_Qjg1hhoCgawQAvD_BwE&sig=AOD64_3BI6et9P33zezMDZwkR859aenR_w&ctype=5&q=&nis=4&ved=2ahUKEwjX4NqIrKWHAxUQ48kDHf2iDNYQ9aACKAB6BAgDECA&adurl=",
   },
   {
     name: "Heitz Cellar Martha's Vineyard",
@@ -672,7 +710,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 200,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRYwxoONMfhw2NujOeXb-76BfEGnXCJ_SFjrHNRM7O4wjKPAYFAFXpu0ug3P2DaNkdS0fzpyoEzP7iy4eKgrnEg5xgJuBQ3X4pobeXhtb3OHN4Yr_gbBtipX5Mz5RT_zqXYjwDRPSI&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiH2IeerKWHAxXgNtQBHRiCDNoYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMT0gjDL-bP7q7lL8F-IzFpuF6OuGHJ33VavdWo3l1ZNfBnSdw5VbxoCdsQQAvD_BwE&sig=AOD64_3kSNZ3MKyJiKnGHzFubDv8C4WVYQ&ctype=5&q=&nis=4&ved=2ahUKEwi9xICerKWHAxUEBdAFHTZ0CkoQ9aACKAB6BAgFEBk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiH2IeerKWHAxXgNtQBHRiCDNoYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMT0gjDL-bP7q7lL8F-IzFpuF6OuGHJ33VavdWo3l1ZNfBnSdw5VbxoCdsQQAvD_BwE&sig=AOD64_3kSNZ3MKyJiKnGHzFubDv8C4WVYQ&ctype=5&q=&nis=4&ved=2ahUKEwi9xICerKWHAxUEBdAFHTZ0CkoQ9aACKAB6BAgFEBk&adurl=",
   },
   {
     name: "Domaine de la Romanée-Conti",
@@ -687,7 +726,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 14000,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSkCwmQvZ7EH_xhJq7FpBOnPUcpqAvzdZ_iMP4lmjRyYjLIJxme6SWFwherLIxGPiPXGU6cHxmRkW6tRbEGG6ipEXmDpgDQSpZMq-Meih0rhTosUdRpEqi2rRkPVDDBi8QJ6kv5icM&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiOh9OurKWHAxV4SH8AHfZkCqUYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDTULFxPRMuBb3NnJ2cqOQyGqT32ecDinwiWTJ10ogOizgLF-yCGZRoC3TwQAvD_BwE&sig=AOD64_3lOQEHJ_6tA7RoRkULqwhHUt0mrg&ctype=5&q=&nis=4&ved=2ahUKEwism8qurKWHAxVb6ckDHbTeAYUQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiOh9OurKWHAxV4SH8AHfZkCqUYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDTULFxPRMuBb3NnJ2cqOQyGqT32ecDinwiWTJ10ogOizgLF-yCGZRoC3TwQAvD_BwE&sig=AOD64_3lOQEHJ_6tA7RoRkULqwhHUt0mrg&ctype=5&q=&nis=4&ved=2ahUKEwism8qurKWHAxVb6ckDHbTeAYUQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Château Margaux",
@@ -702,7 +742,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 700,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS4q-YvGQqCo3Y5hvoYvJ5mwIbVaJFhGrvRn8KNHhOuMWYm9hOgJZg99yzcwCX7KrLIZjoMyJILhbaivtJTg_eFCPVmtdBMVIXOGQlvRlfZEL1YBbVe2azKKu9yKo57wTrnqqRVCrMd7MI&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj5xObErKWHAxWrNtQBHfUIA0AYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAOEfdCPn8_oCzGL0BbvmscBdJ6MyJBR7QDu35lbbC6I3qmSTGkU6RoCRqQQAvD_BwE&sig=AOD64_20U6EluqbSHNpHmAXKVPoyFYeIDQ&ctype=5&q=&nis=4&ved=2ahUKEwjxpeDErKWHAxUT78kDHZUnC9IQ9aACKAB6BAgCEBk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj5xObErKWHAxWrNtQBHfUIA0AYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAOEfdCPn8_oCzGL0BbvmscBdJ6MyJBR7QDu35lbbC6I3qmSTGkU6RoCRqQQAvD_BwE&sig=AOD64_20U6EluqbSHNpHmAXKVPoyFYeIDQ&ctype=5&q=&nis=4&ved=2ahUKEwjxpeDErKWHAxUT78kDHZUnC9IQ9aACKAB6BAgCEBk&adurl=",
   },
   {
     name: "Joseph Phelps Insignia",
@@ -717,7 +758,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 250,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRcRSo5_8kVXThsltB78RO048f47725iTdreI-y1bDRVJciFsLzx6exQxSkf9oioCJQT588OVn12UpCjxcyobNo27jxQVvPydcobFRvCPwpIFu9G9nwHsOEQTBkdQp5wfEPt4-_CA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiJvvHUrKWHAxV1OtQBHbcMAKAYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPAwePhUeVHrmHPNHrZjnCz8Js4kIqrqDp6X9aEy3dYiLbmaUD0ApRoCNwkQAvD_BwE&sig=AOD64_2mDbRFBznv7dlmRGtyQ3Ou5QlesQ&ctype=46&q=&ved=2ahUKEwjylurUrKWHAxWoM9AFHd_JAgYQ9aACKAB6BAgBEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiJvvHUrKWHAxV1OtQBHbcMAKAYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPAwePhUeVHrmHPNHrZjnCz8Js4kIqrqDp6X9aEy3dYiLbmaUD0ApRoCNwkQAvD_BwE&sig=AOD64_2mDbRFBznv7dlmRGtyQ3Ou5QlesQ&ctype=46&q=&ved=2ahUKEwjylurUrKWHAxWoM9AFHd_JAgYQ9aACKAB6BAgBEBA&adurl=",
   },
 
   {
@@ -733,7 +775,8 @@ const wines = [
     grape: "Sangiovese",
     avgPrice: 130,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTsnVvVhhbXhs1KPQguF4Rgd-Tl6v1z0o8nPal2UAemSfggNiL9zuZtVebzNQtLutd2uyN6McbP2Q8gACiJqzMsfDXGaEkAwIVlpKAaQlKnLU8kENt4xtKS4lUvdkF4Ahajl5lW2o3c&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjrj4fzrKWHAxXDLtQBHak5D6AYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJcjC-ySu3BDUbap8fhQoHHD0hMy8EaxTD9giqojoXQg_S56P1IUYRoCHboQAvD_BwE&sig=AOD64_1YK3oJgkrnvNASvZramT5JEveEzQ&ctype=5&q=&nis=4&ved=2ahUKEwiMlIHzrKWHAxWJ7ckDHZHpD5QQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjrj4fzrKWHAxXDLtQBHak5D6AYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJcjC-ySu3BDUbap8fhQoHHD0hMy8EaxTD9giqojoXQg_S56P1IUYRoCHboQAvD_BwE&sig=AOD64_1YK3oJgkrnvNASvZramT5JEveEzQ&ctype=5&q=&nis=4&ved=2ahUKEwiMlIHzrKWHAxWJ7ckDHZHpD5QQ9aACKAB6BAgBEA4&adurl=",
   },
 
   {
@@ -749,7 +792,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 250,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQf2zD96OllFkF1afwXKXICvvLEMJdWKHycC3gMxtjG8zTa7NfIVhJAmJdbLlMdAeMkDe7KqzDyky_DtIfpZ3GpckVTY-bx77qaeWJLqV3YYXNl66e_Eft8k-H6RqtOLgsmcGKS7fgs0Q0&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwibwfiDraWHAxXYOtQBHWn4DcQYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIqGUMZr9BQC_Mxxbuc3RXm4WfNi0UXhS0YGgZ3qt0G7Bu_7hKcx1xoCZMkQAvD_BwE&sig=AOD64_0CelFPDTb0kx6UWayiAhyo9cg3bQ&ctype=46&q=&ved=2ahUKEwjd-_CDraWHAxVDL9AFHdoXBE8Q9aACKAB6BAgDEBo&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwibwfiDraWHAxXYOtQBHWn4DcQYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIqGUMZr9BQC_Mxxbuc3RXm4WfNi0UXhS0YGgZ3qt0G7Bu_7hKcx1xoCZMkQAvD_BwE&sig=AOD64_0CelFPDTb0kx6UWayiAhyo9cg3bQ&ctype=46&q=&ved=2ahUKEwjd-_CDraWHAxVDL9AFHdoXBE8Q9aACKAB6BAgDEBo&adurl=",
   },
   {
     name: "Château Rieussec",
@@ -764,7 +808,8 @@ const wines = [
     grape: "Sémillon",
     avgPrice: 70,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS_8JLrKv3y_B-qJHpYLzEUuQU84NHkbxV88TsqUKDdzTVdub_f0-2--tfg3XwVWwJ1SdE7F6nSl3a8FA4Pi_guagR7IdWTBZ-zIY1VuZmQhIOBsxbBdgbK90L_uKUPGdgZHD9mOQvesA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwio3uifraWHAxUWcn8AHbUaAREYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNHA-oj0Hfrm1psTMVEtY7uf5igOr0meoHe0M1IJWM5okpOAG4pCoxoCZ9sQAvD_BwE&sig=AOD64_0lEdZOAYWVlXoEMzxVfC4RWsoFug&ctype=46&q=&ved=2ahUKEwjEruKfraWHAxUJ78kDHXZDDhUQ9aACKAB6BAgGEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwio3uifraWHAxUWcn8AHbUaAREYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNHA-oj0Hfrm1psTMVEtY7uf5igOr0meoHe0M1IJWM5okpOAG4pCoxoCZ9sQAvD_BwE&sig=AOD64_0lEdZOAYWVlXoEMzxVfC4RWsoFug&ctype=46&q=&ved=2ahUKEwjEruKfraWHAxUJ78kDHXZDDhUQ9aACKAB6BAgGEBM&adurl=",
   },
   {
     name: "Château Lynch-Bages",
@@ -779,7 +824,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 170,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRyqsC14g26vQh7NqGwtWWKEjF6OcG9iPgFw1GoEj4yBLXkD5S5xrvE8xiRaPMp_eyfpVPqom9BKLaHvvCc5yDuGgSZ6DgmRDKm8ps6YQY36LhfCZpTKlh6iFt1jfc-GPGB&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiJmfGxraWHAxXbSn8AHRIQC8IYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGD2ZpX4QdH43KD4K7VBhzxS1XrlMn3UFb8DtBjz1OFNzJxo_qWVinRoCYc8QAvD_BwE&sig=AOD64_2RY4pdgG-FPeDKU3C5EhqgyRziEA&ctype=5&q=&nis=4&ved=2ahUKEwid-uixraWHAxX1L9AFHYYQCIgQ9aACKAB6BAgHEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiJmfGxraWHAxXbSn8AHRIQC8IYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGD2ZpX4QdH43KD4K7VBhzxS1XrlMn3UFb8DtBjz1OFNzJxo_qWVinRoCYc8QAvD_BwE&sig=AOD64_2RY4pdgG-FPeDKU3C5EhqgyRziEA&ctype=5&q=&nis=4&ved=2ahUKEwid-uixraWHAxX1L9AFHYYQCIgQ9aACKAB6BAgHEA4&adurl=",
   },
 
   {
@@ -795,7 +841,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 120,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT4Lb6oWY7QcbDsVG5dXH0_UJ3c_yTPTfkSPqr7S3kOpvMwVjMMI0skac7COD2u1w9dITOub9hzNfByFg6lfxRFY8ECEJKrLFCMOiWjNWryBkxEBu0mvwcwK5R6nW9km9QzZPs5dD2qQw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiKkfPBraWHAxVTd38AHZvSAvQYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGN8I4W6vPcZk08dIfGR1Gb23k8nAchUvh8Y1Ec3x76G_iP3lpXCoXxoC3yAQAvD_BwE&sig=AOD64_3aovWqQ7_-WjOtEHQJuwcEQT8kJg&ctype=46&q=&ved=2ahUKEwjH4OzBraWHAxXLw8kDHUA2DKgQ9aACKAB6BAgBEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiKkfPBraWHAxVTd38AHZvSAvQYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGN8I4W6vPcZk08dIfGR1Gb23k8nAchUvh8Y1Ec3x76G_iP3lpXCoXxoC3yAQAvD_BwE&sig=AOD64_3aovWqQ7_-WjOtEHQJuwcEQT8kJg&ctype=46&q=&ved=2ahUKEwjH4OzBraWHAxXLw8kDHUA2DKgQ9aACKAB6BAgBEBM&adurl=",
   },
   {
     name: "Opus One",
@@ -810,7 +857,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 350,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSQK-mMuc-xPy728qBB6vkYzC6MKzxJEam_f6CrjYrVaTJPVc6Su9zLbKrPtiuP7qN8Ulq6dy6PO_Asi8c6RPzPtvpMlOjvOWbUZEkzNNUsCXLEm2iJHP8rOWvcfcVJqw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj_xqnRraWHAxWOS38AHTK3D0QYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKLSkJg-p376HQvxK7lXvM1xbQUa4NwA3MGYUToNmG2wXTCusC-q5RoCQUIQAvD_BwE&sig=AOD64_2FSiMsYonzaJVQlD9tseanCraYsg&ctype=5&q=&nis=4&ved=2ahUKEwibmqTRraWHAxVj4MkDHQXUAl0Q9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj_xqnRraWHAxWOS38AHTK3D0QYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKLSkJg-p376HQvxK7lXvM1xbQUa4NwA3MGYUToNmG2wXTCusC-q5RoCQUIQAvD_BwE&sig=AOD64_2FSiMsYonzaJVQlD9tseanCraYsg&ctype=5&q=&nis=4&ved=2ahUKEwibmqTRraWHAxVj4MkDHQXUAl0Q9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Château Montrose",
@@ -825,7 +873,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 200,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRjMkvqbMEauexlVNO-8oGb0j1rNWl-uZVXZgS7HYTuSJzlPeElAO8mDVBsH4JotfBA9dnfnYVfI90FNOh4dY2b4p9DkuhUS00KRnyVduTJ9uBfI3vXNwRO8BUoj0Lgou3ClrShHw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiYpaXgraWHAxVQbn8AHTG4AGgYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAYkDnONhSqSz6YWj7iEo92DLWrKuoo_T1jttmdv6D_fSDYJOgAvQhoCymwQAvD_BwE&sig=AOD64_1JDiNr7PeQi5AdC2r7DDkuRTNKXw&ctype=5&q=&nis=4&ved=2ahUKEwjulJ_graWHAxXG78kDHbTJCE4Q9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiYpaXgraWHAxVQbn8AHTG4AGgYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAYkDnONhSqSz6YWj7iEo92DLWrKuoo_T1jttmdv6D_fSDYJOgAvQhoCymwQAvD_BwE&sig=AOD64_1JDiNr7PeQi5AdC2r7DDkuRTNKXw&ctype=5&q=&nis=4&ved=2ahUKEwjulJ_graWHAxXG78kDHbTJCE4Q9aACKAB6BAgCEA4&adurl=",
   },
 
   {
@@ -841,7 +890,8 @@ const wines = [
     grape: "Riesling",
     avgPrice: 120,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTSvn36v28ZRJMYqtYTS68sHpUgx5Dza2rPX0IhlH_ywf12mKGCLwpTQ7KRsWQz8n3mH8uLTejRtQKzk69Gj4-MUOpfNIRaGS8vZ2qcYoFNN78ojUtvFXkzv82H&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjm7KPvraWHAxUZLdQBHb3NBosYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGanDcNKPkXur9toU4bWU3DQeBgoZbwsF4JMPHsIkckRK03rN-xA9RoCnioQAvD_BwE&sig=AOD64_0V4NF4dAh6WQ0uE577Zzv949ZG3w&ctype=5&q=&nis=4&ved=2ahUKEwjP7JzvraWHAxXr4MkDHRWHCrYQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjm7KPvraWHAxUZLdQBHb3NBosYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGanDcNKPkXur9toU4bWU3DQeBgoZbwsF4JMPHsIkckRK03rN-xA9RoCnioQAvD_BwE&sig=AOD64_0V4NF4dAh6WQ0uE577Zzv949ZG3w&ctype=5&q=&nis=4&ved=2ahUKEwjP7JzvraWHAxXr4MkDHRWHCrYQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Dom Pérignon",
@@ -856,7 +906,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 200,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQwWnjGfWcxIGhjLnAF4XB9wl4DSGxA8dQ0WzQb7xaFsbFbY1oEKTQ0R442XoKHmqvToHKhwqQxwjCWqGVITfve0wR3ZA0UF2vfeGFelkQBmMctiNB-Q-zDuzIsqipBPmy-CBAk8bEsUz0&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwimtf_9raWHAxXscn8AHRVuDTYYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGN-bXkGgV7w26Nk1xOp7qeiGK9ijzY4Y6IzRNEG9E0MV1Z4Zs8xbFBoCxPAQAvD_BwE&sig=AOD64_08UcN56VRxO9sZDF6WNS7UxK-iKQ&ctype=5&q=&nis=4&ved=2ahUKEwjm3Pj9raWHAxVb48kDHagqD8QQ9aACKAB6BAgBEDU&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwimtf_9raWHAxXscn8AHRVuDTYYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGN-bXkGgV7w26Nk1xOp7qeiGK9ijzY4Y6IzRNEG9E0MV1Z4Zs8xbFBoCxPAQAvD_BwE&sig=AOD64_08UcN56VRxO9sZDF6WNS7UxK-iKQ&ctype=5&q=&nis=4&ved=2ahUKEwjm3Pj9raWHAxVb48kDHagqD8QQ9aACKAB6BAgBEDU&adurl=",
   },
   {
     name: "Quinta do Noval Vintage Port",
@@ -871,7 +922,8 @@ const wines = [
     grape: "Touriga Nacional",
     avgPrice: 110,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTrO7WSUiwu6lFsyYWvw7rR9S0ILHNiPx6sZMipo1n8pixpJTJIX6E_8_Jos6ZLHJSX6y8f8kfkSuU7QGC3uZaUrGdtbD9PeT8Ks7vmB5m8zmbd7hjdjQIrk2fpdDEkigYFPzUn89g&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi6wJWUrqWHAxWNNtQBHZS2C9sYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJ81vbbVXUyxpFbDDaeJYFmI_uD38uQW5SzKgQYtQMhIpoWKRP3sdBoCunkQAvD_BwE&sig=AOD64_01zcWNXQwiPa8DPC-sqcuBkF9wtg&ctype=5&q=&nis=4&ved=2ahUKEwi8w46UrqWHAxXA78kDHaBaDkMQ9aACKAB6BAgFEA8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi6wJWUrqWHAxWNNtQBHZS2C9sYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJ81vbbVXUyxpFbDDaeJYFmI_uD38uQW5SzKgQYtQMhIpoWKRP3sdBoCunkQAvD_BwE&sig=AOD64_01zcWNXQwiPa8DPC-sqcuBkF9wtg&ctype=5&q=&nis=4&ved=2ahUKEwi8w46UrqWHAxXA78kDHaBaDkMQ9aACKAB6BAgFEA8&adurl=",
   },
   {
     name: "Château Palmer",
@@ -886,7 +938,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 300,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTc_4ifvndYRtQH9v6I9fl9A4KgdScQlCB8oa1cdONdCG2pizwiTxP4HkNdGWFXOnp-3lq1fhtb_9fE6O3lvFa7L-QIJ9MZTq5yPjygGDfCqT4kOByG3RITicLq7ybWRccgdSKWyzUmKA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjm94CqrqWHAxVSMdQBHfOPCqYYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB1e2yfBeRvqXbHsXoV6Qbe4ronfa9uA0QqMPZCS85FnnHp_pFQYvhoCJvIQAvD_BwE&sig=AOD64_3l_ugHQkxEfu2azpZdh3Bf3VV94A&ctype=5&q=&nis=4&ved=2ahUKEwikoPqprqWHAxUJ_8kDHVTZBHoQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjm94CqrqWHAxVSMdQBHfOPCqYYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB1e2yfBeRvqXbHsXoV6Qbe4ronfa9uA0QqMPZCS85FnnHp_pFQYvhoCJvIQAvD_BwE&sig=AOD64_3l_ugHQkxEfu2azpZdh3Bf3VV94A&ctype=5&q=&nis=4&ved=2ahUKEwikoPqprqWHAxUJ_8kDHVTZBHoQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Château de Beaucastel Châteauneuf-du-Pape",
@@ -901,7 +954,8 @@ const wines = [
     grape: "Grenache",
     avgPrice: 100,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQxYqMepJUoLHm4pUe6yH1AnuqqRmVvMHWlViBKeCHVDX2Hd9fgMHVzhsN5gbHAbKNuUtMRiUB-Yd7JPBDecExWahCD2ORpAWyrA6vn8Ih48Gn4Jj_TutKpmCuPcxHcHyTPjhgK8A&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi1u628rqWHAxWgcn8AHQqqC7gYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGD01qxkCM1DZIlsK-8jmPnmhzPYh-hbKxMxXMRUV2m0ccoobh2rxUhoCiWgQAvD_BwE&sig=AOD64_3snPwHAU-NjdNAiWyt5PXp9rDrTA&ctype=46&q=&ved=2ahUKEwi9vKW8rqWHAxXzHNAFHc-nCyMQ9aACKAB6BAgCEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi1u628rqWHAxWgcn8AHQqqC7gYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGD01qxkCM1DZIlsK-8jmPnmhzPYh-hbKxMxXMRUV2m0ccoobh2rxUhoCiWgQAvD_BwE&sig=AOD64_3snPwHAU-NjdNAiWyt5PXp9rDrTA&ctype=46&q=&ved=2ahUKEwi9vKW8rqWHAxXzHNAFHc-nCyMQ9aACKAB6BAgCEBA&adurl=",
   },
   {
     name: "Château Climens",
@@ -916,7 +970,8 @@ const wines = [
     grape: "Sémillon",
     avgPrice: 90,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSe2GKTVFqlr-PDJQXUXLUiwGCGfTs5KEXIUzE-lQwFMq5195bWeTeabLIhWuWk94Fc1xcXUaBJsL-jiQiv08IRigbaKGoxfkFtxBe8xyDnEZ2YPw7mr0vQTYqpWVHn&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjxrpzUrqWHAxWNLNQBHfWhC40YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB2Gw1j6UW-6Hcn9xDcblrdMFr0jtpVbnfYmDaxj8pRINtE7VZAJ2RoCNgoQAvD_BwE&sig=AOD64_2b3o6dUY7GADtsAVClqFrBccbdxQ&ctype=5&q=&nis=4&ved=2ahUKEwiJ6ZXUrqWHAxX278kDHX16D3QQ9aACKAB6BAgCEBU&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjxrpzUrqWHAxWNLNQBHfWhC40YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB2Gw1j6UW-6Hcn9xDcblrdMFr0jtpVbnfYmDaxj8pRINtE7VZAJ2RoCNgoQAvD_BwE&sig=AOD64_2b3o6dUY7GADtsAVClqFrBccbdxQ&ctype=5&q=&nis=4&ved=2ahUKEwiJ6ZXUrqWHAxX278kDHX16D3QQ9aACKAB6BAgCEBU&adurl=",
   },
   {
     name: "Louis Latour Corton-Charlemagne",
@@ -931,7 +986,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 150,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRADMx-wKIbp3HyO47FH5zptyWY7-7jbn5A3KhwkfIHZh1erCphtBglZSM47oqQQXbRt5REtXDeaQZhfIYr1VxnHoqV2E0TcZQ_t1RNPsGNuuXFKunYq1nFlWTBvmYWGVc&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Louis%20Latour%20Corton-Charlemagne%202014&imgurl=http%3A%2F%2Fwww.bighammerwines.com%2Fcdn%2Fshop%2Fproducts%2F2014LouisLatourCorton-CharlemagneGrandCru_600x.jpg%3Fv%3D1627945526&imgrefurl=https%3A%2F%2Fwww.bighammerwines.com%2Fproducts%2F2014-corton-charlemagne-domaine-latour&docid=jlRKYqUCQWwhWM&tbnid=_AeSaiOxwaaNeM&vet=12ahUKEwjR0o7krqWHAxWI78kDHSMFC7UQM3oECGoQAA..i&w=400&h=667&hcb=2&itg=1&ved=2ahUKEwjR0o7krqWHAxWI78kDHSMFC7UQM3oECGoQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Louis%20Latour%20Corton-Charlemagne%202014&imgurl=http%3A%2F%2Fwww.bighammerwines.com%2Fcdn%2Fshop%2Fproducts%2F2014LouisLatourCorton-CharlemagneGrandCru_600x.jpg%3Fv%3D1627945526&imgrefurl=https%3A%2F%2Fwww.bighammerwines.com%2Fproducts%2F2014-corton-charlemagne-domaine-latour&docid=jlRKYqUCQWwhWM&tbnid=_AeSaiOxwaaNeM&vet=12ahUKEwjR0o7krqWHAxWI78kDHSMFC7UQM3oECGoQAA..i&w=400&h=667&hcb=2&itg=1&ved=2ahUKEwjR0o7krqWHAxWI78kDHSMFC7UQM3oECGoQAA",
   },
   {
     name: "Armand de Brignac Ace of Spades",
@@ -946,7 +1002,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 300,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRHgj5iCOeOAqG5OT8w81I4fFJpjpqlLaNQnMop6ct7kwMc75t414r-NH7jOSmod3S_uXWppi0aYz4if5JEmYTG3FVFrD5mEjrpabz0-zH_ArHc6hqL7ngedvpfLagzbqfPF57SWA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiP7_KCr6WHAxUVN9QBHRXTAtwYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFg1uo0bfViPptEUoTYQz0J3CI1qNetQI33vGQ4vebDO2TCd3-h0rhoCTCYQAvD_BwE&sig=AOD64_2cFKZ5MOnirxKSAqyG6CLPbR6l8g&ctype=46&q=&ved=2ahUKEwjKhuyCr6WHAxWpMNAFHWnfAwMQ9aACKAB6BAgBECE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiP7_KCr6WHAxUVN9QBHRXTAtwYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFg1uo0bfViPptEUoTYQz0J3CI1qNetQI33vGQ4vebDO2TCd3-h0rhoCTCYQAvD_BwE&sig=AOD64_2cFKZ5MOnirxKSAqyG6CLPbR6l8g&ctype=46&q=&ved=2ahUKEwjKhuyCr6WHAxWpMNAFHWnfAwMQ9aACKAB6BAgBECE&adurl=",
   },
   {
     name: "Almaviva",
@@ -961,7 +1018,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 150,
     img: "https://www.google.com/aclk?sa=l&ai=DChcSEwi654CQr6WHAxUecn8AHUwpDgoYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLx2O4CNIxHNoDFOScxP9AfO69MNHsZHoPLwatvi6KdqFnJCuR3N6BoCv3oQAvD_BwE&sig=AOD64_28azHHb3igMyu_jIDS4XAH4MwMjg&ctype=46&q=&ved=2ahUKEwiPoPuPr6WHAxVtGtAFHYnXB7oQ9aACKAB6BAgCEBA&adurl=",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi654CQr6WHAxUecn8AHUwpDgoYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKdHthmyfN6TdCqHmzPRtCaQtAN8ZptVKIDc8rGO5JMwf-BtmokzjhoCrUQQAvD_BwE&sig=AOD64_3lc6Nxnd8TTQ3P2i0nDfsEHgnxIg&ctype=5&q=&nis=4&ved=2ahUKEwiPoPuPr6WHAxVtGtAFHYnXB7oQ9aACKAB6BAgCECo&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi654CQr6WHAxUecn8AHUwpDgoYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKdHthmyfN6TdCqHmzPRtCaQtAN8ZptVKIDc8rGO5JMwf-BtmokzjhoCrUQQAvD_BwE&sig=AOD64_3lc6Nxnd8TTQ3P2i0nDfsEHgnxIg&ctype=5&q=&nis=4&ved=2ahUKEwiPoPuPr6WHAxVtGtAFHYnXB7oQ9aACKAB6BAgCECo&adurl=",
   },
   {
     name: "Almaviva",
@@ -976,7 +1034,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 150,
     img: "https://example.com/images/almaviva.jpg",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi654CQr6WHAxUecn8AHUwpDgoYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKdHthmyfN6TdCqHmzPRtCaQtAN8ZptVKIDc8rGO5JMwf-BtmokzjhoCrUQQAvD_BwE&sig=AOD64_3lc6Nxnd8TTQ3P2i0nDfsEHgnxIg&ctype=5&q=&nis=4&ved=2ahUKEwiPoPuPr6WHAxVtGtAFHYnXB7oQ9aACKAB6BAgCECo&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi654CQr6WHAxUecn8AHUwpDgoYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKdHthmyfN6TdCqHmzPRtCaQtAN8ZptVKIDc8rGO5JMwf-BtmokzjhoCrUQQAvD_BwE&sig=AOD64_3lc6Nxnd8TTQ3P2i0nDfsEHgnxIg&ctype=5&q=&nis=4&ved=2ahUKEwiPoPuPr6WHAxVtGtAFHYnXB7oQ9aACKAB6BAgCECo&adurl=",
   },
   {
     name: "Marchesi Antinori Tignanello",
@@ -991,7 +1050,8 @@ const wines = [
     grape: "Sangiovese",
     avgPrice: 135,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTsnVvVhhbXhs1KPQguF4Rgd-Tl6v1z0o8nPal2UAemSfggNiL9zuZtVebzNQtLutd2uyN6McbP2Q8gACiJqzMsfDXGaEkAwIVlpKAaQlKnLU8kENt4xtKS4lUvdkF4Ahajl5lW2o3c&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjDr9W_r6WHAxUZMtQBHbAeDI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJU9s6hpPg5yKZuJ3_v3JoQqRVX2GLZIb8GPHcUmfTLQDoK7vGBE3RoCqKcQAvD_BwE&sig=AOD64_0GfdF86UH1N6B2zDJtHT5WHSZ0Aw&ctype=5&q=&nis=4&ved=2ahUKEwiqyc6_r6WHAxX34ckDHQsODQMQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjDr9W_r6WHAxUZMtQBHbAeDI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJU9s6hpPg5yKZuJ3_v3JoQqRVX2GLZIb8GPHcUmfTLQDoK7vGBE3RoCqKcQAvD_BwE&sig=AOD64_0GfdF86UH1N6B2zDJtHT5WHSZ0Aw&ctype=5&q=&nis=4&ved=2ahUKEwiqyc6_r6WHAxX34ckDHQsODQMQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Penfolds Bin 707",
@@ -1006,7 +1066,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 250,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTTb-Ajg0TOU_17lrMq1_-wQXcZlrChPV-6JG6_PSnMwUVSLQUFsyGifBID1rBdF2VD6CTpXswxYzUYFP4SV9cWC2ZOkrBSGF2p0R9iSTvgZmNf7a-fW4OtiRWv3sE5YiuTc0c-9mjn&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiQ_b_Mr6WHAxXmbn8AHYYfDwIYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPmCxIvItStdlGNKXzkDSVAFkJWMOUIWgN1PWxGhgFhzXxxkDWGazxoC0WsQAvD_BwE&sig=AOD64_1Bb36q6pNoY7qulAMusH4XdP3VxQ&ctype=5&q=&nis=4&ved=2ahUKEwiO37jMr6WHAxVQMtAFHTeMC3EQ9aACKAB6BAgBEB0&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiQ_b_Mr6WHAxXmbn8AHYYfDwIYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPmCxIvItStdlGNKXzkDSVAFkJWMOUIWgN1PWxGhgFhzXxxkDWGazxoC0WsQAvD_BwE&sig=AOD64_1Bb36q6pNoY7qulAMusH4XdP3VxQ&ctype=5&q=&nis=4&ved=2ahUKEwiO37jMr6WHAxVQMtAFHTeMC3EQ9aACKAB6BAgBEB0&adurl=",
   },
   {
     name: "Sine Qua Non Syrah",
@@ -1021,7 +1082,8 @@ const wines = [
     grape: "Syrah",
     avgPrice: 250,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQD066gBsr5l_7ntajcX72m8tLm7MzXyMH71DULJHV9IH1wLwKGRphzqs5iyPHEURceNXX3DI_qRjZ6Fs3UHGMjvo4RJjzefnM2RQc3lgBZOYtGIOHd0rThbaEOyqrfflyj&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi09Yfdr6WHAxWHNdQBHeBmCI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB0yAG_dMiLNnDkJVbEBDWB6r5MzZz9qliOjpo69q0VDjvxdX1hIUBoC74EQAvD_BwE&sig=AOD64_13dFK0bFtCExO5Xj6SNbrjUT9xeA&ctype=5&q=&nis=4&ved=2ahUKEwifsIHdr6WHAxVP48kDHRnqDhUQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi09Yfdr6WHAxWHNdQBHeBmCI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB0yAG_dMiLNnDkJVbEBDWB6r5MzZz9qliOjpo69q0VDjvxdX1hIUBoC74EQAvD_BwE&sig=AOD64_13dFK0bFtCExO5Xj6SNbrjUT9xeA&ctype=5&q=&nis=4&ved=2ahUKEwifsIHdr6WHAxVP48kDHRnqDhUQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Domaine de la Romanée-Conti Montrachet",
@@ -1036,7 +1098,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 3500,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSAJyV59xJR3ZFKFoupxHEKDOnCFN31i7lzPjOLvJSCqYbJ3fyn9m9k9M-VSCsR1YNG1eYFmD0_ZIL6DJXDiK4wQ9PpEVNqfTxkQbHUK_1ea3N9ElsYMnGnYnbNChK6kzhjmd_Or0Yl-mQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwivl4_sr6WHAxXTNtQBHVr6C6kYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEfDo-rCDb6mPoC7JxXIXNIoZN1DtnUOyYmmcqlgy5azQOm6rYTY7BoC3bgQAvD_BwE&sig=AOD64_2s_WP5POJ1YeQ_GEghNiBQeW-oyg&ctype=5&q=&nis=4&ved=2ahUKEwjIjofsr6WHAxXN4ckDHfPSA9IQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwivl4_sr6WHAxXTNtQBHVr6C6kYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEfDo-rCDb6mPoC7JxXIXNIoZN1DtnUOyYmmcqlgy5azQOm6rYTY7BoC3bgQAvD_BwE&sig=AOD64_2s_WP5POJ1YeQ_GEghNiBQeW-oyg&ctype=5&q=&nis=4&ved=2ahUKEwjIjofsr6WHAxXN4ckDHfPSA9IQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Bodegas Vega Sicilia Unico",
@@ -1051,7 +1114,8 @@ const wines = [
     grape: "Tempranillo",
     avgPrice: 300,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRg3hgXmPsZJxc-qWp0MLq55nzAt1VPde_EIHSkReIh1WVRsolKUmG-PH65pBgTMV1mKFaii4fZ7FCiQlUEbBorhsaVtEBpeUrg7a1kDBoUezHpbkDkzlwhN2mweezCeMhQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiQqKT9r6WHAxVFNtQBHcnVDI8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGILU1e8iL1Gh4EITglCVcsqSTK6QzO72ANN2fWysp5G7PNICz9KmqRoCUqcQAvD_BwE&sig=AOD64_3e3BLgTo_BxMIGZgckPM7-ipQG7Q&ctype=5&q=&nis=4&ved=2ahUKEwjgxp39r6WHAxW65skDHcJzAZcQ9aACKAB6BAgCEBo&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiQqKT9r6WHAxVFNtQBHcnVDI8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGILU1e8iL1Gh4EITglCVcsqSTK6QzO72ANN2fWysp5G7PNICz9KmqRoCUqcQAvD_BwE&sig=AOD64_3e3BLgTo_BxMIGZgckPM7-ipQG7Q&ctype=5&q=&nis=4&ved=2ahUKEwjgxp39r6WHAxW65skDHcJzAZcQ9aACKAB6BAgCEBo&adurl=",
   },
   {
     name: "Joseph Phelps Insignia",
@@ -1066,7 +1130,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 250,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQoyC1_CZwi-PEM4JcYumaWzGuwMdBVewiI97BUCob0gAybUuXx_f_CSTfdATlfTzvxvbhDLH467Cd3-I4xGZ91AlsGPRYhpWz-CymyCZPy96e2OHBL3jeC1KOnrXDm66NVY5J9kSdPbg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi-nJCSsKWHAxVlN9QBHQobCr4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEid8Ad8A8waQKwPDKTGN--1FaoODq4BSxT6eEq8roNSszGqlT-1KhoCDRAQAvD_BwE&sig=AOD64_2ySxtcz0q5LlvPOtYeFb2xgCcO0g&ctype=5&q=&nis=4&ved=2ahUKEwiowomSsKWHAxVlD9AFHRaQDu4Q9aACKAB6BAgEEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi-nJCSsKWHAxVlN9QBHQobCr4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEid8Ad8A8waQKwPDKTGN--1FaoODq4BSxT6eEq8roNSszGqlT-1KhoCDRAQAvD_BwE&sig=AOD64_2ySxtcz0q5LlvPOtYeFb2xgCcO0g&ctype=5&q=&nis=4&ved=2ahUKEwiowomSsKWHAxVlD9AFHRaQDu4Q9aACKAB6BAgEEA4&adurl=",
   },
 
   {
@@ -1082,7 +1147,8 @@ const wines = [
     grape: "Nebbiolo",
     avgPrice: 200,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRe_BPSlPnfcOaMjFwE7ysNm-jnVRHSKr25otDLAHO40m50CO-LNn2xxe4AOysczUF6_MTi_eH3kr-ru39Kxx38JwAZoh7ViDLPBDCfNrtoJtclZ9cszDzT2ii8Wm0AN5dIn2kpqnA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiyvfOesKWHAxWYOtQBHZRqDo8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGM7k7EZUvTUJqrZKFSoatK5Nyf_xL0YXuEdAdCyxhOb3J_fFyuHrExoCLyYQAvD_BwE&sig=AOD64_1qq4-YsF6WAx6DPAjqXoa9cmfKKA&ctype=5&q=&nis=4&ved=2ahUKEwjIlO2esKWHAxWpwskDHZU1D5sQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiyvfOesKWHAxWYOtQBHZRqDo8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGM7k7EZUvTUJqrZKFSoatK5Nyf_xL0YXuEdAdCyxhOb3J_fFyuHrExoCLyYQAvD_BwE&sig=AOD64_1qq4-YsF6WAx6DPAjqXoa9cmfKKA&ctype=5&q=&nis=4&ved=2ahUKEwjIlO2esKWHAxWpwskDHZU1D5sQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Opus One",
@@ -1097,7 +1163,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 300,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcReCgdkuseODLwMegLpbcMVhNGsfwr4L1Ttbd_XzyK2S4J2WkpVpA2pUHqixPkXF25XX1m1zxhH1QjulZBY2tpDRI-4jYM0oEIloyQJkH7YlwYeFnqPL4SufPyVlJdpugWyvNFSepkUuA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwja7MeusKWHAxWQNdQBHe_rC7UYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGL8cpEDExIlu8tWPdJoS_hdYPzm2hvM09f80A2WwRDX8aIUlF6ygwRoCnwkQAvD_BwE&sig=AOD64_1X3Q-0C_N4iek3rC8AwyVDbvxRHQ&ctype=5&q=&nis=4&ved=2ahUKEwio1cGusKWHAxWB5ckDHb4xDF0Q9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwja7MeusKWHAxWQNdQBHe_rC7UYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGL8cpEDExIlu8tWPdJoS_hdYPzm2hvM09f80A2WwRDX8aIUlF6ygwRoCnwkQAvD_BwE&sig=AOD64_1X3Q-0C_N4iek3rC8AwyVDbvxRHQ&ctype=5&q=&nis=4&ved=2ahUKEwio1cGusKWHAxWB5ckDHb4xDF0Q9aACKAB6BAgCEA4&adurl=",
   },
 
   {
@@ -1113,7 +1180,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 60,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSMbxQ0d7LNn5hLTTSoOklJL8UdKI_cnS904TMV69UYR6wyUuC-p3YGlfuFEiHoWRFRbhNERYpNlPRqPvC1rpfaA1REy3cky8xRcS2Mqdv9-bdBGhM8_6LP83nuk4ZozbnpA503Jg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjM8bS8sKWHAxX_MdQBHb4CCqQYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDi8Qs_cAlQhXB8vZLRNNe3iuMhvgfiQQb5IL1RFzl8gTuhcb6hcvxoCTvgQAvD_BwE&sig=AOD64_14HrkXR3U-9JEUzNJ7daYTxS1jcA&ctype=46&q=&ved=2ahUKEwjd5K28sKWHAxXGHNAFHe5PBTEQ9aACKAB6BAgBEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjM8bS8sKWHAxX_MdQBHb4CCqQYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDi8Qs_cAlQhXB8vZLRNNe3iuMhvgfiQQb5IL1RFzl8gTuhcb6hcvxoCTvgQAvD_BwE&sig=AOD64_14HrkXR3U-9JEUzNJ7daYTxS1jcA&ctype=46&q=&ved=2ahUKEwjd5K28sKWHAxXGHNAFHe5PBTEQ9aACKAB6BAgBEBA&adurl=",
   },
 
   {
@@ -1129,7 +1197,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 180,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ4lKq-h8HBJdwb-3HrA5jz1jQtFBaEXvJfU6B6mmodqyVSuv9pNT2cNbzNjs2eKoBGZ4RDSqO9-s8vPG4cT1gUw_YOlvqnZuVYWMFneyH1iPMDG2eSxYQ89TayVgXz&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiIwajOsKWHAxVjNtQBHfkIA9QYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIz_v2QM4jJMQZHN8bOu1OCDfE933bm0rfXzBRgwAtlFp5RgVBD1HRoCc5gQAvD_BwE&sig=AOD64_3V7qebiRgLjOH-HZSEutjr0LTD3g&ctype=5&q=&nis=4&ved=2ahUKEwjP0qLOsKWHAxWe4ckDHWTABYYQ9aACKAB6BAgHEB8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiIwajOsKWHAxVjNtQBHfkIA9QYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIz_v2QM4jJMQZHN8bOu1OCDfE933bm0rfXzBRgwAtlFp5RgVBD1HRoCc5gQAvD_BwE&sig=AOD64_3V7qebiRgLjOH-HZSEutjr0LTD3g&ctype=5&q=&nis=4&ved=2ahUKEwjP0qLOsKWHAxWe4ckDHWTABYYQ9aACKAB6BAgHEB8&adurl=",
   },
   {
     name: "Rombauer Chardonnay",
@@ -1144,7 +1213,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 40,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSKC1ivyHu6IrdgQXpr_u8-8BWWOjiqDemhjo0gZ3WDXWMv0KIX60pOMBQZjZNdICEC7tapWlP1Pw0UOW0uYO24mYF9NUk1kyigJYgliTMrg5NojkEdx78HS2rkUhooiOg6BlS2UIolPA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjc1bzesKWHAxWYOtQBHZRqDo8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOaKIxSSOQF_31JwKJi8lSAuvtYOtxthzebDMNm_UGZOWtALV3W6GhoC71QQAvD_BwE&sig=AOD64_0paluPLZbkCv-xgk8GojgysAIzWQ&ctype=46&q=&ved=2ahUKEwjc6bbesKWHAxXJ78kDHelWB5UQ9aACKAB6BAgHEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjc1bzesKWHAxWYOtQBHZRqDo8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOaKIxSSOQF_31JwKJi8lSAuvtYOtxthzebDMNm_UGZOWtALV3W6GhoC71QQAvD_BwE&sig=AOD64_0paluPLZbkCv-xgk8GojgysAIzWQ&ctype=46&q=&ved=2ahUKEwjc6bbesKWHAxXJ78kDHelWB5UQ9aACKAB6BAgHEBM&adurl=",
   },
   {
     name: "Chateau Montelena Cabernet Sauvignon",
@@ -1159,7 +1229,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 125,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTbMFBWUGv3x_2Py76PoXtH--orKk-KnlZwLWmn4uUQqpu40TTcyGD5j2SGmAZNAyVwJ5-vl1K2mafVB07IxbJ7gj-Jy2cx1BQcerCuz4RqdMaZ1mZ_dREdWwWnK8IkEdQCbZTBApUVHQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjV2bLxsKWHAxXfcn8AHZigDX4YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBbkGzKSvr21IzQWTFiAt0Au5mBxBNJbvOP34Dpkhm_TrYest_vNuhoCYwsQAvD_BwE&sig=AOD64_0Z05GN2opiuJD6xyhAPKd3AbpF3g&ctype=5&q=&nis=4&ved=2ahUKEwjbpavxsKWHAxVDGtAFHRqEBIUQ9aACKAB6BAgCEBk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjV2bLxsKWHAxXfcn8AHZigDX4YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBbkGzKSvr21IzQWTFiAt0Au5mBxBNJbvOP34Dpkhm_TrYest_vNuhoCYwsQAvD_BwE&sig=AOD64_0Z05GN2opiuJD6xyhAPKd3AbpF3g&ctype=5&q=&nis=4&ved=2ahUKEwjbpavxsKWHAxVDGtAFHRqEBIUQ9aACKAB6BAgCEBk&adurl=",
   },
   {
     name: "Domaines Ott Chateau de Selle",
@@ -1174,7 +1245,8 @@ const wines = [
     grape: "Grenache",
     avgPrice: 55,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS_xermasuznPuWzEdKDevzXSiVPfl-SKE71eUJs-GgLo-GKNFRO_1sVau3Q0ICamYC7Gah82D1k-4wc_hKO1qbwnEMUP9_MKSzlDDXRC01FLfbGbRZY8ot7TYYmdM&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjcq6GCsaWHAxV4SH8AHfZkCqUYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOWFxyFYj9zJT3V6HSWNyYMtCeuMNG4fkh40szp6ziEghN7V_U3M8xoCQIMQAvD_BwE&sig=AOD64_0WA1wKK-mYcRo_Hszln0jASMk0bA&ctype=5&q=&nis=4&ved=2ahUKEwiM15eCsaWHAxV96ckDHdB-AuMQ9aACKAB6BAgBEDQ&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjcq6GCsaWHAxV4SH8AHfZkCqUYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOWFxyFYj9zJT3V6HSWNyYMtCeuMNG4fkh40szp6ziEghN7V_U3M8xoCQIMQAvD_BwE&sig=AOD64_0WA1wKK-mYcRo_Hszln0jASMk0bA&ctype=5&q=&nis=4&ved=2ahUKEwiM15eCsaWHAxV96ckDHdB-AuMQ9aACKAB6BAgBEDQ&adurl=",
   },
   {
     name: "Pio Cesare Barolo",
@@ -1189,7 +1261,8 @@ const wines = [
     grape: "Nebbiolo",
     avgPrice: 85,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTA0nyldmsU6EhIXXvvY_WYdmLDXg84ckjJ8JaN-QXAvOUdwNlMaH29fw1KNBeTkC5o_lo8e3RAXZLIxi9dA4NAUEgmKXIdpUefmBu2flxt0enTAMQLqLaqiMQKxz_A9KG9HsrK-rcB_Ro&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwihq8yUsaWHAxVCS38AHeydD0MYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNPjmyk7iVntI0kSek5dj1y9hVkXXBmr14EZA43a9h5Doir7gt-RvRoCDxUQAvD_BwE&sig=AOD64_3mUdVISlPdW5bi_n8v3PQL-qGfww&ctype=5&q=&nis=4&ved=2ahUKEwjJv8WUsaWHAxVoJNAFHcHACUUQ9aACKAB6BAgBECQ&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwihq8yUsaWHAxVCS38AHeydD0MYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNPjmyk7iVntI0kSek5dj1y9hVkXXBmr14EZA43a9h5Doir7gt-RvRoCDxUQAvD_BwE&sig=AOD64_3mUdVISlPdW5bi_n8v3PQL-qGfww&ctype=5&q=&nis=4&ved=2ahUKEwjJv8WUsaWHAxVoJNAFHcHACUUQ9aACKAB6BAgBECQ&adurl=",
   },
   {
     name: "Veuve Clicquot La Grande Dame",
@@ -1204,7 +1277,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 150,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS5lIJt19b-swH0KzTJ4XLK3S5fuu6FWEa6eCJHcmSufN3-N61RszS9W209YTUJIGphQbtAUhW96pUJTAGBesz6JhXyWR8TgHu1_noXh8KZJJD35cH__ZKjngcllXy3gQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiYl5iqsaWHAxXrUn8AHceeDXYYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIkWVmXQNSlHNgp1Ko7w78tcXJrM1xDavjA8rNMm8sS5VkH5eVSDsBoCyPAQAvD_BwE&sig=AOD64_0nbjBZIeCKlUfZli3BKyqrhu8emg&ctype=5&q=&nis=4&ved=2ahUKEwj415CqsaWHAxUW5MkDHdU9CsoQ9aACKAB6BAgCEB8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiYl5iqsaWHAxXrUn8AHceeDXYYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIkWVmXQNSlHNgp1Ko7w78tcXJrM1xDavjA8rNMm8sS5VkH5eVSDsBoCyPAQAvD_BwE&sig=AOD64_0nbjBZIeCKlUfZli3BKyqrhu8emg&ctype=5&q=&nis=4&ved=2ahUKEwj415CqsaWHAxUW5MkDHdU9CsoQ9aACKAB6BAgCEB8&adurl=",
   },
   {
     name: "Louis Roederer Cristal",
@@ -1219,7 +1293,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 300,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTt2sSaVi9Cc_6PMyh9g6XztL1aXcZbFQb1ryC0NYQhe2WOcH8jHHBKhPux3Mz0m2-96VGIEft-0P0F3s0boor_AcaLWpNnv9iKYcVjhFa_kzWAXFe23Jn46sY6VQkinH2bLZ-_wA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi6rIW6saWHAxUQd38AHeLiA50YABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDXv-VBerY4zlh36p-1ZB0nI2F19-0vkrYIVeBj3ohYvIsJuU44GuBoCb00QAvD_BwE&sig=AOD64_1KLxEwdXarjV1REpIWFNwXbIu6wg&ctype=5&q=&nis=4&ved=2ahUKEwifvf25saWHAxW13MkDHTCaCTQQ9aACKAB6BAgCECk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi6rIW6saWHAxUQd38AHeLiA50YABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDXv-VBerY4zlh36p-1ZB0nI2F19-0vkrYIVeBj3ohYvIsJuU44GuBoCb00QAvD_BwE&sig=AOD64_1KLxEwdXarjV1REpIWFNwXbIu6wg&ctype=5&q=&nis=4&ved=2ahUKEwifvf25saWHAxW13MkDHTCaCTQQ9aACKAB6BAgCECk&adurl=",
   },
   {
     name: "Beringer Private Reserve Cabernet Sauvignon",
@@ -1234,7 +1309,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 150,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSQSqnOI-Oc3LXRBMzShEZn-s5_exT8aJ2nZyOLTvMp1lTrL77q_xx32h_3WXHoWe3BNtxxxRo9daUKuquOIR2hLXv1JKqk5Plw5a2KYFEZeHk2qVQUn7DKmaTJTc8J7g&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjuye3JsaWHAxVbXX8AHfSkB7MYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMbU67H1RSU-AhSBct3b96cBkNHg-rGWR6oWwjQ5bvt0Vbev30O8zhoCrAcQAvD_BwE&sig=AOD64_0ojOATiBy67KmcEKiS0vrJR26sAg&ctype=5&q=&nis=4&ved=2ahUKEwiE2-bJsaWHAxWt5MkDHX0LCLEQ9aACKAB6BAgBECA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjuye3JsaWHAxVbXX8AHfSkB7MYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMbU67H1RSU-AhSBct3b96cBkNHg-rGWR6oWwjQ5bvt0Vbev30O8zhoCrAcQAvD_BwE&sig=AOD64_0ojOATiBy67KmcEKiS0vrJR26sAg&ctype=5&q=&nis=4&ved=2ahUKEwiE2-bJsaWHAxWt5MkDHX0LCLEQ9aACKAB6BAgBECA&adurl=",
   },
   {
     name: "Cloudy Bay Sauvignon Blanc",
@@ -1249,7 +1325,8 @@ const wines = [
     grape: "Sauvignon Blanc",
     avgPrice: 30,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT-maVjebg_UI5WmMkQ0XxT4k7sPMKYv6WqeBl6zY2Bjaf_urzk1947zKaomQslTI1pxVJSUkU_h7EV5vwmQUsyBDJ1Ibg3mrvbWEaPHWvFzmwmXyWIMuFsrYgYtqa0HTeR4mz0md0&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjMkY_YsaWHAxUqNtQBHSDiCn0YABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLB8LXqye3NSeEHaMR_q5N1A2pD3nojNij9GuqJP_Nn0xAieyJWOqBoCs9gQAvD_BwE&sig=AOD64_0dSv8BBTHk9gCWPWmHTFDPXJo3cQ&ctype=46&q=&ved=2ahUKEwjFpojYsaWHAxUlG9AFHV7DBVsQ9aACKAB6BAgBEC8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjMkY_YsaWHAxUqNtQBHSDiCn0YABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLB8LXqye3NSeEHaMR_q5N1A2pD3nojNij9GuqJP_Nn0xAieyJWOqBoCs9gQAvD_BwE&sig=AOD64_0dSv8BBTHk9gCWPWmHTFDPXJo3cQ&ctype=46&q=&ved=2ahUKEwjFpojYsaWHAxUlG9AFHV7DBVsQ9aACKAB6BAgBEC8&adurl=",
   },
   {
     name: "Chateau Ste. Michelle Riesling",
@@ -1264,7 +1341,8 @@ const wines = [
     grape: "Riesling",
     avgPrice: 15,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMiNyfj14CDxNgoVmIsh7W9V-yxbUEX9WmZQ&s",
-    linkToPurchase: "https://www.google.com/imgres?q=Chateau%20Ste.%20Michelle%20Riesling%202018&imgurl=https%3A%2F%2Fimages.vivino.com%2Fthumbs%2FORJdgjuwTe6f2vYTKMOYwA_pb_x600.png&imgrefurl=https%3A%2F%2Fwww.vivino.com%2Fchateau-ste-michelle-riesling%2Fw%2F1110344%3Fyear%3D2018&docid=qsY0MRd9dEX8zM&tbnid=v23H1ZvU_uEcjM&vet=12ahUKEwiX6av4saWHAxUwL9AFHayPDgEQM3oECBsQAA..i&w=158&h=600&hcb=2&ved=2ahUKEwiX6av4saWHAxUwL9AFHayPDgEQM3oECBsQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Chateau%20Ste.%20Michelle%20Riesling%202018&imgurl=https%3A%2F%2Fimages.vivino.com%2Fthumbs%2FORJdgjuwTe6f2vYTKMOYwA_pb_x600.png&imgrefurl=https%3A%2F%2Fwww.vivino.com%2Fchateau-ste-michelle-riesling%2Fw%2F1110344%3Fyear%3D2018&docid=qsY0MRd9dEX8zM&tbnid=v23H1ZvU_uEcjM&vet=12ahUKEwiX6av4saWHAxUwL9AFHayPDgEQM3oECBsQAA..i&w=158&h=600&hcb=2&ved=2ahUKEwiX6av4saWHAxUwL9AFHayPDgEQM3oECBsQAA",
   },
 
   {
@@ -1280,7 +1358,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 120,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR0L4Ytu-1sII8ETvzJkyD7p-7yUAsmLowWmjHMMMx_9eU6JGVoaF5QAB4znN2IQdIpHZ9npBG-Ki1S_UQeYSuLmDmSxKlKNt2MK5uDx3DcaKDKYVIzhYUL1D4N2KoFQV7RsponQA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjIkNqUsqWHAxVvN9QBHaEuAZ0YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFFReFyNGuj-Kcds4_VC432aw7Zzp3oqU86VATOe76F183Kp32pqfRoCUU4QAvD_BwE&sig=AOD64_00MsFO-MRttPbKM6n02hwjXw_Fpw&ctype=5&q=&nis=4&ved=2ahUKEwiBidOUsqWHAxVLL9AFHZoAChIQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjIkNqUsqWHAxVvN9QBHaEuAZ0YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFFReFyNGuj-Kcds4_VC432aw7Zzp3oqU86VATOe76F183Kp32pqfRoCUU4QAvD_BwE&sig=AOD64_00MsFO-MRttPbKM6n02hwjXw_Fpw&ctype=5&q=&nis=4&ved=2ahUKEwiBidOUsqWHAxVLL9AFHZoAChIQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Penfolds Bin 389 Cabernet Shiraz",
@@ -1295,7 +1374,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 70,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQf3P0W_CiLA_u6mBo60KTliRPXjZuMS6DCUxXfJCJJqEQOlGDQz-XMUZAQCUX45nH1nOh7qOxXf2vLw9OVxSXFxWRdYG5yiwbigm9H2SCF4i3OATfKqd_6VsVBpAV8&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwja6_-rsqWHAxUENtQBHd9GDI8YABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK46mQ6HwrL0m5FNuQw-1rLZDn8gp1RCIZI_i70-rwlQQEm2Vv2LwBoCIY4QAvD_BwE&sig=AOD64_0kCgY1hZGAkwJmVKmq-rzQqfdgXw&ctype=5&q=&nis=4&ved=2ahUKEwjh_vmrsqWHAxWE1skDHXKNDX0Q9aACKAB6BAgHED4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwja6_-rsqWHAxUENtQBHd9GDI8YABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK46mQ6HwrL0m5FNuQw-1rLZDn8gp1RCIZI_i70-rwlQQEm2Vv2LwBoCIY4QAvD_BwE&sig=AOD64_0kCgY1hZGAkwJmVKmq-rzQqfdgXw&ctype=5&q=&nis=4&ved=2ahUKEwjh_vmrsqWHAxWE1skDHXKNDX0Q9aACKAB6BAgHED4&adurl=",
   },
   {
     name: "Domaine de la Romanee-Conti La Tache",
@@ -1310,7 +1390,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 2000,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTBwexKjtKn3lPGXasIslhsxYgrChS6q8zgQPHlhFOdjXEfTrdEevEjft4ZpQ9omHIzLWfn3wa2UzAaHA7yCqQ0b_p0A1vYCErzDG3M7JBF1I0lTlwMfB3LNg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjVrPS7sqWHAxVBcn8AHVJZAjkYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEMriI-6-VvRODscBfqhaiYYe9h22S-11GTfbw_cbavs4iTWhDYrQxoCLbAQAvD_BwE&sig=AOD64_0Uq593bGUHKaXfgzB-rxQabP63OA&ctype=5&q=&nis=4&ved=2ahUKEwiwpuy7sqWHAxUoLdAFHVesAzIQ9aACKAB6BAgEEA8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjVrPS7sqWHAxVBcn8AHVJZAjkYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGEMriI-6-VvRODscBfqhaiYYe9h22S-11GTfbw_cbavs4iTWhDYrQxoCLbAQAvD_BwE&sig=AOD64_0Uq593bGUHKaXfgzB-rxQabP63OA&ctype=5&q=&nis=4&ved=2ahUKEwiwpuy7sqWHAxUoLdAFHVesAzIQ9aACKAB6BAgEEA8&adurl=",
   },
   {
     name: "Chateau Haut-Brion Blanc",
@@ -1325,7 +1406,8 @@ const wines = [
     grape: "Sauvignon Blanc",
     avgPrice: 850,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcScbwHTqjwfIvwj5Ffk1P5nNSi4TmcRWXQC8FycHbLOeSihwrVQWw6uLywk_QAtKwiy09JU-esG_fuxTRlswPFgNVZ18h8apoVuQ62MyjksnuI5mUnHtFGk0hFlKPup19ksth36ywOB9g&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiho-rSsqWHAxU_LtQBHZrEB6sYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLndYlsb03VfD9hwrLZ6GXCEmB1BeuCHbr5t248JR-lVoKgP4-9czRoCICAQAvD_BwE&sig=AOD64_2KaanAoicA4htC4PlFdJVtxbBIVA&ctype=46&q=&ved=2ahUKEwikqOPSsqWHAxWW38kDHYwFCkIQ9aACKAB6BAgDEBM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiho-rSsqWHAxU_LtQBHZrEB6sYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLndYlsb03VfD9hwrLZ6GXCEmB1BeuCHbr5t248JR-lVoKgP4-9czRoCICAQAvD_BwE&sig=AOD64_2KaanAoicA4htC4PlFdJVtxbBIVA&ctype=46&q=&ved=2ahUKEwikqOPSsqWHAxWW38kDHYwFCkIQ9aACKAB6BAgDEBM&adurl=",
   },
 
   {
@@ -1341,7 +1423,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 350,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT-3iyrcRMj-5cXP1XhGHUHJJgEW1BCaWQsEZcFx_dpLAGfPcrw2CKE_iKiBsLJjAEBulCyRDD4lQF2KpDbFZiN9j-1pv0uINnJ564J6uhztki5nB3aenJ3nNpwkqq2lI0WtZ6CfYyjcDw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiLzuffsqWHAxXAc38AHSrqB8gYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDjX56PZ-l_WEoBU3sNX411-B2F_RePZEL49TIOfmFgAc9TTt9mwnxoCOSMQAvD_BwE&sig=AOD64_01Dq0_eBi0D_Xobc4XpvqOH314YQ&ctype=5&q=&nis=4&ved=2ahUKEwjhsuLfsqWHAxVgMNAFHTLOC2YQ9aACKAB6BAgCEBw&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiLzuffsqWHAxXAc38AHSrqB8gYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDjX56PZ-l_WEoBU3sNX411-B2F_RePZEL49TIOfmFgAc9TTt9mwnxoCOSMQAvD_BwE&sig=AOD64_01Dq0_eBi0D_Xobc4XpvqOH314YQ&ctype=5&q=&nis=4&ved=2ahUKEwjhsuLfsqWHAxVgMNAFHTLOC2YQ9aACKAB6BAgCEBw&adurl=",
   },
   {
     name: "Clos des Papes Chateauneuf-du-Pape",
@@ -1356,7 +1439,8 @@ const wines = [
     grape: "Grenache",
     avgPrice: 100,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQaxOhx8e0FM-Seuh0HY4s5r4w87akwLexBxYhjFwswBzLMzmx5bxS-KIdiNVf_kxNjDaE7U2tXEeLtrqKlypi76F5F6ivVzxLnQdKeOpA6IH5wzrYsLl4p8NYXQ2Hh6w&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj8sZ7xsqWHAxXwdH8AHV7ADnoYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGM0YotY16jQLs__E8xOOQT6yC6z7BR3dm3FCl69C-vjxdt6MW-I1IxoCIhoQAvD_BwE&sig=AOD64_3i_r-pICX6Y4ZCzfG5NiGTW74B6Q&ctype=5&q=&nis=4&ved=2ahUKEwj60ZXxsqWHAxWT0ckDHSGRAMUQ9aACKAB6BAgBEBw&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj8sZ7xsqWHAxXwdH8AHV7ADnoYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGM0YotY16jQLs__E8xOOQT6yC6z7BR3dm3FCl69C-vjxdt6MW-I1IxoCIhoQAvD_BwE&sig=AOD64_3i_r-pICX6Y4ZCzfG5NiGTW74B6Q&ctype=5&q=&nis=4&ved=2ahUKEwj60ZXxsqWHAxWT0ckDHSGRAMUQ9aACKAB6BAgBEBw&adurl=",
   },
   {
     name: "Ornellaia",
@@ -1371,7 +1455,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 200,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRX491olxCAtBArQrOEmH0-i2iZyjiS-yqkjxvWU7A3BhyxXeZYgOkewXkx0BkSU4OqORbL3HS7EcTcY77g3W-297qi3Jjbjj1bcUhDmuSIGp8duB0MBln7eQNkXd6O3sQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiJ2ar_sqWHAxVcMdQBHZjjCl0YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDc0UVvQoM0-dk5NT_aWsh-PYTPoJGBVXEPdN5yjsGDkwWBZdFCY7BoCJK4QAvD_BwE&sig=AOD64_2P9FQGmJyeQKt3e_-pEZYICPtEdA&ctype=5&q=&nis=4&ved=2ahUKEwjzkKT_sqWHAxXbMdAFHdR7DOgQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiJ2ar_sqWHAxVcMdQBHZjjCl0YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDc0UVvQoM0-dk5NT_aWsh-PYTPoJGBVXEPdN5yjsGDkwWBZdFCY7BoCJK4QAvD_BwE&sig=AOD64_2P9FQGmJyeQKt3e_-pEZYICPtEdA&ctype=5&q=&nis=4&ved=2ahUKEwjzkKT_sqWHAxXbMdAFHdR7DOgQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Vega Sicilia Unico",
@@ -1386,7 +1471,8 @@ const wines = [
     grape: "Tempranillo",
     avgPrice: 350,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS0X_XCnfQAM-vapxFQBBirWNrmY1nikMTEhlKPLZkIMCXhIOAlCoQWHUBrcoFWOz-xuJRLMyKqyJgG8FxLQT2pZH9ftRuMtHo3rOMBVsayqkraU8voY1VoLzm5XywcvcAWjbgdiw64QDs&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjBz4iMs6WHAxV5ONQBHdqZBpoYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKHOIOYFefY0Iz3FAovYS9FSh45fYgmm8dR2aFeUXxWfgAVZGwBXlhoCVEkQAvD_BwE&sig=AOD64_0ypbXrz1Dg4SdArX904Ic5QaiQvg&ctype=46&q=&ved=2ahUKEwiGiIGMs6WHAxWN4skDHfzeBhgQ9aACKAB6BAgEEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjBz4iMs6WHAxV5ONQBHdqZBpoYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKHOIOYFefY0Iz3FAovYS9FSh45fYgmm8dR2aFeUXxWfgAVZGwBXlhoCVEkQAvD_BwE&sig=AOD64_0ypbXrz1Dg4SdArX904Ic5QaiQvg&ctype=46&q=&ved=2ahUKEwiGiIGMs6WHAxWN4skDHfzeBhgQ9aACKAB6BAgEEBA&adurl=",
   },
   {
     name: "Catena Zapata Adrianna Vineyard White Bones",
@@ -1401,7 +1487,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 150,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTTgn4Y4eJOApN5Ggu4aUnA4Tn2VwuH9KVkjrwcOOxT7S3SKH4sntFpt-N96S740skYEi90yv_LVlPlApDqi-jcGb2AD2hax3aQFfAyc6Hal8vFTLS0dr-m_B6X-FZv&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiTlLqbs6WHAxUycn8AHYI6CbcYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLM7RGimxDskjW2MZg_sqP8c1t-1UAxuTZGlgutDxfuXGyB_lxDqKBoCUHkQAvD_BwE&sig=AOD64_1Ihwa4sg9dRWP20lc4ppu9C6KxrA&ctype=5&q=&nis=4&ved=2ahUKEwiegLKbs6WHAxX3GtAFHdxnDX4Q9aACKAB6BAgBEBw&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiTlLqbs6WHAxUycn8AHYI6CbcYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLM7RGimxDskjW2MZg_sqP8c1t-1UAxuTZGlgutDxfuXGyB_lxDqKBoCUHkQAvD_BwE&sig=AOD64_1Ihwa4sg9dRWP20lc4ppu9C6KxrA&ctype=5&q=&nis=4&ved=2ahUKEwiegLKbs6WHAxX3GtAFHdxnDX4Q9aACKAB6BAgBEBw&adurl=",
   },
 
   {
@@ -1417,7 +1504,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 150,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTD0ebiTVvIJM3wRly1jzqXgwmEop3nVx4XuFXWbJX_M7eqzGgYraBgYlW13VTXZnO_AyONDsTAZkThL_UPmih27lknM3e_XUpPF44xD8HG2aCy9gS4kJaozhnS5l6gs27WY7ADDEFYHA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjXmaOus6WHAxVvN9QBHV3vAHoYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHEVhQPBYyax9BCe1ILmAFwe1g63viPHTPgfpGS9aP7yuEcNyyM0lhoCG3cQAvD_BwE&sig=AOD64_1tpXT4irhlEI1pW0ewYPRR5noBEQ&ctype=5&q=&nis=4&ved=2ahUKEwjtn5yus6WHAxW65skDHcJzAZcQ9aACKAB6BAgCEC8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjXmaOus6WHAxVvN9QBHV3vAHoYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHEVhQPBYyax9BCe1ILmAFwe1g63viPHTPgfpGS9aP7yuEcNyyM0lhoCG3cQAvD_BwE&sig=AOD64_1tpXT4irhlEI1pW0ewYPRR5noBEQ&ctype=5&q=&nis=4&ved=2ahUKEwjtn5yus6WHAxW65skDHcJzAZcQ9aACKAB6BAgCEC8&adurl=",
   },
   {
     name: "Silver Oak Napa Valley Cabernet Sauvignon",
@@ -1432,7 +1520,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 125,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR4cwnRTS3C6VugvAGsLSH7ZpbgjwnUVRnNVuAsGhR89bgRzob1xzREOtkASTTrda4lJdFpjT4wNJRYeQvJJhUvTlVy9oaC_-31udpaz9zUIOhuFhtb_195bgzblpMVuq78IarVfQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwji08G-s6WHAxUVS38AHSmHDG8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJIAgvfnYl6peIqyJOh7Tu9bCO20OZXTDNRrzERm1QGKWXavCL0zABoCr-cQAvD_BwE&sig=AOD64_0t5Cts0rrsn-e2YpkfcTHtMn75CQ&ctype=46&q=&ved=2ahUKEwit9Lm-s6WHAxXo8MkDHQ3sBP4Q9aACKAB6BAgDEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwji08G-s6WHAxUVS38AHSmHDG8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJIAgvfnYl6peIqyJOh7Tu9bCO20OZXTDNRrzERm1QGKWXavCL0zABoCr-cQAvD_BwE&sig=AOD64_0t5Cts0rrsn-e2YpkfcTHtMn75CQ&ctype=46&q=&ved=2ahUKEwit9Lm-s6WHAxXo8MkDHQ3sBP4Q9aACKAB6BAgDEBA&adurl=",
   },
   {
     name: "Cloudy Bay Pinot Noir",
@@ -1447,7 +1536,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 45,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQDhqXn5JwFtAcUhkJJdRRJTYRc9XpAYutNUewUEV7Nye2-V-KPVmTr26tdLi_K3ZII3j7lg0ANv66IW-W3pDlXh2CsGIszmGYcJW34qm0T3ywjlcRmhoOpwmGcSgd2JXyhwovcgw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjVv5DMs6WHAxV-S38AHbOXBLwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCnx4awl_7M4HjC_M9khZK9YC02t-MVCWtB_P7KrALGLHD6Jy2ly3RoCrTIQAvD_BwE&sig=AOD64_1mXyH62smLaqtFZhwj8xg_wT4ezw&ctype=5&q=&nis=4&ved=2ahUKEwj2mIrMs6WHAxVA38kDHVNNDYIQ9aACKAB6BAgEEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjVv5DMs6WHAxV-S38AHbOXBLwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCnx4awl_7M4HjC_M9khZK9YC02t-MVCWtB_P7KrALGLHD6Jy2ly3RoCrTIQAvD_BwE&sig=AOD64_1mXyH62smLaqtFZhwj8xg_wT4ezw&ctype=5&q=&nis=4&ved=2ahUKEwj2mIrMs6WHAxVA38kDHVNNDYIQ9aACKAB6BAgEEA4&adurl=",
   },
   {
     name: "Chateau Montelena Chardonnay",
@@ -1462,7 +1552,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 60,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRaZFeq9DLUl2LTkk-1SbELHIuPkeE2E-EMs7F0bQbV3J4WlzrVluDQhNKBzf2nF9ipHtfOUFhZH74x0C2yQXg2F8Zk1MdbKBBsJNL501GGN_6O9mvRte8BPwSFJg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiPwbTZs6WHAxUZLdQBHb3NBosYABANGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBAASwViSJ7HIvbadO_ScdFS18y0GVIJf1kkilMW4uP5oErGXkrxbxoCQdwQAvD_BwE&sig=AOD64_0F7jWxuoVnsxkOqeofYIt8vUX0Ew&ctype=5&q=&nis=4&ved=2ahUKEwjD067Zs6WHAxWaL9AFHe7mB5UQ9aACKAB6BAgCEFY&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiPwbTZs6WHAxUZLdQBHb3NBosYABANGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBAASwViSJ7HIvbadO_ScdFS18y0GVIJf1kkilMW4uP5oErGXkrxbxoCQdwQAvD_BwE&sig=AOD64_0F7jWxuoVnsxkOqeofYIt8vUX0Ew&ctype=5&q=&nis=4&ved=2ahUKEwjD067Zs6WHAxWaL9AFHe7mB5UQ9aACKAB6BAgCEFY&adurl=",
   },
 
   {
@@ -1478,7 +1569,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 500,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTSQv0voPzdH0Dj929tCA1K1sodlm3egPMI0Va_AaMqqFYOyuqUFUox_FrBzHoQKep6XRLIqay3D1wpHRoornHsQXHfiQeqGVFzlSsD5lyHRFYbLHCO0zGsKAdB8vm-o7_Z&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjjzOzqs6WHAxV-NtQBHefzAJ4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDL9hRNgz9rlZHEl3skmdZUIlpl9r1Sz_YLNbYpOCshQN9gO3IR2jRoClikQAvD_BwE&sig=AOD64_156VAN60BM862bQktaqosjcMWGhA&ctype=5&q=&nis=4&ved=2ahUKEwjt2uXqs6WHAxU96ckDHazPClkQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjjzOzqs6WHAxV-NtQBHefzAJ4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDL9hRNgz9rlZHEl3skmdZUIlpl9r1Sz_YLNbYpOCshQN9gO3IR2jRoClikQAvD_BwE&sig=AOD64_156VAN60BM862bQktaqosjcMWGhA&ctype=5&q=&nis=4&ved=2ahUKEwjt2uXqs6WHAxU96ckDHazPClkQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Marchesi Antinori Castello della Sala Cervaro",
@@ -1493,7 +1585,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 55,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT4tBpr8QXfPCC11Pe2zBZjzDVSuNudsb-uS2vDnZKQC-c8_yitdDd_kMWGEanitlHx7Y9u5aOSQHJkqTGVMoINxIxPddeznPqZ1AxlU_3LJ_k1NZ8AhqZU5IbLZqx2OZqc2K9y1Yw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwibmav4s6WHAxXQc38AHcZ6BQ8YABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGkrFZogqmKno8OFJsSiBIH1ye4OhQ00AgvmwV1gbqA2mMMIj20RRRoCdV8QAvD_BwE&sig=AOD64_3crgJiI7ul6sibFBx05bzaGHzk4w&ctype=5&q=&nis=4&ved=2ahUKEwiomaP4s6WHAxUUM9AFHdlcBe8Q9aACKAB6BAgBEC0&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwibmav4s6WHAxXQc38AHcZ6BQ8YABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGkrFZogqmKno8OFJsSiBIH1ye4OhQ00AgvmwV1gbqA2mMMIj20RRRoCdV8QAvD_BwE&sig=AOD64_3crgJiI7ul6sibFBx05bzaGHzk4w&ctype=5&q=&nis=4&ved=2ahUKEwiomaP4s6WHAxUUM9AFHdlcBe8Q9aACKAB6BAgBEC0&adurl=",
   },
   {
     name: "Opus One",
@@ -1508,7 +1601,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 350,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSQK-mMuc-xPy728qBB6vkYzC6MKzxJEam_f6CrjYrVaTJPVc6Su9zLbKrPtiuP7qN8Ulq6dy6PO_Asi8c6RPzPtvpMlOjvOWbUZEkzNNUsCXLEm2iJHP8rOWvcfcVJqw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjimeCFtKWHAxWwNdQBHZCPDL8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDUeydHuqZlwKLfFqOQm8wlhCIKOtJUhtDQQ_RVJ8RN7oxR4vfV9-hoCtTEQAvD_BwE&sig=AOD64_2ruOcd4mfqhbOyBUA1Xhz3vBrExQ&ctype=5&q=&nis=4&ved=2ahUKEwiR-NmFtKWHAxUa5ckDHVUaBdkQ9aACKAB6BAgCEBY&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjimeCFtKWHAxWwNdQBHZCPDL8YABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDUeydHuqZlwKLfFqOQm8wlhCIKOtJUhtDQQ_RVJ8RN7oxR4vfV9-hoCtTEQAvD_BwE&sig=AOD64_2ruOcd4mfqhbOyBUA1Xhz3vBrExQ&ctype=5&q=&nis=4&ved=2ahUKEwiR-NmFtKWHAxUa5ckDHVUaBdkQ9aACKAB6BAgCEBY&adurl=",
   },
   {
     name: "Egon Muller Scharzhofberger Riesling",
@@ -1523,7 +1617,8 @@ const wines = [
     grape: "Riesling",
     avgPrice: 200,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQKEmRYbaINbBl7CWGQhLsx9y6_R_hsBoU1xFRpgVylAe80FuHBsQrWr9SzLmoSIO3UJtqP4LGWcV4w5WRYdsSY_rMPFb5ZPYfR3OMnHGLf42nLIxiQ6ZbMmbKflfUgqpYPyA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjl4emRtKWHAxVBcn8AHVJZAjkYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOh3Bxtl2DT54UDF4lgTCyF9gzRMNs6dhdsfOSV7Zyj6oleSHwpzZBoCIx4QAvD_BwE&sig=AOD64_0owLlBAHMx94MPck3JrsrRh41CpA&ctype=5&q=&nis=4&ved=2ahUKEwj6p-KRtKWHAxXEMtAFHYWXBwMQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjl4emRtKWHAxVBcn8AHVJZAjkYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOh3Bxtl2DT54UDF4lgTCyF9gzRMNs6dhdsfOSV7Zyj6oleSHwpzZBoCIx4QAvD_BwE&sig=AOD64_0owLlBAHMx94MPck3JrsrRh41CpA&ctype=5&q=&nis=4&ved=2ahUKEwj6p-KRtKWHAxXEMtAFHYWXBwMQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Masseto",
@@ -1538,7 +1633,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 800,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcScs2dgDAvkQajqOkBdit9VdE7Mo53mw-2vGikMVWZzx0Vc9zlcaj6cdlNv9TRQ7LPTfghcP9uVRRSjIa3vp5QJIWwaVcWwP8G-axfzL9t6kme8547cHIveyOwwTHLhQQzEVoSF858&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiwzc7ctqWHAxUXRn8AHWNoBcoYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNpUZREDSqKKh74RQUJQF4F9Ga95FJYweQvZm7vSDZwKpTBLKP2xShoCwnUQAvD_BwE&sig=AOD64_14vABNfIWAbS1gF3Xo33dCM9m_rQ&ctype=5&q=&nis=4&ved=2ahUKEwiF28jctqWHAxUn5skDHYKCBcAQ9aACKAB6BAgBEBY&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiwzc7ctqWHAxUXRn8AHWNoBcoYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNpUZREDSqKKh74RQUJQF4F9Ga95FJYweQvZm7vSDZwKpTBLKP2xShoCwnUQAvD_BwE&sig=AOD64_14vABNfIWAbS1gF3Xo33dCM9m_rQ&ctype=5&q=&nis=4&ved=2ahUKEwiF28jctqWHAxUn5skDHYKCBcAQ9aACKAB6BAgBEBY&adurl=",
   },
   {
     name: "Dom Perignon",
@@ -1553,7 +1649,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 200,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6kFRPYDrJwLkLpL0KrHQ35zyvtgkzk3PgP-JCnygn09e65bBBOa1ZdB0QpOA-iBueR-8jHgDIa4WYFbIqPd7rJtENaqDXSRt0bppTYFm08shVQs_WAQzk&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjBm9L_tqWHAxUCOdQBHdktAMEYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIDql46tfa8gudMsxRUxGOU4RfsFmzaUuGodtOabIKs3pobFcddhrBoCIhkQAvD_BwE&sig=AOD64_2rz93FwodKzhS702Rpb5pKtOWrNg&ctype=5&q=&nis=4&ved=2ahUKEwioiMv_tqWHAxWNJNAFHSUDAd0Q9aACKAB6BAgDEDU&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjBm9L_tqWHAxUCOdQBHdktAMEYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIDql46tfa8gudMsxRUxGOU4RfsFmzaUuGodtOabIKs3pobFcddhrBoCIhkQAvD_BwE&sig=AOD64_2rz93FwodKzhS702Rpb5pKtOWrNg&ctype=5&q=&nis=4&ved=2ahUKEwioiMv_tqWHAxWNJNAFHSUDAd0Q9aACKAB6BAgDEDU&adurl=",
   },
 
   {
@@ -1569,7 +1666,8 @@ const wines = [
     grape: "Semillon",
     avgPrice: 500,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTjIhqdBNEtXv1Yxa-e3l6xkUrdeNLNCPru76_lvCKN3scDb9cj-LSZLJgBdXjLobWqDIHrIpznn39OoeFkqTu2m5fyK4GwETUaLRvpi3oJxbVLBT1oTxqAXm4jY2uJchED&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjYqaKQt6WHAxWsN9QBHUsaAXwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCM70TZBjvcx1XXLXSAn7gqwyiuksSw1vrWiXrOuyPaDUNfrwMAm2xoC4JMQAvD_BwE&sig=AOD64_0jFcbKEbu4U9MrDrf4xEwePtbA8A&ctype=5&q=&nis=4&ved=2ahUKEwiL5JuQt6WHAxUELtAFHbqIDPMQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjYqaKQt6WHAxWsN9QBHUsaAXwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCM70TZBjvcx1XXLXSAn7gqwyiuksSw1vrWiXrOuyPaDUNfrwMAm2xoC4JMQAvD_BwE&sig=AOD64_0jFcbKEbu4U9MrDrf4xEwePtbA8A&ctype=5&q=&nis=4&ved=2ahUKEwiL5JuQt6WHAxUELtAFHbqIDPMQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Perrier-Jouet Belle Epoque",
@@ -1584,7 +1682,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 180,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTPPgURKnAN3yOLRLU28fM2YSb3OjT0NH0FalpLjeQwwXYwDcfgUa2UbrwGAdR1cc7kgUm1ZVJzAQNjgVjV2DyS_VCDSTnY_w6DV5Hgqsl9Gi68Z9smNEcspHAm03sbsUz7dIOWvA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwirxLe_t6WHAxVMgloFHbmRDrMYABAHGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMUQaFrqPg8_TpVdacSDqMAImfQ6ygTUzVZhumdXscpKS6HrIw565RoCVXAQAvD_BwE&sig=AOD64_0EZMsmaVRb6gIFC5RAgKkphAYZvQ&ctype=5&q=&nis=4&ved=2ahUKEwj2u6-_t6WHAxXKt4QIHRtZAm8Q9aACKAB6BAgHEDE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwirxLe_t6WHAxVMgloFHbmRDrMYABAHGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMUQaFrqPg8_TpVdacSDqMAImfQ6ygTUzVZhumdXscpKS6HrIw565RoCVXAQAvD_BwE&sig=AOD64_0EZMsmaVRb6gIFC5RAgKkphAYZvQ&ctype=5&q=&nis=4&ved=2ahUKEwj2u6-_t6WHAxXKt4QIHRtZAm8Q9aACKAB6BAgHEDE&adurl=",
   },
   {
     name: "Gaja Barbaresco",
@@ -1599,7 +1698,8 @@ const wines = [
     grape: "Nebbiolo",
     avgPrice: 200,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcStNjvYMn08Z3h9kuI98cbnynl3oUND96BKTHIHYHZ9drOazZuS909pV98ZjChbvESd4el9C7DoWi8AGs4GENhscMraKkvY4yZjNTvG452qsuJ0pNop-C0fMR0cBLOUMSI6XiW35w&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi40N3Yt6WHAxVgnVoFHUTxDxMYABADGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPvRykOoLbjVbGZXUMuKC-Aln0UUsuFQVHZGoS51mMPvWQHDuGT0VBoCJ5QQAvD_BwE&sig=AOD64_2gNUeagdq1ZVWUjmxo0N8J3NKBcA&ctype=5&q=&nis=4&ved=2ahUKEwjs5NbYt6WHAxXcSzABHShADUoQ9aACKAB6BAgHEBk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi40N3Yt6WHAxVgnVoFHUTxDxMYABADGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPvRykOoLbjVbGZXUMuKC-Aln0UUsuFQVHZGoS51mMPvWQHDuGT0VBoCJ5QQAvD_BwE&sig=AOD64_2gNUeagdq1ZVWUjmxo0N8J3NKBcA&ctype=5&q=&nis=4&ved=2ahUKEwjs5NbYt6WHAxXcSzABHShADUoQ9aACKAB6BAgHEBk&adurl=",
   },
   {
     name: "Dr. Loosen Wehlener Sonnenuhr Riesling Spatlese",
@@ -1614,7 +1714,8 @@ const wines = [
     grape: "Riesling",
     avgPrice: 35,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTItB3ezFHCMpX9elwMvvCMRa5J9ZxWiX62V1tKPc2bBbYmJkrzI4hI_fJbmt30rv_bmEKae7sRYIG4P5i1fjrokc8Zn5HYpyykug2s_h4P-H4WnEvhTqgwKLzU27Ceo7SCx0Voj4c&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Dr.%20Loosen%20Wehlener%20Sonnenuhr%20Riesling%20Spatlese%202016&imgurl=https%3A%2F%2Fwww.wine-searcher.com%2Fimages%2Flabels%2F43%2F49%2F11624349.jpg%3Fwidth%3D260%26height%3D260%26fit%3Dbounds%26canvas%3D260%2C260&imgrefurl=https%3A%2F%2Fwww.wine-searcher.com%2Ffind%2Fdr%2Bloosen%2Bsonnenuhr%2Briesling%2Bspatl%2Bwehlen%2Bmosel%2Bgermany%2F2016&docid=fOJ0kgZXUoZdoM&tbnid=mxo-brIUhBWSdM&vet=12ahUKEwidq9Xut6WHAxUoLdAFHVesAzIQM3oECBoQAA..i&w=260&h=260&hcb=2&itg=1&ved=2ahUKEwidq9Xut6WHAxUoLdAFHVesAzIQM3oECBoQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Dr.%20Loosen%20Wehlener%20Sonnenuhr%20Riesling%20Spatlese%202016&imgurl=https%3A%2F%2Fwww.wine-searcher.com%2Fimages%2Flabels%2F43%2F49%2F11624349.jpg%3Fwidth%3D260%26height%3D260%26fit%3Dbounds%26canvas%3D260%2C260&imgrefurl=https%3A%2F%2Fwww.wine-searcher.com%2Ffind%2Fdr%2Bloosen%2Bsonnenuhr%2Briesling%2Bspatl%2Bwehlen%2Bmosel%2Bgermany%2F2016&docid=fOJ0kgZXUoZdoM&tbnid=mxo-brIUhBWSdM&vet=12ahUKEwidq9Xut6WHAxUoLdAFHVesAzIQM3oECBoQAA..i&w=260&h=260&hcb=2&itg=1&ved=2ahUKEwidq9Xut6WHAxUoLdAFHVesAzIQM3oECBoQAA",
   },
   {
     name: "Chateau Ste. Michelle Eroica Riesling",
@@ -1629,7 +1730,8 @@ const wines = [
     grape: "Riesling",
     avgPrice: 20,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQV2ygjhZW6ZIuexn-yGO6J35_K11AgCcg2wyTwyW6hIJtg0fBCocr7m-nOPCnUSouMbV7VGVxN1NO4E_ZQPqNRhAWGhCe8GLttcTU7ZanCAyMMfhmicwP78Wmw1E97f-G1GPZMARY&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Chateau%20Ste.%20Michelle%20Eroica%20Riesling%202018&imgurl=https%3A%2F%2Fcdn.klwines.com%2Fimages%2Fskus%2F1493790x.jpg&imgrefurl=https%3A%2F%2Fm.klwines.com%2Fp%2Fi%3Fi%3D1493790&docid=JFVNmqY5Da7DWM&tbnid=kSWrsjhnOyk42M&vet=12ahUKEwi1iMaKuKWHAxVXVTABHUBxDncQM3oECGcQAA..i&w=225&h=540&hcb=2&itg=1&ved=2ahUKEwi1iMaKuKWHAxVXVTABHUBxDncQM3oECGcQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Chateau%20Ste.%20Michelle%20Eroica%20Riesling%202018&imgurl=https%3A%2F%2Fcdn.klwines.com%2Fimages%2Fskus%2F1493790x.jpg&imgrefurl=https%3A%2F%2Fm.klwines.com%2Fp%2Fi%3Fi%3D1493790&docid=JFVNmqY5Da7DWM&tbnid=kSWrsjhnOyk42M&vet=12ahUKEwi1iMaKuKWHAxVXVTABHUBxDncQM3oECGcQAA..i&w=225&h=540&hcb=2&itg=1&ved=2ahUKEwi1iMaKuKWHAxVXVTABHUBxDncQM3oECGcQAA",
   },
   {
     name: "Veuve Clicquot La Grande Dame",
@@ -1644,7 +1746,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 220,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTZboGv6_rvccSU-XOZ6zsrf990Gd_neIK2WFU7umRhK_XrxrMK-oA6u_0cb1VrZ8SUAJXdfQNwmyujPMz3qGRLwJwgJc0rpvWq9nJg8Y7G0GWPr-kzJyPIL6YWEoZrahOJtwFIyDJjO8c&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiinKecuKWHAxX9ONQBHfyhAqAYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGN1Ig7OnKPctjCb14LsDnd16RWovTOwQR4QRTfMEoUCk_ZmhvuyDUBoC0SsQAvD_BwE&sig=AOD64_04ccNLlQitymLxOBNxICg9wSAqZQ&ctype=5&q=&nis=4&ved=2ahUKEwjr65-cuKWHAxWE4ckDHbG_DX4Q9aACKAB6BAgCECk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiinKecuKWHAxX9ONQBHfyhAqAYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGN1Ig7OnKPctjCb14LsDnd16RWovTOwQR4QRTfMEoUCk_ZmhvuyDUBoC0SsQAvD_BwE&sig=AOD64_04ccNLlQitymLxOBNxICg9wSAqZQ&ctype=5&q=&nis=4&ved=2ahUKEwjr65-cuKWHAxWE4ckDHbG_DX4Q9aACKAB6BAgCECk&adurl=",
   },
   {
     name: "Torres Mas La Plana",
@@ -1659,7 +1762,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 50,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQxXTW9u85ANKVPaSLGKfF19BVJzfV-Avj4EWLm0xL0h1Z466NzKSLqtsFbrkrR_PuJijl77qosOQLmqDMU4OzeT47hNCi_Caf2zbbwWkVPHnoqkmEJWDyGThs3zbyqQD0gRXW334lOlr0&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Torres%20Mas%20La%20Plana%202014&imgurl=https%3A%2F%2Fcdn.ct-static.com%2Flabels%2Fea77d3ad-02c2-45fb-8448-b4c4cfb7ae55.jpg&imgrefurl=https%3A%2F%2Fwww.cellartracker.com%2Fwine.asp%3FiWine%3D2901443&docid=g6B6QXyP-3R_GM&tbnid=PeC5DmKwRzugZM&vet=12ahUKEwiT85GquKWHAxVASDABHToIBvwQM3oECBsQAA..i&w=465&h=620&hcb=2&itg=1&ved=2ahUKEwiT85GquKWHAxVASDABHToIBvwQM3oECBsQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Torres%20Mas%20La%20Plana%202014&imgurl=https%3A%2F%2Fcdn.ct-static.com%2Flabels%2Fea77d3ad-02c2-45fb-8448-b4c4cfb7ae55.jpg&imgrefurl=https%3A%2F%2Fwww.cellartracker.com%2Fwine.asp%3FiWine%3D2901443&docid=g6B6QXyP-3R_GM&tbnid=PeC5DmKwRzugZM&vet=12ahUKEwiT85GquKWHAxVASDABHToIBvwQM3oECBsQAA..i&w=465&h=620&hcb=2&itg=1&ved=2ahUKEwiT85GquKWHAxVASDABHToIBvwQM3oECBsQAA",
   },
   {
     name: "Kendall-Jackson Vintner's Reserve Chardonnay",
@@ -1674,7 +1778,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 15,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSitCnVg0TuvDxS4N-j27ish7JloKhmTbvpMNQ1H6roxzcFCU0owOOrsA0KfvsLVxtOEnD2nBIKVj0FL4l-P_WdoCUsxtBjqPqUwHk9T6Qdt6h-fdRJdWGGZwjvZ9DRNV0BZ0ZLgw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwig9cq_uKWHAxV-S38AHbOXBLwYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGN77MrER4EvziZLCY6RG-Qtvfdn6btciOry7hwgHTHlcUsoksZUydxoCBdMQAvD_BwE&sig=AOD64_0WbKGILjnaOnWNVKjRcbrix4kXCQ&ctype=46&q=&ved=2ahUKEwjx_MK_uKWHAxXt4MkDHaoDBm4Q9aACKAB6BAgHECE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwig9cq_uKWHAxV-S38AHbOXBLwYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGN77MrER4EvziZLCY6RG-Qtvfdn6btciOry7hwgHTHlcUsoksZUydxoCBdMQAvD_BwE&sig=AOD64_0WbKGILjnaOnWNVKjRcbrix4kXCQ&ctype=46&q=&ved=2ahUKEwjx_MK_uKWHAxXt4MkDHaoDBm4Q9aACKAB6BAgHECE&adurl=",
   },
   {
     name: "Bodegas Muga Prado Enea Gran Reserva",
@@ -1689,7 +1794,8 @@ const wines = [
     grape: "Tempranillo",
     avgPrice: 80,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSSxWpiQzPdS38qyPI5dnJXIjwYliF8ABppWdXDk0ADVYobuGYC-ct94a9nEIPNlNDUGT7C3JgQkiMX4lwxvI70TDzHpj8yz67edlevOK66Sts2az4a57_PNzVkxQJwS7I&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Bodegas%20Muga%20Prado%20Enea%20Gran%20Reserva%202011&imgurl=https%3A%2F%2Ffinding.wine%2Fcdn%2Fshop%2Fproducts%2F13_272d527e-26d2-4853-9e7d-c450ee7a98d4_1400x.png%3Fv%3D1647296988&imgrefurl=https%3A%2F%2Ffinding.wine%2Fproducts%2Fbodegas-muga-prado-enea-gran-reserva-2011-3-l-2011&docid=th6UFZX-gLc2QM&tbnid=Vjr5idpwbsoaCM&vet=12ahUKEwjI1o7PuKWHAxXOTTABHdXsBWgQM3oECBMQAA..i&w=1400&h=1400&hcb=2&itg=1&ved=2ahUKEwjI1o7PuKWHAxXOTTABHdXsBWgQM3oECBMQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Bodegas%20Muga%20Prado%20Enea%20Gran%20Reserva%202011&imgurl=https%3A%2F%2Ffinding.wine%2Fcdn%2Fshop%2Fproducts%2F13_272d527e-26d2-4853-9e7d-c450ee7a98d4_1400x.png%3Fv%3D1647296988&imgrefurl=https%3A%2F%2Ffinding.wine%2Fproducts%2Fbodegas-muga-prado-enea-gran-reserva-2011-3-l-2011&docid=th6UFZX-gLc2QM&tbnid=Vjr5idpwbsoaCM&vet=12ahUKEwjI1o7PuKWHAxXOTTABHdXsBWgQM3oECBMQAA..i&w=1400&h=1400&hcb=2&itg=1&ved=2ahUKEwjI1o7PuKWHAxXOTTABHdXsBWgQM3oECBMQAA",
   },
   {
     name: "Ridge Monte Bello",
@@ -1704,7 +1810,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 180,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTzlYBF-Uk9emjkS-NPhqbKyJxAWpAfIP9nIb_8jRYQSAReMBFsPmt2EeZxvSmWqJ_jfRA70vT7BQIiuDNKspFxP0PxmqSykCgHBUABsLVWqoV1rnkK571UaHB90uqnXX_WpGwsIerN&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi_-LfsuKWHAxUpK9QBHaJlASwYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIOU5iXERhNTgDVanFdby9gQcaQCxNvGwV9KIDleknYdkylJPR21gxoCMhkQAvD_BwE&sig=AOD64_3dS5acs2xQE5gzkilg_HZZKVb_Yg&ctype=5&q=&nis=4&ved=2ahUKEwjEjrHsuKWHAxVF48kDHQpqCgkQ9aACKAB6BAgEEBU&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi_-LfsuKWHAxUpK9QBHaJlASwYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIOU5iXERhNTgDVanFdby9gQcaQCxNvGwV9KIDleknYdkylJPR21gxoCMhkQAvD_BwE&sig=AOD64_3dS5acs2xQE5gzkilg_HZZKVb_Yg&ctype=5&q=&nis=4&ved=2ahUKEwjEjrHsuKWHAxVF48kDHQpqCgkQ9aACKAB6BAgEEBU&adurl=",
   },
   {
     name: "Chateau Haut-Brion",
@@ -1719,7 +1826,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 550,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQoYpq6CFzACVzI9LhNegZvCZnJU-oyIqkRm2WH1_if3L8TYaiIv-2yAr74sVzVkqIe6U51-dX8Ys4rE-sOCFV4vbteUFW-Qp4eieT4ErWC5fy9xlRMTWF70ypNfx0yWl-tX3zmI5A&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwimr8r5uKWHAxVjJ9QBHSt_CmMYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKLFDje4qahypZO6mMbVwZLfWyzVnM4T_ziyUsr9SmFiFVggk9gCsxoC5gcQAvD_BwE&sig=AOD64_0t0FWYcehiU0SDFNYnQvKNljYq9Q&ctype=5&q=&nis=4&ved=2ahUKEwi37cL5uKWHAxWJLtAFHYLpBEgQ9aACKAB6BAgBEB0&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwimr8r5uKWHAxVjJ9QBHSt_CmMYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKLFDje4qahypZO6mMbVwZLfWyzVnM4T_ziyUsr9SmFiFVggk9gCsxoC5gcQAvD_BwE&sig=AOD64_0t0FWYcehiU0SDFNYnQvKNljYq9Q&ctype=5&q=&nis=4&ved=2ahUKEwi37cL5uKWHAxWJLtAFHYLpBEgQ9aACKAB6BAgBEB0&adurl=",
   },
 
   {
@@ -1735,7 +1843,8 @@ const wines = [
     grape: "Riesling",
     avgPrice: 300,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR2wygr1vOLfo74Rq5MsybHhyZA_I4YoGwRPzdYnc2qX_e1nhb6jUgFwypFdeeyhwIh2mFdg6IXPV0my3syCwVpfCv5mHxvUBWadlPhS-cM3e7IMsdHbNiAch0xSliRMk1TZpG4rGctXg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiKrYyMuaWHAxXyUn8AHTEyANEYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOrxZFDHw1dxcnkBq-C70Vb02J6y36pIZoZgxZvgMX35_LMS5y9w9xoCZ-IQAvD_BwE&sig=AOD64_1ocKqNRz9h7oB7VhMTAJhMCFLuNA&ctype=5&q=&nis=4&ved=2ahUKEwiF94SMuaWHAxViGtAFHcNODDIQ9aACKAB6BAgCECM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiKrYyMuaWHAxXyUn8AHTEyANEYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOrxZFDHw1dxcnkBq-C70Vb02J6y36pIZoZgxZvgMX35_LMS5y9w9xoCZ-IQAvD_BwE&sig=AOD64_1ocKqNRz9h7oB7VhMTAJhMCFLuNA&ctype=5&q=&nis=4&ved=2ahUKEwiF94SMuaWHAxViGtAFHcNODDIQ9aACKAB6BAgCECM&adurl=",
   },
 
   {
@@ -1751,7 +1860,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 90,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSCw_Td7ExEHuQ0bbu6WUb8xzgEU75_afEmH3rdJsH-7QUgARcZltH_Z_8PsJMo-77MFJptqXZduI2I1b3HjW5mYUKX5IyMFvM_5dxKOLvzcXB_Ku4JY80h_GqAxFxGIdk8EVyAIxo&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi-0MKauaWHAxXzLNQBHVmIAngYABALGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDEjDU9z7yW3e76aoxPONAoNTOGUF_ULf0dqdo0GsLVQ-kmK7K-H6BoC0RwQAvD_BwE&sig=AOD64_2AyrzTZlqCT-9POuUgpxkXwBi-kg&ctype=5&q=&nis=4&ved=2ahUKEwjqh7yauaWHAxWLJNAFHVUzBS4Q9aACKAB6BAgFEEk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi-0MKauaWHAxXzLNQBHVmIAngYABALGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDEjDU9z7yW3e76aoxPONAoNTOGUF_ULf0dqdo0GsLVQ-kmK7K-H6BoC0RwQAvD_BwE&sig=AOD64_2AyrzTZlqCT-9POuUgpxkXwBi-kg&ctype=5&q=&nis=4&ved=2ahUKEwjqh7yauaWHAxWLJNAFHVUzBS4Q9aACKAB6BAgFEEk&adurl=",
   },
   {
     name: "Chateau de Beaucastel Chateauneuf-du-Pape",
@@ -1766,7 +1876,8 @@ const wines = [
     grape: "Grenache",
     avgPrice: 100,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS3uAXlDyHQtEa9y6r2r8x90ZKK13bP2T1LkJIpkaj_WgLtYXhoHQfvisBMBVjrX1xg0KNbUpLbr-9pd7sEqq7l-ku7ONmw4fpmbBL_amjIXZqj3nQKeNXKcqP7w07-UShPKt8CINg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjP4pyuuaWHAxWFXX8AHfl6D6MYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJ854yABPp4gtrDerpw42mPLY0GQAsT1nQNixx91eAqECI6xT_G4cxoCF0EQAvD_BwE&sig=AOD64_0C_siamjT2DC53lux68AhPLuTjUg&ctype=5&q=&nis=4&ved=2ahUKEwjpspSuuaWHAxXqG9AFHVeKD1IQ9aACKAB6BAgEEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjP4pyuuaWHAxWFXX8AHfl6D6MYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJ854yABPp4gtrDerpw42mPLY0GQAsT1nQNixx91eAqECI6xT_G4cxoCF0EQAvD_BwE&sig=AOD64_0C_siamjT2DC53lux68AhPLuTjUg&ctype=5&q=&nis=4&ved=2ahUKEwjpspSuuaWHAxXqG9AFHVeKD1IQ9aACKAB6BAgEEA4&adurl=",
   },
   {
     name: "Quinta do Noval Nacional Vintage Port",
@@ -1781,7 +1892,8 @@ const wines = [
     grape: "Touriga Nacional",
     avgPrice: 700,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTrO7WSUiwu6lFsyYWvw7rR9S0ILHNiPx6sZMipo1n8pixpJTJIX6E_8_Jos6ZLHJSX6y8f8kfkSuU7QGC3uZaUrGdtbD9PeT8Ks7vmB5m8zmbd7hjdjQIrk2fpdDEkigYFPzUn89g&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwirpsu8uaWHAxXONtQBHbaxDo8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGECBpEwqXuFB61vm6QQyUX80Np4dK4OI_rVuyUu0RRyiQehgz3OeGBoCgJkQAvD_BwE&sig=AOD64_38M2R7-7mpn6oKNOeYdZ7CNdaBlw&ctype=5&q=&nis=4&ved=2ahUKEwiGjMS8uaWHAxUwLtAFHQSpDSkQ9aACKAB6BAgCEA8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwirpsu8uaWHAxXONtQBHbaxDo8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGECBpEwqXuFB61vm6QQyUX80Np4dK4OI_rVuyUu0RRyiQehgz3OeGBoCgJkQAvD_BwE&sig=AOD64_38M2R7-7mpn6oKNOeYdZ7CNdaBlw&ctype=5&q=&nis=4&ved=2ahUKEwiGjMS8uaWHAxUwLtAFHQSpDSkQ9aACKAB6BAgCEA8&adurl=",
   },
   {
     name: "Domaine de la Romanée-Conti Montrachet",
@@ -1796,7 +1908,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 3000,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRBr9BvpyWLcIFanDI1k1Wah-F1yscXU_lNPRWK8PxgVlAlQkBrH4izzOTSoaAUhGM0cpeAToxc4uW0tiZIKR7rrGMGPO1lio_1h9kr8n6n8igTwCey4C-yvSp9GLuBA39FbS2RH8C7&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwicmKrKuaWHAxVJcX8AHVVABf4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLp48NTKRKKzLpo4ajysXJF9MbydF5_xi9_U22wYwHkmkpA3FtR4mRoC1K0QAvD_BwE&sig=AOD64_0PR0a-0wEFlxE7qRR4WFYMMnI-_A&ctype=5&q=&nis=4&ved=2ahUKEwi93qLKuaWHAxUzLtAFHSikBo8Q9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwicmKrKuaWHAxVJcX8AHVVABf4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLp48NTKRKKzLpo4ajysXJF9MbydF5_xi9_U22wYwHkmkpA3FtR4mRoC1K0QAvD_BwE&sig=AOD64_0PR0a-0wEFlxE7qRR4WFYMMnI-_A&ctype=5&q=&nis=4&ved=2ahUKEwi93qLKuaWHAxUzLtAFHSikBo8Q9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Clos de la Roche Grand Cru",
@@ -1811,7 +1924,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 400,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTU7NS9flAMzu30tRJQ8dQ5batFB1ZlwagpDEwjKYaQXblnyzlFcqlV_6om-uK9uVm7fVRbe6tE-rFCv06kxtrvSpfl21YYEWiUKFq5Znhg9-VC3r4wjL72cO3Pj4ZOYH8FMZb6YIQ3Kg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi9p-LXuaWHAxW8NtQBHXilCPIYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGL00gyV7A974j9ya5ZsOZND9qA2oUv-ri0NTnaWz0l8wpoj97TMHHRoCH2QQAvD_BwE&sig=AOD64_2oplHzv47DHj-3BkYiRV7zGSqvpg&ctype=5&q=&nis=4&ved=2ahUKEwj66trXuaWHAxV05ckDHZwTBIQQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi9p-LXuaWHAxW8NtQBHXilCPIYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGL00gyV7A974j9ya5ZsOZND9qA2oUv-ri0NTnaWz0l8wpoj97TMHHRoCH2QQAvD_BwE&sig=AOD64_2oplHzv47DHj-3BkYiRV7zGSqvpg&ctype=5&q=&nis=4&ved=2ahUKEwj66trXuaWHAxV05ckDHZwTBIQQ9aACKAB6BAgBEA4&adurl=",
   },
 
   {
@@ -1827,7 +1941,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 250,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRkjS3aU2AoOPSxzX1TnTB1lpxvU6Jxtw42quCZ2aeWdUBPmAo3sbG0tku-Gw4WenVV79ODWcQ7XARTQKKCkbfGY2AqFapzDuKL8WCf0nNiWtVrBdkzoio6rBPcK7yvhLdLb4PyIw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiO0sLmuaWHAxVuLtQBHYXvAKcYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBcS_UTG6fL3P83XgrGDJMOYur3G14T2IKRvZMXkhdrLPnfWLoyYARoCIMgQAvD_BwE&sig=AOD64_17GR24NAfxCgQeSoYesLa--7ISSg&ctype=5&q=&nis=4&ved=2ahUKEwiJurrmuaWHAxXp78kDHTd-DRUQ9aACKAB6BAgCECQ&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiO0sLmuaWHAxVuLtQBHYXvAKcYABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBcS_UTG6fL3P83XgrGDJMOYur3G14T2IKRvZMXkhdrLPnfWLoyYARoCIMgQAvD_BwE&sig=AOD64_17GR24NAfxCgQeSoYesLa--7ISSg&ctype=5&q=&nis=4&ved=2ahUKEwiJurrmuaWHAxXp78kDHTd-DRUQ9aACKAB6BAgCECQ&adurl=",
   },
 
   {
@@ -1843,7 +1958,8 @@ const wines = [
     grape: "Tempranillo",
     avgPrice: 65,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQtI6un13jc4YHQkdpLmf6iR6bfBKkZ_LA6hy_uYrblaJv3K-rZ_pumCNF8TlCDT_JxytNIbTiwz28MAdSD3D097HtFwHo_pW0xvBzgmRW-aUXHV6h9Evswtz7CBeDIeBFzjy1fcm_m-HA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjJh970uaWHAxVLXX8AHb0PDYAYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGC13paDzBjpJMVNsscyuoI8BgvtUn3ZPPSB_QTOprjA3692hiwvJGhoCWgYQAvD_BwE&sig=AOD64_1ulDbENr8fROJKSCtMpkWPHmXC6w&ctype=46&q=&ved=2ahUKEwiantb0uaWHAxWo78kDHVzaARMQ9aACKAB6BAgCECE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjJh970uaWHAxVLXX8AHb0PDYAYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGC13paDzBjpJMVNsscyuoI8BgvtUn3ZPPSB_QTOprjA3692hiwvJGhoCWgYQAvD_BwE&sig=AOD64_1ulDbENr8fROJKSCtMpkWPHmXC6w&ctype=46&q=&ved=2ahUKEwiantb0uaWHAxWo78kDHVzaARMQ9aACKAB6BAgCECE&adurl=",
   },
   {
     name: "Joseph Drouhin Marquis de Laguiche Montrachet",
@@ -1858,7 +1974,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 900,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSjvg2a-O8ijpW9wYiI6BsN9Y9Wm5VMfdHz27kDgtnPUxNtUvjYcfQCvsM-TUkOMeNV_quuIkJ7Y3fZOf_hGqNVIK_dtTbuSwkrsMX_rCTdn5SmuBa0zUAqNp7hNTnqWkZRfJa8VM0a&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiD_92FuqWHAxUNOtQBHZe_D2YYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDqX3X7bxMq6mXA3N2wofjQskEfn02r6PCma1LRuL1yVIzoaFRCM4RoCE4wQAvD_BwE&sig=AOD64_31j4rT8wR8kGrkZfAqKHg-dz82eA&ctype=5&q=&nis=4&ved=2ahUKEwi-4dWFuqWHAxVnL9AFHWFqC5wQ9aACKAB6BAgHEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiD_92FuqWHAxUNOtQBHZe_D2YYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDqX3X7bxMq6mXA3N2wofjQskEfn02r6PCma1LRuL1yVIzoaFRCM4RoCE4wQAvD_BwE&sig=AOD64_31j4rT8wR8kGrkZfAqKHg-dz82eA&ctype=5&q=&nis=4&ved=2ahUKEwi-4dWFuqWHAxVnL9AFHWFqC5wQ9aACKAB6BAgHEA4&adurl=",
   },
 
   {
@@ -1874,7 +1991,8 @@ const wines = [
     grape: "Riesling",
     avgPrice: 70,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSIP5wDMWN9pa5wjCfCFNIkAdQb0wytWzKR7azFne-iEsQpT322n2LFpKOGtLtwB6HA2RcJAuTr44nz6GyOq86hk0UGg3KwCxu6ZxC6isdkxCorrBKyM-em5ZFfH8slfVvlOuIDmO4Teg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjL_tSTuqWHAxXqONQBHSDGD3IYABALGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK_TT1It7ZVOHe31md96Ayw9zBL-6DSjijbgjDW9TQtXzoIZvq_m6RoCoAQQAvD_BwE&sig=AOD64_3_bM4xx_5zZrIhkZSiflyD4yufdQ&ctype=5&q=&nis=4&ved=2ahUKEwiVhc6TuqWHAxXk8MkDHfPUA80Q9aACKAB6BAgCEDE&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjL_tSTuqWHAxXqONQBHSDGD3IYABALGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGK_TT1It7ZVOHe31md96Ayw9zBL-6DSjijbgjDW9TQtXzoIZvq_m6RoCoAQQAvD_BwE&sig=AOD64_3_bM4xx_5zZrIhkZSiflyD4yufdQ&ctype=5&q=&nis=4&ved=2ahUKEwiVhc6TuqWHAxXk8MkDHfPUA80Q9aACKAB6BAgCEDE&adurl=",
   },
   {
     name: "Chateau Leoville Las Cases",
@@ -1889,7 +2007,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 200,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSw_eyUTiA0MgD5w_1W8v5JLw_xfYJwU8YwOp637VriJ-8WyIpofl05Smxin5sB8r0xHlnKMN7Q0nw3kEWaUpM_-wmLqPlInCsUFckfrWVjupYGjLK0ABkMwlKQwuKyl65vI2fDK16H&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwihzYehuqWHAxUCOdQBHdktAMEYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGFdsQIzspcA-mHjlVBREyaO69UoCRrlZw2AeWZN0dQ5NRv7faDJVBoCKkwQAvD_BwE&sig=AOD64_3sO0r1N1oERLbEmlmtQS8Hl_ywzA&ctype=5&q=&nis=4&ved=2ahUKEwiP7oChuqWHAxXdL9AFHfnUCTkQ9aACKAB6BAgHEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwihzYehuqWHAxUCOdQBHdktAMEYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGFdsQIzspcA-mHjlVBREyaO69UoCRrlZw2AeWZN0dQ5NRv7faDJVBoCKkwQAvD_BwE&sig=AOD64_3sO0r1N1oERLbEmlmtQS8Hl_ywzA&ctype=5&q=&nis=4&ved=2ahUKEwiP7oChuqWHAxXdL9AFHfnUCTkQ9aACKAB6BAgHEA4&adurl=",
   },
   {
     name: "Chateau Palmer",
@@ -1904,7 +2023,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 220,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR83l0qp4Iqf9SrQvrHsIHng8R7Hxy-wsZfaKPsVr-CHIHrmvDZ-fFMWMzNNKyj9rDyv4N0tyihMp0vWMTRQ_TybZf6LQWd8_5gp5aWLFgo35qLZZ3R8hXzZy3HNlnRvR-Q&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjFpIe1uqWHAxV7LtQBHRJTDYwYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBi28YbGzQJjgiT8aKb-8HAA17jGRSu3G3rASA8AVodNRKarWxnRXRoCk-gQAvD_BwE&sig=AOD64_1e0UfHo0ZvajaoMYTWMMDS2GLCCQ&ctype=5&q=&nis=4&ved=2ahUKEwikwYC1uqWHAxVP48kDHfAXAMkQ9aACKAB6BAgCEBU&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjFpIe1uqWHAxV7LtQBHRJTDYwYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBi28YbGzQJjgiT8aKb-8HAA17jGRSu3G3rASA8AVodNRKarWxnRXRoCk-gQAvD_BwE&sig=AOD64_1e0UfHo0ZvajaoMYTWMMDS2GLCCQ&ctype=5&q=&nis=4&ved=2ahUKEwikwYC1uqWHAxVP48kDHfAXAMkQ9aACKAB6BAgCEBU&adurl=",
   },
   {
     name: "Kongsgaard Chardonnay",
@@ -1919,7 +2039,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 150,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTIzulNWogjI2u-SiTyYWNNkA4VAEv-XSjup17Fo99eccqAZEGtKL05nIKRm4DHdUexn83Nm0fu1zKVgnNy9Vk7pFI2wO4FwTK33Lk6JN78ZjMMfDWHkBvFLL6WsQB1iwLA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjwuq_GuqWHAxWOS38AHTK3D0QYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBJ0NITkJ3DW_fVGchRe6WpH7Bkj6Nc7vc2ofek9H1N2Nq4fTK6wjBoCMGkQAvD_BwE&sig=AOD64_2tnThP2IhL_gvliyWwa_utuFjJfg&ctype=5&q=&nis=4&ved=2ahUKEwjb9KjGuqWHAxUFx8kDHbWgD1EQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjwuq_GuqWHAxWOS38AHTK3D0QYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBJ0NITkJ3DW_fVGchRe6WpH7Bkj6Nc7vc2ofek9H1N2Nq4fTK6wjBoCMGkQAvD_BwE&sig=AOD64_2tnThP2IhL_gvliyWwa_utuFjJfg&ctype=5&q=&nis=4&ved=2ahUKEwjb9KjGuqWHAxUFx8kDHbWgD1EQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Domaine Leroy Richebourg Grand Cru",
@@ -1934,7 +2055,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 1500,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT5DC4PRIHwhpw5kguzzMJ03RsM2ryN6WPOzrNDw26WSgmwI_H103DBINUvfF0CoF4j_2-cKLJtDTv8JfqzY-3HqWPLdeZvV804TxTdU21ubDjTGzsDGGCbbeWkhlADvqEeKae9HjH8fbw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjy4KHTuqWHAxVwOdQBHZuABp4YABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKFjtQ6-sTQf1Xrk3r_W2A5xf4wy8gskMZE7j1mEN5dVLCRl4dY5cxoCEE4QAvD_BwE&sig=AOD64_2W8I4_LtaS6KU9PbcMfLpvlSq61g&ctype=5&q=&nis=4&ved=2ahUKEwiA9prTuqWHAxXXLdAFHZFGCbUQ9aACKAB6BAgBECQ&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjy4KHTuqWHAxVwOdQBHZuABp4YABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKFjtQ6-sTQf1Xrk3r_W2A5xf4wy8gskMZE7j1mEN5dVLCRl4dY5cxoCEE4QAvD_BwE&sig=AOD64_2W8I4_LtaS6KU9PbcMfLpvlSq61g&ctype=5&q=&nis=4&ved=2ahUKEwiA9prTuqWHAxXXLdAFHZFGCbUQ9aACKAB6BAgBECQ&adurl=",
   },
   {
     name: "Chateau Rayas Chateauneuf-du-Pape",
@@ -1949,7 +2071,8 @@ const wines = [
     grape: "Grenache",
     avgPrice: 700,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRJWphH8dTaiqXRf7Fv_Wvmj5gxdNaYas_XGsJPdURnRwJY3dSb0RvTRR-A-tpip98FQkX2BpSYqsvyOXgERpQq64dytynMKT_4Mmdt6yG__WyyfPEwSi0S8GXg1t-hIRAHHI5qCy4BSpY&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjsltzfuqWHAxW0Sn8AHYBTA24YABAVGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKc9O2pv0f2uV8oXSlNRXUUYC3nXjZvOiG7VaD--tMEPxpB2lBIObxoCtOsQAvD_BwE&sig=AOD64_36I2IeY40NvB67oi0WfRGjJaDZjw&ctype=5&q=&nis=4&ved=2ahUKEwj7q9XfuqWHAxUELtAFHdaDDO4Q9aACKAB6BAgBEFk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjsltzfuqWHAxW0Sn8AHYBTA24YABAVGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKc9O2pv0f2uV8oXSlNRXUUYC3nXjZvOiG7VaD--tMEPxpB2lBIObxoCtOsQAvD_BwE&sig=AOD64_36I2IeY40NvB67oi0WfRGjJaDZjw&ctype=5&q=&nis=4&ved=2ahUKEwj7q9XfuqWHAxUELtAFHdaDDO4Q9aACKAB6BAgBEFk&adurl=",
   },
   {
     name: "Krug Grande Cuvee",
@@ -1964,7 +2087,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 250,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQS0DRbRcDBl8d3eYRVy55aBR64dzQbSL_M6Vdn3q1kTiHxfDHc-0nAISiWmbWeq-2S3nl9PfK6y0p11zGRkGjflvIFvKaZoo8zpCetIbzS-nPjDTzrpinyf_1LmAg-6COw__Mbgkw0Kw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Krug%20Grande%20Cuvee%202016&imgurl=https%3A%2F%2Fwww.plummarket.com%2Fstore%2Fpub%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2F49722c31a15eff463262c631eda6cffe%2F2%2F4%2F24275_1_1_3.jpg&imgrefurl=https%3A%2F%2Fwww.plummarket.com%2Fstore%2Fkrug-grande-cuvee-brut-170eme-edition-champagne-gift-box.html&docid=fHNoVKIZKSOeHM&tbnid=friXlKi48NawQM&vet=12ahUKEwiXy676uqWHAxUpN94AHWyWC1IQM3oECFoQAA..i&w=400&h=400&hcb=2&ved=2ahUKEwiXy676uqWHAxUpN94AHWyWC1IQM3oECFoQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Krug%20Grande%20Cuvee%202016&imgurl=https%3A%2F%2Fwww.plummarket.com%2Fstore%2Fpub%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2F49722c31a15eff463262c631eda6cffe%2F2%2F4%2F24275_1_1_3.jpg&imgrefurl=https%3A%2F%2Fwww.plummarket.com%2Fstore%2Fkrug-grande-cuvee-brut-170eme-edition-champagne-gift-box.html&docid=fHNoVKIZKSOeHM&tbnid=friXlKi48NawQM&vet=12ahUKEwiXy676uqWHAxUpN94AHWyWC1IQM3oECFoQAA..i&w=400&h=400&hcb=2&ved=2ahUKEwiXy676uqWHAxUpN94AHWyWC1IQM3oECFoQAA",
   },
   {
     name: "Domaine Weinbach Riesling",
@@ -1979,7 +2103,8 @@ const wines = [
     grape: "Riesling",
     avgPrice: 50,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS8U7SMvoyHYtV0GHVK1Ylq03XwWB63MqNA3PgBHZ40r5x2rzGI9FRdksTRvKtL4Q7RzmzErGE1c33rLXMUUW-rz9YNFs8dT2VePJdH1I43Rv6Z1YnDp3VZOaD9bSDhjsZe1QYwcMRMkIQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Domaine%20Weinbach%20Riesling%202018&imgurl=https%3A%2F%2Fimages.vivino.com%2Fthumbs%2FxYOtIqopSN2xS8ciVmy40w_pb_x600.png&imgrefurl=https%3A%2F%2Fwww.vivino.com%2FUS%2Fen%2Fdomaine-weinbach-riesling%2Fw%2F7026035%3Fyear%3D2018&docid=6VM8TJNBSpMNzM&tbnid=1PdD3v-a2K6xHM&vet=12ahUKEwi_gs-Su6WHAxXESTABHcL8DEoQM3oECBQQAA..i&w=158&h=600&hcb=2&itg=1&ved=2ahUKEwi_gs-Su6WHAxXESTABHcL8DEoQM3oECBQQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Domaine%20Weinbach%20Riesling%202018&imgurl=https%3A%2F%2Fimages.vivino.com%2Fthumbs%2FxYOtIqopSN2xS8ciVmy40w_pb_x600.png&imgrefurl=https%3A%2F%2Fwww.vivino.com%2FUS%2Fen%2Fdomaine-weinbach-riesling%2Fw%2F7026035%3Fyear%3D2018&docid=6VM8TJNBSpMNzM&tbnid=1PdD3v-a2K6xHM&vet=12ahUKEwi_gs-Su6WHAxXESTABHcL8DEoQM3oECBQQAA..i&w=158&h=600&hcb=2&itg=1&ved=2ahUKEwi_gs-Su6WHAxXESTABHcL8DEoQM3oECBQQAA",
   },
 
   {
@@ -1995,7 +2120,8 @@ const wines = [
     grape: "Grenache",
     avgPrice: 80,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR0HZ-_stWv_OtiTB_AwvKkDPWakGMjHCD6G5RZLam4IoirhD3aPwsRb_EqXHWESt4jaFkE3LrV9nLHcpHzqomn5TkVzyFPa2JJC6lOjdQZsBeGGy5tWt7LroEn0zcXyfHS92_pEg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Chateau%20Beaucastel%20Chateauneuf-du-Pape%202017&imgurl=https%3A%2F%2Fwww.wine-searcher.com%2Fimages%2Flabels%2F94%2F56%2F11629456.jpg%3Fwidth%3D260%26height%3D260%26fit%3Dbounds%26canvas%3D260%2C260&imgrefurl=https%3A%2F%2Fwww.wine-searcher.com%2Ffind%2Fde%2Bbeaucastel%2Bchateauneuf%2Bdu%2Bpape%2Brhone%2Bfrance%2F2017&docid=NiJiwF3geopyiM&tbnid=Q4cxyNCrYI7DaM&vet=12ahUKEwj0sp2ou6WHAxXonYQIHSKTClIQM3oECBsQAA..i&w=260&h=260&hcb=2&ved=2ahUKEwj0sp2ou6WHAxXonYQIHSKTClIQM3oECBsQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Chateau%20Beaucastel%20Chateauneuf-du-Pape%202017&imgurl=https%3A%2F%2Fwww.wine-searcher.com%2Fimages%2Flabels%2F94%2F56%2F11629456.jpg%3Fwidth%3D260%26height%3D260%26fit%3Dbounds%26canvas%3D260%2C260&imgrefurl=https%3A%2F%2Fwww.wine-searcher.com%2Ffind%2Fde%2Bbeaucastel%2Bchateauneuf%2Bdu%2Bpape%2Brhone%2Bfrance%2F2017&docid=NiJiwF3geopyiM&tbnid=Q4cxyNCrYI7DaM&vet=12ahUKEwj0sp2ou6WHAxXonYQIHSKTClIQM3oECBsQAA..i&w=260&h=260&hcb=2&ved=2ahUKEwj0sp2ou6WHAxXonYQIHSKTClIQM3oECBsQAA",
   },
   {
     name: "Guigal Cote Rotie La Landonne",
@@ -2010,7 +2136,8 @@ const wines = [
     grape: "Syrah",
     avgPrice: 350,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQHNfAh4aZvobHianMcl6FGL-iNE_ABbtwWQlbh1M1OdRtUkDrkf7g_oCb31PsbySwNQLQuqM730wDxGoj_PsXL46o7kmYz4Fhx9xL3KZfGrre4VqB1eJf570_zRSHo5EI&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiMk6u7u6WHAxUJiVoFHdjBBNIYABABGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOJtH0akAOetoWdaGwYkp2S3C-M0aYMgCRxJI-ZCrzogA6Z8pjWC1RoC4F0QAvD_BwE&sig=AOD64_2TEg_Hl1UdXxtbaEmgTY5vscYbzA&ctype=5&q=&nis=4&ved=2ahUKEwjClaK7u6WHAxWaRzABHeh8CDYQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiMk6u7u6WHAxUJiVoFHdjBBNIYABABGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOJtH0akAOetoWdaGwYkp2S3C-M0aYMgCRxJI-ZCrzogA6Z8pjWC1RoC4F0QAvD_BwE&sig=AOD64_2TEg_Hl1UdXxtbaEmgTY5vscYbzA&ctype=5&q=&nis=4&ved=2ahUKEwjClaK7u6WHAxWaRzABHeh8CDYQ9aACKAB6BAgBEA4&adurl=",
   },
 
   {
@@ -2026,7 +2153,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 180,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSfJ_n9hzJ1txqvlfZtHn1EvjV-YLycQEcJvRfzI8D1SJNYwY2t1kWPaKC2w4cZTm799KBT_sdrUJ-OaoTmfz0VfO_0RkYc5wMsEGDF_BZAxIwhCesHEETM31Z_gEH_WpInOHUGs2c&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjQ07rJu6WHAxWggloFHSpQBBYYABAHGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLO2vxy3UCW0allYowPcpmKAZFtAQFGoLd6oqh60UDUqHN3V3evOgRoCp8IQAvD_BwE&sig=AOD64_2Ui9TMZQGhu98IFQuo2Vous6u3Cw&ctype=5&q=&nis=4&ved=2ahUKEwibo7LJu6WHAxVORTABHek_AboQ9aACKAB6BAgHECM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjQ07rJu6WHAxWggloFHSpQBBYYABAHGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLO2vxy3UCW0allYowPcpmKAZFtAQFGoLd6oqh60UDUqHN3V3evOgRoCp8IQAvD_BwE&sig=AOD64_2Ui9TMZQGhu98IFQuo2Vous6u3Cw&ctype=5&q=&nis=4&ved=2ahUKEwibo7LJu6WHAxVORTABHek_AboQ9aACKAB6BAgHECM&adurl=",
   },
   {
     name: "Caymus Special Selection",
@@ -2041,7 +2169,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 150,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTwYBYOwPHn2lyQqm_aGxBD3Mg4tjYztc6EvoGQz-ccFIfVRAotsAbXPPEdE5TnxWJAHLdc-EPVr1kpJxcp8DjXmznFcHqOGUFhD5YyzqbwPwyrKloL91GyoSZk-ks9vBTxG5SXJ0x64g&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj7iu3au6WHAxX-OtQBHSDGBLUYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGARqH47n1G9H3dCvFs2F4jlT4nUEN0n3u_uLUzYAT3RhqmJZXM9qMhoC8GcQAvD_BwE&sig=AOD64_0eIjgzQCWLCM5RG3JNeW9r2SZWjA&ctype=5&q=&nis=4&ved=2ahUKEwi9i-fau6WHAxWX38kDHe8dAV0Q9aACKAB6BAgHEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj7iu3au6WHAxX-OtQBHSDGBLUYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGARqH47n1G9H3dCvFs2F4jlT4nUEN0n3u_uLUzYAT3RhqmJZXM9qMhoC8GcQAvD_BwE&sig=AOD64_0eIjgzQCWLCM5RG3JNeW9r2SZWjA&ctype=5&q=&nis=4&ved=2ahUKEwi9i-fau6WHAxWX38kDHe8dAV0Q9aACKAB6BAgHEA4&adurl=",
   },
   {
     name: "Cayuse Vineyards Bionic Frog Syrah",
@@ -2056,7 +2185,8 @@ const wines = [
     grape: "Syrah",
     avgPrice: 190,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQmiBATwnUy5C2oleSKy4k2dQrSCzLP_mBMoS99KjOwsAloK2v1bW4nuzmcRvvQY6caW5AEgMdSNdeNIsv9pRunVQ-LWsRnwIA5hG8Vq-sKV56xZD8WtwPd_M4vPh_E-LinZuKkAB8sMK4&usqp=CAc",
-    linkToPurchase: "https://www.google.com/imgres?q=Cayuse%20Vineyards%20Bionic%20Frog%20Syrah%202015&imgurl=https%3A%2F%2Fwww.wine-searcher.com%2Fimages%2Flabels%2F94%2F27%2F10979427.jpg%3Fwidth%3D260%26height%3D260%26fit%3Dbounds%26canvas%3D260%2C260&imgrefurl=https%3A%2F%2Fwww.wine-searcher.com%2Ffind%2Fcayuse%2Bbionic%2Bfrog%2Bsra%2Bwalla%2Bvalley%2Bwashington%2Busa&docid=uHVaS81aO00VKM&tbnid=5IbN8B_ISo59MM&vet=12ahUKEwiIjpDpu6WHAxWORTABHRNCB6YQM3oECGkQAA..i&w=260&h=260&hcb=2&ved=2ahUKEwiIjpDpu6WHAxWORTABHRNCB6YQM3oECGkQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Cayuse%20Vineyards%20Bionic%20Frog%20Syrah%202015&imgurl=https%3A%2F%2Fwww.wine-searcher.com%2Fimages%2Flabels%2F94%2F27%2F10979427.jpg%3Fwidth%3D260%26height%3D260%26fit%3Dbounds%26canvas%3D260%2C260&imgrefurl=https%3A%2F%2Fwww.wine-searcher.com%2Ffind%2Fcayuse%2Bbionic%2Bfrog%2Bsra%2Bwalla%2Bvalley%2Bwashington%2Busa&docid=uHVaS81aO00VKM&tbnid=5IbN8B_ISo59MM&vet=12ahUKEwiIjpDpu6WHAxWORTABHRNCB6YQM3oECGkQAA..i&w=260&h=260&hcb=2&ved=2ahUKEwiIjpDpu6WHAxWORTABHRNCB6YQM3oECGkQAA",
   },
 
   {
@@ -2072,7 +2202,8 @@ const wines = [
     grape: "Nebbiolo",
     avgPrice: 70,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRS9sw5YQ1h5rGDc7Zj3qhDsBPHKsKGMvXZgISe7wimWEywYCA3lL90P7ztyvVm0fZjf49nHE6OcPcwaErj-CPmQFjKxVdjewUv07I0TX1rWH4JBx5kxaSnPhjInmP0U9Vm2Xeaekw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjZye__u6WHAxWaoFoFHWGTCxcYABABGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOtG_IpPSjk1PgKcdpq0Co0iV0g86xcTC92y4EOACqdUKZRCuuN8FBoCAPsQAvD_BwE&sig=AOD64_23hV7DJ2S-j8zjiWN1vcCpACwN-g&ctype=5&q=&nis=4&ved=2ahUKEwiygun_u6WHAxXBQTABHUP2CK8Q9aACKAB6BAgGEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjZye__u6WHAxWaoFoFHWGTCxcYABABGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOtG_IpPSjk1PgKcdpq0Co0iV0g86xcTC92y4EOACqdUKZRCuuN8FBoCAPsQAvD_BwE&sig=AOD64_23hV7DJ2S-j8zjiWN1vcCpACwN-g&ctype=5&q=&nis=4&ved=2ahUKEwiygun_u6WHAxXBQTABHUP2CK8Q9aACKAB6BAgGEA4&adurl=",
   },
   {
     name: "Kumeu River Maté's Vineyard Chardonnay",
@@ -2087,7 +2218,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 50,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSGzSOqYwOJvA655hqZCxRvUtAl4NwqmaYrRXmnreQVYooJLC3IWs8d_LA3Cf0PHmL_Oug4LRMz46UrnaZX2S2EFreR6pHAKxWZyOYIeahtSBpHmgzgHdjvG7kfGZ7EENuXVojfoWhBRg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiy24ONvKWHAxWUgFoFHdgICjoYABABGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBpjnZQqnYIypm17mkhpCOEXkFfqF3qyqZ_L1TfmfCb1kE4uK_WLMBoC8QQQAvD_BwE&sig=AOD64_1PIQu9S5PkkDlJWD61WjF0wWtOlg&ctype=5&q=&nis=4&ved=2ahUKEwje9_uMvKWHAxV6RDABHYlfBRIQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiy24ONvKWHAxWUgFoFHdgICjoYABABGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBpjnZQqnYIypm17mkhpCOEXkFfqF3qyqZ_L1TfmfCb1kE4uK_WLMBoC8QQQAvD_BwE&sig=AOD64_1PIQu9S5PkkDlJWD61WjF0wWtOlg&ctype=5&q=&nis=4&ved=2ahUKEwje9_uMvKWHAxV6RDABHYlfBRIQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Penfolds Bin 707 Cabernet Sauvignon",
@@ -2102,7 +2234,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 350,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSFlM6W8jQVpq2iA_8zINhxDjlMzxHQ4oDPjfVMCX54gsX0QG77uBpOIy_42bNaHrfOhlgogh98VW1rJIaP3S1vJoJnV3bKtQV47r6M2IMBIKsvz4l9aLXYHaG5OVRJE-s&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi6mPGZvKWHAxVopVoFHc8CAIcYABAPGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGIzb8sqJ082ODTGaiPbNsnVPLgnE1LO2GpKcuN9h08h4NZOdjxqEhoC9JEQAvD_BwE&sig=AOD64_2H4iyn2MVsTaPXdbljWyBwcBtlnA&ctype=5&q=&nis=4&ved=2ahUKEwjq0uqZvKWHAxWZSjABHTz-DGsQ9aACKAB6BAgCEEk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi6mPGZvKWHAxVopVoFHc8CAIcYABAPGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGIzb8sqJ082ODTGaiPbNsnVPLgnE1LO2GpKcuN9h08h4NZOdjxqEhoC9JEQAvD_BwE&sig=AOD64_2H4iyn2MVsTaPXdbljWyBwcBtlnA&ctype=5&q=&nis=4&ved=2ahUKEwjq0uqZvKWHAxWZSjABHTz-DGsQ9aACKAB6BAgCEEk&adurl=",
   },
 
   {
@@ -2118,7 +2251,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 3500,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSAJyV59xJR3ZFKFoupxHEKDOnCFN31i7lzPjOLvJSCqYbJ3fyn9m9k9M-VSCsR1YNG1eYFmD0_ZIL6DJXDiK4wQ9PpEVNqfTxkQbHUK_1ea3N9ElsYMnGnYnbNChK6kzhjmd_Or0Yl-mQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjaw5ixvKWHAxULNtQBHTzMBYAYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDVLKyxnrGBJcSvUxcXOFTuYm69EAzI-QABlVOZDnjM7x79abWjPiBoCC84QAvD_BwE&sig=AOD64_0b2oiXDEZ9yfTINnV7nO7qFBKXEQ&ctype=5&q=&nis=4&ved=2ahUKEwiQmZCxvKWHAxVRJNAFHU2cAy4Q9aACKAB6BAgBEBY&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjaw5ixvKWHAxULNtQBHTzMBYAYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDVLKyxnrGBJcSvUxcXOFTuYm69EAzI-QABlVOZDnjM7x79abWjPiBoCC84QAvD_BwE&sig=AOD64_0b2oiXDEZ9yfTINnV7nO7qFBKXEQ&ctype=5&q=&nis=4&ved=2ahUKEwiQmZCxvKWHAxVRJNAFHU2cAy4Q9aACKAB6BAgBEBY&adurl=",
   },
   {
     name: "Lapostolle Clos Apalta",
@@ -2133,7 +2267,8 @@ const wines = [
     grape: "Carmenere",
     avgPrice: 120,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRtW1FU4btNFflQYfUIOWiY-zwtqGyBxU23fddSuYxTZG6mHG1DZWxJZzjaQ3YLiajY_g0AMCbHMxwUPNSdRscaVLLEHFbqajtImXBzXeRbmxX1SzXj_Ntm-YCZpzrGVWXcgI71Puyh&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj3yM7EvKWHAxXnrVoFHVQABhUYABADGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKuYso_ZGPty7vtc-0hS8X860kN17CETVWcE6pxzwBEPvaWpoT7C_xoCMyoQAvD_BwE&sig=AOD64_2uciPyARdhyhunqjMjDOwgNG9Wfg&ctype=5&q=&nis=4&ved=2ahUKEwi088fEvKWHAxXqSDABHcYeAtkQ9aACKAB6BAgDEBk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj3yM7EvKWHAxXnrVoFHVQABhUYABADGgJ2dQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGKuYso_ZGPty7vtc-0hS8X860kN17CETVWcE6pxzwBEPvaWpoT7C_xoCMyoQAvD_BwE&sig=AOD64_2uciPyARdhyhunqjMjDOwgNG9Wfg&ctype=5&q=&nis=4&ved=2ahUKEwi088fEvKWHAxXqSDABHcYeAtkQ9aACKAB6BAgDEBk&adurl=",
   },
   {
     name: "Guigal Condrieu La Doriane",
@@ -2148,7 +2283,8 @@ const wines = [
     grape: "Viognier",
     avgPrice: 90,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTlU-ZlMUHzD2Lyf0oCh4TVwipAQGhGbIBcqHpk5zr4FOvXDXYFBajyhAqfDI0Gk8CVLRF4NOC98CMyyxoIgAfixGIHFae5BAqTsQ61bloyaZd_FttzhTomKXl5A0c&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi43cP0vKWHAxVSMdQBHZGPCqgYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAapQ7NA0jlCxTzTa-7feMoCk5eBLacAnhewx_jKL8IkE6fuLm_PXxoCVBMQAvD_BwE&sig=AOD64_2Hhz6dWrsEw3gvpqFtGihQVtQcSw&ctype=5&q=&nis=4&ved=2ahUKEwjSxbz0vKWHAxVVLtAFHZxpDf0Q9aACKAB6BAgCECk&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi43cP0vKWHAxVSMdQBHZGPCqgYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAapQ7NA0jlCxTzTa-7feMoCk5eBLacAnhewx_jKL8IkE6fuLm_PXxoCVBMQAvD_BwE&sig=AOD64_2Hhz6dWrsEw3gvpqFtGihQVtQcSw&ctype=5&q=&nis=4&ved=2ahUKEwjSxbz0vKWHAxVVLtAFHZxpDf0Q9aACKAB6BAgCECk&adurl=",
   },
   {
     name: "Silver Oak Napa Valley Cabernet Sauvignon",
@@ -2163,7 +2299,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 125,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTFsLqRtSHS_Bdtn1cFNSCw7C02J_9fSRtPlgAevh--RqrK2uzi2DG-x9KEczeeoXHtsckG-SvG0M5z0P5IfTLucP7EiDw-WlAU5uT93Rnbak8yHzcfKO1bXKHzfG7_vw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiZ-OOCvaWHAxUqNtQBHSDiCn0YABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBZPAxBOCU8BzfUPRhl56N2wyZVudKVM8LxWZfzUTj3ZbytylgvRJxoCPtwQAvD_BwE&sig=AOD64_0GzUUCUNYxlTqKG3wuWiUQL-xr_g&ctype=5&q=&nis=4&ved=2ahUKEwikwtuCvaWHAxXN4ckDHfPSA9IQ9aACKAB6BAgHECQ&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiZ-OOCvaWHAxUqNtQBHSDiCn0YABAFGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGBZPAxBOCU8BzfUPRhl56N2wyZVudKVM8LxWZfzUTj3ZbytylgvRJxoCPtwQAvD_BwE&sig=AOD64_0GzUUCUNYxlTqKG3wuWiUQL-xr_g&ctype=5&q=&nis=4&ved=2ahUKEwikwtuCvaWHAxXN4ckDHfPSA9IQ9aACKAB6BAgHECQ&adurl=",
   },
   {
     name: "Domaine Leflaive Puligny-Montrachet",
@@ -2178,7 +2315,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 200,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ7xHj-7Xqq9_PnmLaVuYbx2wpQcKTt-Y-ngNI7U16tDzMr_vaM6EtEHVwLLyc_xepJK7q7CgfZBT5-de67omrx3YOti2JwvHDOCLz75ZEfrNT4ya7K7hy1uakUQht6ijbKCBHuE0Y&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiJyemRvaWHAxVYONQBHY1uCHcYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJ5aj652RbRoKFF82DVi94WTQy_bDWs9t33xNFa8avc8UEe9eMPpGhoCP4EQAvD_BwE&sig=AOD64_0AqaDM1reaWXf9D3tL1Wzh-y0OlQ&ctype=5&q=&nis=4&ved=2ahUKEwiSouKRvaWHAxUQLtAFHc-hBw8Q9aACKAB6BAgBEBU&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiJyemRvaWHAxVYONQBHY1uCHcYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJ5aj652RbRoKFF82DVi94WTQy_bDWs9t33xNFa8avc8UEe9eMPpGhoCP4EQAvD_BwE&sig=AOD64_0AqaDM1reaWXf9D3tL1Wzh-y0OlQ&ctype=5&q=&nis=4&ved=2ahUKEwiSouKRvaWHAxUQLtAFHc-hBw8Q9aACKAB6BAgBEBU&adurl=",
   },
   {
     name: "Joseph Phelps Insignia",
@@ -2193,7 +2331,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 250,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQWZA5YAw9K9ktI59ZhMp-vHG44r9b9cuwdzsbeGNZmomJiyxvN565k0mB5aKrHsDjjCvfY8ryofM1eWfS7xGZiOW_MkNXeGGbc5FnP_FMlf_X0kusN5fzUWRRA6mo_Uis&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjuj4ifvaWHAxV8XX8AHRG6C_wYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJs9FBhJOsP3_yv4SKQOtvbDn6BCC79wfWUM_c34Sv5S5sFOiUyK1hoCY6UQAvD_BwE&sig=AOD64_3hXJaQ5jdBq9hTzQxoBfaDEd56bA&ctype=5&q=&nis=4&ved=2ahUKEwjk7f-evaWHAxXo6ckDHcgSBf4Q9aACKAB6BAgBEBU&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjuj4ifvaWHAxV8XX8AHRG6C_wYABADGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJs9FBhJOsP3_yv4SKQOtvbDn6BCC79wfWUM_c34Sv5S5sFOiUyK1hoCY6UQAvD_BwE&sig=AOD64_3hXJaQ5jdBq9hTzQxoBfaDEd56bA&ctype=5&q=&nis=4&ved=2ahUKEwjk7f-evaWHAxXo6ckDHcgSBf4Q9aACKAB6BAgBEBU&adurl=",
   },
   {
     name: "Bollinger La Grande Annee",
@@ -2208,7 +2347,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 150,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS19O_LbmgYyRL1d0cI-SSfUE7-8cH5_WcZ7DGm0UkqAIFgcDEY8uDSVkGoiJNiu8N7zpKe9vEoFe8Oi0ixXkhe32yB3b7WIYS66-6fCGVq4ZpZPh4LqmLPsHy-M61VOmfsBI3UQ8Y&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi10e3FvaWHAxWwoAMAHfOXBQMYABAJGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMKkrmfqYWVNzctEOL3-WOTlu5pGrQ6w735Riq0m4NIlENUihC8kHhoC32cQAvD_BwE&sig=AOD64_08Ii60MzaEwDyE8ytY-j-xeOv55A&ctype=5&q=&nis=4&ved=2ahUKEwien-bFvaWHAxUm48kDHZO-BLIQ9aACKAB6BAgBEDY&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi10e3FvaWHAxWwoAMAHfOXBQMYABAJGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMKkrmfqYWVNzctEOL3-WOTlu5pGrQ6w735Riq0m4NIlENUihC8kHhoC32cQAvD_BwE&sig=AOD64_08Ii60MzaEwDyE8ytY-j-xeOv55A&ctype=5&q=&nis=4&ved=2ahUKEwien-bFvaWHAxUm48kDHZO-BLIQ9aACKAB6BAgBEDY&adurl=",
   },
   {
     name: "Ornellaia",
@@ -2223,7 +2363,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 250,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS9sCF2e7n5Cc22gzH6qIvsDORuWprbeOf3il_Aq95eDYFfg8ZnRgZ-Xg8sfZTCnFxc9H038qP2JaE5h8P7eRunWZPAiAZ9Z2MDRjXQeU0vFWM5I9s14ejDjFhAqGdXTz233eXzWD5Dj3g&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjysPvVvaWHAxW0Sn8AHYBTA24YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNhLQ4gYOQu7Xf3Rx00XwTrpPCyDq1UPUx_mCjx3ra03NWJW1wB4ZBoCFh0QAvD_BwE&sig=AOD64_0Xm8qBTdDPZIp3gOjirTRp5xIHVw&ctype=5&q=&nis=4&ved=2ahUKEwiFg_LVvaWHAxViMtAFHc9uC0cQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjysPvVvaWHAxW0Sn8AHYBTA24YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNhLQ4gYOQu7Xf3Rx00XwTrpPCyDq1UPUx_mCjx3ra03NWJW1wB4ZBoCFh0QAvD_BwE&sig=AOD64_0Xm8qBTdDPZIp3gOjirTRp5xIHVw&ctype=5&q=&nis=4&ved=2ahUKEwiFg_LVvaWHAxViMtAFHc9uC0cQ9aACKAB6BAgBEA4&adurl=",
   },
 
   {
@@ -2239,7 +2380,8 @@ const wines = [
     grape: "Sauvignon Blanc",
     avgPrice: 30,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRWFp2a3tr_yzMLYfC-cwdK4cGj0jlq8gvyR3yVFc-F-xwzooT9opPaTUJdwMDQFOvXZV36S4ZbQqrc4s4n_vRQU7NA_4vEcVVurm5xe2jD6fkkCZ6E6ScW0WX0HH7saS0TnH1oCA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiz9ITjvaWHAxV-NtQBHefzAJ4YABALGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOmuC3JJmPNHjvM5lfx5PL4uDB_qJ6f2vLZ4OZtPKCCwaSOjL4VYKhoCAlEQAvD_BwE&sig=AOD64_3XdMStTS7IX5OJc6k_edz0TGT9yg&ctype=5&q=&nis=4&ved=2ahUKEwiStP7ivaWHAxWZ78kDHRGeDYgQ9aACKAB6BAgDEFc&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiz9ITjvaWHAxV-NtQBHefzAJ4YABALGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOmuC3JJmPNHjvM5lfx5PL4uDB_qJ6f2vLZ4OZtPKCCwaSOjL4VYKhoCAlEQAvD_BwE&sig=AOD64_3XdMStTS7IX5OJc6k_edz0TGT9yg&ctype=5&q=&nis=4&ved=2ahUKEwiStP7ivaWHAxWZ78kDHRGeDYgQ9aACKAB6BAgDEFc&adurl=",
   },
   {
     name: "Chateau Palmer",
@@ -2254,7 +2396,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 350,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR83l0qp4Iqf9SrQvrHsIHng8R7Hxy-wsZfaKPsVr-CHIHrmvDZ-fFMWMzNNKyj9rDyv4N0tyihMp0vWMTRQ_TybZf6LQWd8_5gp5aWLFgo35qLZZ3R8hXzZy3HNlnRvR-Q&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjd3JrzvaWHAxUpK9QBHaJlASwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFpkk3ZYsL2MrZEOezfMKCb2CPcvfB8AKkUokZIyXqClAfHhVs0UlBoCJVkQAvD_BwE&sig=AOD64_0Aeh0WWT4b7OjnbCYmaW78HgCl1Q&ctype=5&q=&nis=4&ved=2ahUKEwibw5TzvaWHAxVS4MkDHdpLDtAQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjd3JrzvaWHAxUpK9QBHaJlASwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFpkk3ZYsL2MrZEOezfMKCb2CPcvfB8AKkUokZIyXqClAfHhVs0UlBoCJVkQAvD_BwE&sig=AOD64_0Aeh0WWT4b7OjnbCYmaW78HgCl1Q&ctype=5&q=&nis=4&ved=2ahUKEwibw5TzvaWHAxVS4MkDHdpLDtAQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Guigal La Turque",
@@ -2269,7 +2412,8 @@ const wines = [
     grape: "Syrah",
     avgPrice: 400,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcScLy-TjNCRd9RUVSfPlekpiDDo1BhDK_QZSrK9UpKXMQm_FeqREHBsTPsLmqROn1CJEAzhjF1w-RiAFhEp5qhfIy0TEJ9Bf1WsFlcUfr8YFkBRQWngjY1S2P-dQVE-c2U&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjqhPz-vaWHAxXVcn8AHQnuDoAYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNDUoY88gifvCIPMn3yr9cpyWOmtmV_-_tIyIny-HTYoDZSXohzPhhoCKhoQAvD_BwE&sig=AOD64_1UD_BVa2AQpn06YGHn24iyadE6yg&ctype=5&q=&nis=4&ved=2ahUKEwiwoPX-vaWHAxWwGtAFHYosCM8Q9aACKAB6BAgBEA8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjqhPz-vaWHAxXVcn8AHQnuDoAYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNDUoY88gifvCIPMn3yr9cpyWOmtmV_-_tIyIny-HTYoDZSXohzPhhoCKhoQAvD_BwE&sig=AOD64_1UD_BVa2AQpn06YGHn24iyadE6yg&ctype=5&q=&nis=4&ved=2ahUKEwiwoPX-vaWHAxWwGtAFHYosCM8Q9aACKAB6BAgBEA8&adurl=",
   },
 
   {
@@ -2285,7 +2429,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 3000,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRABVKaYnrLMief7EtekDAQl0vkCck7tDl2igvFkBKQmLSI_BffZiArSdzeJlGi2ZwP7nvzzfMmSH2TmeeEbIhEbbINNeiNhEN_eRATJEztPYJV_WkiuKVhgwjfsJ1KY-c7AXnXtIsCVkWn&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjOjq2MvqWHAxVXNdQBHQODDDIYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGG6kCXQHibg84EHb7GfHfVLPnBmf-Li5bz_Cmvxd-6bcHhErOedqMxoCwlcQAvD_BwE&sig=AOD64_0Ptc0f42FpYRb5U_hFG42EUuQAqQ&ctype=5&q=&nis=4&ved=2ahUKEwiBg6eMvqWHAxVp_skDHdntBoYQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjOjq2MvqWHAxVXNdQBHQODDDIYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGG6kCXQHibg84EHb7GfHfVLPnBmf-Li5bz_Cmvxd-6bcHhErOedqMxoCwlcQAvD_BwE&sig=AOD64_0Ptc0f42FpYRb5U_hFG42EUuQAqQ&ctype=5&q=&nis=4&ved=2ahUKEwiBg6eMvqWHAxVp_skDHdntBoYQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Penfolds RWT Shiraz",
@@ -2300,7 +2445,8 @@ const wines = [
     grape: "Shiraz",
     avgPrice: 150,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTYBmCjElG28uI_z28Q8T3cQa5sFcga-PfN46aZnYO_vC7SgyYXDkOBeKtwlJXHGYongG_kOFNktlfHJlqXTQU6Wxkg-JlyaBr0ya4sVvVgSa0UE2kNS4qGj4X683TEb8JBFIOoc7s&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiN5-CZvqWHAxWUONQBHWxDD3sYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOQcES1_qcIGMluwMCAjVxm6zY6aSkTOuCTPXlZQKNMD_GlWxqnqChoCyDgQAvD_BwE&sig=AOD64_07_EeimjWzonAjMfCmjXaszbsm5w&ctype=5&q=&nis=4&ved=2ahUKEwiL4NmZvqWHAxU7GtAFHcskCmIQ9aACKAB6BAgBEDs&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiN5-CZvqWHAxWUONQBHWxDD3sYABAHGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOQcES1_qcIGMluwMCAjVxm6zY6aSkTOuCTPXlZQKNMD_GlWxqnqChoCyDgQAvD_BwE&sig=AOD64_07_EeimjWzonAjMfCmjXaszbsm5w&ctype=5&q=&nis=4&ved=2ahUKEwiL4NmZvqWHAxU7GtAFHcskCmIQ9aACKAB6BAgBEDs&adurl=",
   },
   {
     name: "Vietti Barolo Castiglione",
@@ -2315,7 +2461,8 @@ const wines = [
     grape: "Nebbiolo",
     avgPrice: 70,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQtJZVASCgA5poOLrFoysFv8gxOyCqC-4O-dCCV7W0zMpxGVfhTOTh2VHAsykKflfa1xgf8-5nkKNib56-wFot3co6liVMxuefyrkIAEuzsgKVWZyk9WIhHgGd6Bh31dB4&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwipreC0vqWHAxXmbn8AHQdwDhUYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFTaaGSBHpHSns1t3EwggwdGpJ27obQqQehpNcfktfJbC5fsxBErfxoCMD8QAvD_BwE&sig=AOD64_1_qynZnYT0bGf9BKUJNTYXSIhYPw&ctype=5&q=&nis=4&ved=2ahUKEwi0z9m0vqWHAxXuHdAFHbTVBL4Q9aACKAB6BAgEEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwipreC0vqWHAxXmbn8AHQdwDhUYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFTaaGSBHpHSns1t3EwggwdGpJ27obQqQehpNcfktfJbC5fsxBErfxoCMD8QAvD_BwE&sig=AOD64_1_qynZnYT0bGf9BKUJNTYXSIhYPw&ctype=5&q=&nis=4&ved=2ahUKEwi0z9m0vqWHAxXuHdAFHbTVBL4Q9aACKAB6BAgEEA4&adurl=",
   },
 
   {
@@ -2331,7 +2478,8 @@ const wines = [
     grape: "Touriga Nacional",
     avgPrice: 120,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSMCpoovT6GpUMqpJLrwfiyGWYXKQDnIo-cqrF0fcVgLEpejXaK76lv5N21eALX_RSkrurd5YMdLYXRSL07wdhajvJg0uo73smiW9y8VQsG6_AJ2v3z8IRwCjd__dvN7XkI1mE9U_1ERfs&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwig_ZbDvqWHAxWQNdQBHe_rC7UYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHo0Y9H2ER6exdnshsLwqpAbkgsui2NgRr7QP8OlEA4veKBmP-ZVgxoC5QsQAvD_BwE&sig=AOD64_20m1HBs98Q7e40UQdHti2733pDHg&ctype=46&q=&ved=2ahUKEwidm4_DvqWHAxV5L9AFHRrYDV8Q9aACKAB6BAgBEBA&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwig_ZbDvqWHAxWQNdQBHe_rC7UYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGHo0Y9H2ER6exdnshsLwqpAbkgsui2NgRr7QP8OlEA4veKBmP-ZVgxoC5QsQAvD_BwE&sig=AOD64_20m1HBs98Q7e40UQdHti2733pDHg&ctype=46&q=&ved=2ahUKEwidm4_DvqWHAxV5L9AFHRrYDV8Q9aACKAB6BAgBEBA&adurl=",
   },
   {
     name: "Clos de Tart",
@@ -2346,7 +2494,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 350,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQr3rUX8KKX4xANgf-TRjACsavILoCMzwQQ9EF-D7T0RmielaL3bn68cdjHVYKEcIJJo_3w-C9xYrPTFGvqUsnkkEIjfIHp6P8q1PsQS8XGZpzosBwjCiBYyo0aLT1L4gzU&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiA3qvSvqWHAxW0Sn8AHYBTA24YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPuyR-vZeVX8yq5RqODR67I_dalnNlek_sn6rQBN4W8T3W9EjSXmNBoCZc0QAvD_BwE&sig=AOD64_0sgLV1peaoYCFXFyNwgwky4MgYag&ctype=5&q=&nis=4&ved=2ahUKEwj4kaTSvqWHAxU838kDHRMOBrcQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiA3qvSvqWHAxW0Sn8AHYBTA24YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGPuyR-vZeVX8yq5RqODR67I_dalnNlek_sn6rQBN4W8T3W9EjSXmNBoCZc0QAvD_BwE&sig=AOD64_0sgLV1peaoYCFXFyNwgwky4MgYag&ctype=5&q=&nis=4&ved=2ahUKEwj4kaTSvqWHAxU838kDHRMOBrcQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Chateau Lafleur",
@@ -2361,7 +2510,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 1000,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRat-l_8Lz5rhBQunmdHdkPuJ_iUx6DVLmtgWnCXK3JkVCNQJoAPHvvOQVKJSCo42kfETRchZeZuZu4CMSfs4yRv4D9ILm7UIg4G8_Z-fp-3r1Sgdf1OVoFR4bJUfqcWB87V2L_pg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiaxezgvqWHAxUeOtQBHfroDZcYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCa2qnjWLTy3ntKwBkplMUsuidxou_igARwWyyEmWV3D04yZcH17FxoC_3cQAvD_BwE&sig=AOD64_1GW3HzCq0l4g_PDefdCHFQ3DgU7w&ctype=5&q=&nis=4&ved=2ahUKEwiy_-XgvqWHAxVF5MkDHdHBBpcQ9aACKAB6BAgDEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiaxezgvqWHAxUeOtQBHfroDZcYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGCa2qnjWLTy3ntKwBkplMUsuidxou_igARwWyyEmWV3D04yZcH17FxoC_3cQAvD_BwE&sig=AOD64_1GW3HzCq0l4g_PDefdCHFQ3DgU7w&ctype=5&q=&nis=4&ved=2ahUKEwiy_-XgvqWHAxVF5MkDHdHBBpcQ9aACKAB6BAgDEA4&adurl=",
   },
   {
     name: "Peter Michael Les Pavots",
@@ -2376,7 +2526,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 200,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSa9hLaO1qADZichP6DL6ULh2wSqBCcHsflLscq30IMtgH2aHa3PPSezJ0LR8_ZrWU4s7yWZipXdy4uIPgo794LGNZTzFKODfF_vqdUFBOvB3sop7bDvOT3ipjCSpAO0G8WkBVUqE55P1XK&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjT7bD0vqWHAxVFNtQBHcnVDI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFGMcP5RCAIy-F68Qla_ZhoyrIUoLnEdY93DL6xroa_T1XiY8Rw0aRoCSu0QAvD_BwE&sig=AOD64_0Wepp0N1A5vf1O0ujCnE-OtfBV6g&ctype=5&q=&nis=4&ved=2ahUKEwiR06j0vqWHAxWT3ckDHSfgCewQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjT7bD0vqWHAxVFNtQBHcnVDI8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGFGMcP5RCAIy-F68Qla_ZhoyrIUoLnEdY93DL6xroa_T1XiY8Rw0aRoCSu0QAvD_BwE&sig=AOD64_0Wepp0N1A5vf1O0ujCnE-OtfBV6g&ctype=5&q=&nis=4&ved=2ahUKEwiR06j0vqWHAxWT3ckDHSfgCewQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Torres Mas La Plana",
@@ -2391,7 +2542,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 60,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTvunRrQ1ALXeeUsPizSvC3_IsIj49GY9-VO1-keqbw6b8Ab2YJY9bjuSPd05yhGPlRGDVSfWAHdm6arB0nX8Ge25Oo-YtLRWOadsoXFOAk1gnCHyn-JxhBXn7T2ifrwlJ3VE9p6PzJeA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjutOKDv6WHAxUpK9QBHVXIALsYABAJGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGH4mynQUyfkY7lK2BdP38Q_Jh8bN2aiINuLltfx0exd-5OM2EhMayBoCvwsQAvD_BwE&sig=AOD64_3Xe7Pg3rkKy7gW-yldlbo0XLx17A&ctype=5&q=&nis=4&ved=2ahUKEwii7tqDv6WHAxW55skDHQ_ZB6kQ9aACKAB6BAgGEDQ&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjutOKDv6WHAxUpK9QBHVXIALsYABAJGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGH4mynQUyfkY7lK2BdP38Q_Jh8bN2aiINuLltfx0exd-5OM2EhMayBoCvwsQAvD_BwE&sig=AOD64_3Xe7Pg3rkKy7gW-yldlbo0XLx17A&ctype=5&q=&nis=4&ved=2ahUKEwii7tqDv6WHAxW55skDHQ_ZB6kQ9aACKAB6BAgGEDQ&adurl=",
   },
   {
     name: "Clarendon Hills Astralis Syrah",
@@ -2406,7 +2558,8 @@ const wines = [
     grape: "Syrah",
     avgPrice: 350,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTRQwZvo1ZhLM19ZfPq4ZQLADz2I_KEkbGjOYyEjba61ZD9jeh2fjRdmeF2a2AMTMZcjtg-H5_QEQsGCuvoOyeJ0t79wKhqTupIV60Jgas1quZ40ZN8Na1fpFUvaMcJmqES&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjCifeYv6WHAxUCSH8AHV24AZsYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDwdb9WLZ9y8hc9-n0mg1Xa7UjunsLkqTfRQOdLIcGj7QgMCbZai9BoCKucQAvD_BwE&sig=AOD64_1Mo7JfBVV3NQJrzouV4lX13n00pQ&ctype=5&q=&nis=4&ved=2ahUKEwiMo_CYv6WHAxU8GtAFHZ_GCcIQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjCifeYv6WHAxUCSH8AHV24AZsYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDwdb9WLZ9y8hc9-n0mg1Xa7UjunsLkqTfRQOdLIcGj7QgMCbZai9BoCKucQAvD_BwE&sig=AOD64_1Mo7JfBVV3NQJrzouV4lX13n00pQ&ctype=5&q=&nis=4&ved=2ahUKEwiMo_CYv6WHAxU8GtAFHZ_GCcIQ9aACKAB6BAgBEA4&adurl=",
   },
 
   {
@@ -2422,7 +2575,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 300,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTIUOB6KnUpL025r0IIbPWAKvi4Lc9BwYJ_-O5N5Amkw0XeY2xkMpnL_dypuXTv7WvJmtoESRH-KY9A39NkOwfiGh-v35puQ3xamcAybLFnIqROJoNpKmWjKzgxI9YQY7_4&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwj918amv6WHAxUCSH8AHV24AZsYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAhSLL2pDm9sEBXNjnnUvFnEcny5mKQWEkRi_cce6jAsXx1bROd8ExoCiigQAvD_BwE&sig=AOD64_0EAb8HFu5xBdWlmIW4QOVWjtsZwQ&ctype=5&q=&nis=4&ved=2ahUKEwjDlcCmv6WHAxVf5MkDHdeMD2UQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwj918amv6WHAxUCSH8AHV24AZsYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGAhSLL2pDm9sEBXNjnnUvFnEcny5mKQWEkRi_cce6jAsXx1bROd8ExoCiigQAvD_BwE&sig=AOD64_0EAb8HFu5xBdWlmIW4QOVWjtsZwQ&ctype=5&q=&nis=4&ved=2ahUKEwjDlcCmv6WHAxVf5MkDHdeMD2UQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Domaine de la Romanee-Conti Echezeaux",
@@ -2437,7 +2591,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 1200,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTfEktg6OEc38B-qjYJ5et-KcbpyxK9GOL318Fje0KavrvUXKVcMAr4WOh7REc3N_r4njDWP6nq8XHO_9WXQpRv-RBs0lKMSqhkMQ5kW2FC5Bvso9UVuZOJ4itH07t3IGNF9hezmGo&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiy8-2yv6WHAxVNN9QBHUK0Dy4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIpUJ9FEdUYfwcqQYa7PbCO18VrqRYPoL3TNydwrG1fd12gmQ4aXRxoC_FsQAvD_BwE&sig=AOD64_3roj7h64po05zjPXmBjeHFL_DDbg&ctype=5&q=&nis=4&ved=2ahUKEwiBh-ayv6WHAxXNwckDHf13AhEQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiy8-2yv6WHAxVNN9QBHUK0Dy4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIpUJ9FEdUYfwcqQYa7PbCO18VrqRYPoL3TNydwrG1fd12gmQ4aXRxoC_FsQAvD_BwE&sig=AOD64_3roj7h64po05zjPXmBjeHFL_DDbg&ctype=5&q=&nis=4&ved=2ahUKEwiBh-ayv6WHAxXNwckDHf13AhEQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Cheval Blanc",
@@ -2452,7 +2607,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 5000,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWCfd6VBoeIonTEWCiz4qnm_lhjhM1_VbQhQ&s",
-    linkToPurchase: "https://www.google.com/imgres?q=Cheval%20Blanc%201947&imgurl=https%3A%2F%2Fimages.vivino.com%2Fthumbs%2FAIWJqsLoSIyz0HO4de1llA_pb_600x600.png&imgrefurl=https%3A%2F%2Fwww.vivino.com%2FUS%2Fen%2Fchateau-cheval-blanc-saint-emilion-grand-cru-premier-grand-cru-classe%2Fw%2F1148747%3Fyear%3D1947%26price_id%3D34561115&docid=9iZP5fEk_u23CM&tbnid=VsMWC_zpL_6S3M&vet=12ahUKEwjEloPAv6WHAxXqG9AFHVeKD1IQM3oECD4QAA..i&w=600&h=600&hcb=2&ved=2ahUKEwjEloPAv6WHAxXqG9AFHVeKD1IQM3oECD4QAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Cheval%20Blanc%201947&imgurl=https%3A%2F%2Fimages.vivino.com%2Fthumbs%2FAIWJqsLoSIyz0HO4de1llA_pb_600x600.png&imgrefurl=https%3A%2F%2Fwww.vivino.com%2FUS%2Fen%2Fchateau-cheval-blanc-saint-emilion-grand-cru-premier-grand-cru-classe%2Fw%2F1148747%3Fyear%3D1947%26price_id%3D34561115&docid=9iZP5fEk_u23CM&tbnid=VsMWC_zpL_6S3M&vet=12ahUKEwjEloPAv6WHAxXqG9AFHVeKD1IQM3oECD4QAA..i&w=600&h=600&hcb=2&ved=2ahUKEwjEloPAv6WHAxXqG9AFHVeKD1IQM3oECD4QAA",
   },
   {
     name: "Screaming Eagle",
@@ -2467,7 +2623,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 3000,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQBuSLcnBa76ezbdevl1ZluCqBtFh_zKttzlHH0u3SNstxavvX1fkxnnOa1bmoOX48tc_wdskOYp2XReSCw6o46H4dNJoDfgo_CiZX62oz9o_mp_TRN7Dl93SzGQgIV1_I9s8oOLVW47Q&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwi8gpXzv6WHAxVbMdQBHbZRC5AYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGIAatw7l3lwGMpcNzzSuCp-dWBqw9N70KkK7R1y93LoYuMR6dn2-RoCv6UQAvD_BwE&sig=AOD64_3VXCYlffe8KOSGc3lRfawRy0fxKg&ctype=5&q=&nis=4&ved=2ahUKEwidoI7zv6WHAxUuyMkDHaRTA1gQ9aACKAB6BAgDEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwi8gpXzv6WHAxVbMdQBHbZRC5AYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGGIAatw7l3lwGMpcNzzSuCp-dWBqw9N70KkK7R1y93LoYuMR6dn2-RoCv6UQAvD_BwE&sig=AOD64_3VXCYlffe8KOSGc3lRfawRy0fxKg&ctype=5&q=&nis=4&ved=2ahUKEwidoI7zv6WHAxUuyMkDHaRTA1gQ9aACKAB6BAgDEA4&adurl=",
   },
   {
     name: "Romanée-Conti",
@@ -2482,7 +2639,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 20000,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmaAU5uxIouKIlVUoJ89OZpQyWBhwyifGiyg&s",
-    linkToPurchase: "https://www.google.com/imgres?q=Roman%C3%A9e-Conti%201945&imgurl=https%3A%2F%2Fcultwine.com%2Fcdn%2Fshop%2Fproducts%2FD8WAFE-1945DRCRC-DomaineStock2_510x.jpg%3Fv%3D1607814140&imgrefurl=https%3A%2F%2Fcultwine.com%2Fproducts%2F1945-drc-romanee-conti&docid=K9dNhYdYXfK9-M&tbnid=GhKfyGENed2cCM&vet=12ahUKEwiU-oCAwKWHAxUq8MkDHUWfAMMQM3oECF0QAA..i&w=510&h=765&hcb=2&ved=2ahUKEwiU-oCAwKWHAxUq8MkDHUWfAMMQM3oECF0QAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Roman%C3%A9e-Conti%201945&imgurl=https%3A%2F%2Fcultwine.com%2Fcdn%2Fshop%2Fproducts%2FD8WAFE-1945DRCRC-DomaineStock2_510x.jpg%3Fv%3D1607814140&imgrefurl=https%3A%2F%2Fcultwine.com%2Fproducts%2F1945-drc-romanee-conti&docid=K9dNhYdYXfK9-M&tbnid=GhKfyGENed2cCM&vet=12ahUKEwiU-oCAwKWHAxUq8MkDHUWfAMMQM3oECF0QAA..i&w=510&h=765&hcb=2&ved=2ahUKEwiU-oCAwKWHAxUq8MkDHUWfAMMQM3oECF0QAA",
   },
   {
     name: "Château d'Yquem",
@@ -2497,7 +2655,8 @@ const wines = [
     grape: "Sémillon",
     avgPrice: 10000,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcX1v14ln4A5rwgEyabxzcPEp5CQ21BxZxBw&s",
-    linkToPurchase: "https://www.google.com/imgres?q=Ch%C3%A2teau%20d%27Yquem%201811&imgurl=https%3A%2F%2Fassets.bonappetit.com%2Fphotos%2F59483b88adb3b53bd37a7d52%2F1%3A1%2Fw_330%252Cc_limit%2Fchristies-chateau-d%27yquem-wine-auction-crop.jpg&imgrefurl=https%3A%2F%2Fwww.bonappetit.com%2Fcontributor%2Fmari-uyehara&docid=gh7xnwAbKDNaqM&tbnid=y6Tcc9_idX-8SM&vet=12ahUKEwjisJW2wKWHAxWT78kDHXQvBUcQM3oECC8QAA..i&w=330&h=330&hcb=2&ved=2ahUKEwjisJW2wKWHAxWT78kDHXQvBUcQM3oECC8QAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Ch%C3%A2teau%20d%27Yquem%201811&imgurl=https%3A%2F%2Fassets.bonappetit.com%2Fphotos%2F59483b88adb3b53bd37a7d52%2F1%3A1%2Fw_330%252Cc_limit%2Fchristies-chateau-d%27yquem-wine-auction-crop.jpg&imgrefurl=https%3A%2F%2Fwww.bonappetit.com%2Fcontributor%2Fmari-uyehara&docid=gh7xnwAbKDNaqM&tbnid=y6Tcc9_idX-8SM&vet=12ahUKEwjisJW2wKWHAxWT78kDHXQvBUcQM3oECC8QAA..i&w=330&h=330&hcb=2&ved=2ahUKEwjisJW2wKWHAxWT78kDHXQvBUcQM3oECC8QAA",
   },
   {
     name: "Château Lafite",
@@ -2512,7 +2671,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 20000,
     img: "https://assets.tastingbook.com/assets/full/b993edde4733a4c9ab45069ce16c0453.jpg",
-    linkToPurchase: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftastingbook.com%2Fwine%2Fchateau_lafiterothschild%2Flafiterothschild_1787&psig=AOvVaw2CBq6V-ecUXY_P3PBWDIup&ust=1721011326282000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD59_jApYcDFQAAAAAdAAAAABAE",
+    linkToPurchase:
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftastingbook.com%2Fwine%2Fchateau_lafiterothschild%2Flafiterothschild_1787&psig=AOvVaw2CBq6V-ecUXY_P3PBWDIup&ust=1721011326282000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD59_jApYcDFQAAAAAdAAAAABAE",
   },
   {
     name: "Mouton-Rothschild",
@@ -2527,7 +2687,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 5000,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSzOFXunlr3S5AdpFuCUd5p7TlKruxMUqZjIWvI0NZZN_7dLyIpf3u9tAIemV7CgsO7AUC61TZclfSeYxaUriPu1nXf8TMdviu9NxSyNzES94anBfxbS-aqxQPetrH2fwebEnRvlLCePA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjl_MmGwaWHAxUqNtQBHUe4DGwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIdYvnUixG08goUnAn-Sfq2jNdcv0Bqfe6In6V0s-bYIgcAmX-YsVxoCH0QQAvD_BwE&sig=AOD64_3JOT0tHnfq12SCeI9ExdHzRrnZvQ&ctype=5&q=&nis=4&ved=2ahUKEwjYosOGwaWHAxVI5skDHTATA58Q9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjl_MmGwaWHAxUqNtQBHUe4DGwYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGIdYvnUixG08goUnAn-Sfq2jNdcv0Bqfe6In6V0s-bYIgcAmX-YsVxoCH0QQAvD_BwE&sig=AOD64_3JOT0tHnfq12SCeI9ExdHzRrnZvQ&ctype=5&q=&nis=4&ved=2ahUKEwjYosOGwaWHAxVI5skDHTATA58Q9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Penfolds Block 42 Kalimna Cabernet Sauvignon",
@@ -2542,7 +2703,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 8000,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjWhJllzK4q02KZPn6Op-I9yZRcYmFR0h2wQ&s",
-    linkToPurchase: "https://www.google.com/imgres?q=Penfolds%20Block%2042%20Kalimna%20Cabernet%20Sauvignon%202004&imgurl=https%3A%2F%2Fcaskcartel.com%2Fcdn%2Fshop%2Fproducts%2F44_dd029228-dbff-4936-8719-655dd0df3a3a_700x.jpg%3Fv%3D1680170652&imgrefurl=https%3A%2F%2Fcaskcartel.com%2Fproducts%2F2004-penfolds-penfolds-block-42-kalimna&docid=HGzoAw1qfAmEDM&tbnid=8a1lo3dYrm1MOM&vet=12ahUKEwjlmc-WwaWHAxUy4ckDHUXPAN0QM3oECFYQAA..i&w=600&h=1000&hcb=2&ved=2ahUKEwjlmc-WwaWHAxUy4ckDHUXPAN0QM3oECFYQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Penfolds%20Block%2042%20Kalimna%20Cabernet%20Sauvignon%202004&imgurl=https%3A%2F%2Fcaskcartel.com%2Fcdn%2Fshop%2Fproducts%2F44_dd029228-dbff-4936-8719-655dd0df3a3a_700x.jpg%3Fv%3D1680170652&imgrefurl=https%3A%2F%2Fcaskcartel.com%2Fproducts%2F2004-penfolds-penfolds-block-42-kalimna&docid=HGzoAw1qfAmEDM&tbnid=8a1lo3dYrm1MOM&vet=12ahUKEwjlmc-WwaWHAxUy4ckDHUXPAN0QM3oECFYQAA..i&w=600&h=1000&hcb=2&ved=2ahUKEwjlmc-WwaWHAxUy4ckDHUXPAN0QM3oECFYQAA",
   },
   {
     name: "Château Le Pin",
@@ -2557,7 +2719,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 6000,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRjXWMkiHqoGzpPTSVM_M_kdjK_IBvVaITUd-deQodMXIRrvFCwYfYw8JHdKd1Z_jHXqNl-6CfMGhUCDcDHq1nYFjv92sKM67oFROyLaxJ1OT6pfwbFVYQ0gWZSI74cDPVWMBrKJagjFg&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiPt4HXwaWHAxXnR38AHZVjA4wYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB_nG_2Lv250BNVgG2aJLpMvHO0-UkgnlL2dh__GeA4vbPofHFGJzhoCF6wQAvD_BwE&sig=AOD64_2P80Tgo_94OxFbgGlEZkQLOO1g0g&ctype=5&q=&nis=4&ved=2ahUKEwiVxPrWwaWHAxV-1skDHc0LDS0Q9aACKAB6BAgHEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiPt4HXwaWHAxXnR38AHZVjA4wYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGB_nG_2Lv250BNVgG2aJLpMvHO0-UkgnlL2dh__GeA4vbPofHFGJzhoCF6wQAvD_BwE&sig=AOD64_2P80Tgo_94OxFbgGlEZkQLOO1g0g&ctype=5&q=&nis=4&ved=2ahUKEwiVxPrWwaWHAxV-1skDHc0LDS0Q9aACKAB6BAgHEA4&adurl=",
   },
   {
     name: "Domaine Leroy Musigny Grand Cru",
@@ -2572,7 +2735,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 7000,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS4-ZNUHODPZAneRF5Kl9tet4_4KVwLojnr1-MUH64sVu6g8SI_GMCZW7jHfF6aaptJBua6U2M4IvVp0x0K_SHwntQCYB20lD05jkw8VV0O3uFgLfuDtw6bu0c66lXuDVKHMyTz1m41&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiFzsbjwaWHAxVcONQBHXWECQoYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLfegrBlZdyp76FrYxtDmeJSbKdl0Q4qDd-AYYTRxGYRG-ekeWNN8BoCQJYQAvD_BwE&sig=AOD64_0p2iH4KkunM9Y5ciqWHVGcLpHMhA&ctype=5&q=&nis=4&ved=2ahUKEwjfyr_jwaWHAxXoHdAFHQS_AQsQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiFzsbjwaWHAxVcONQBHXWECQoYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLfegrBlZdyp76FrYxtDmeJSbKdl0Q4qDd-AYYTRxGYRG-ekeWNN8BoCQJYQAvD_BwE&sig=AOD64_0p2iH4KkunM9Y5ciqWHVGcLpHMhA&ctype=5&q=&nis=4&ved=2ahUKEwjfyr_jwaWHAxXoHdAFHQS_AQsQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Domaine de la Romanée-Conti Romanée-Conti Grand Cru",
@@ -2587,7 +2751,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 12000,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-HX0UokQcNMfgdtOujYgglqGwQuLoZkLPag&s",
-    linkToPurchase: "https://www.google.com/imgres?q=Domaine%20Leroy%20Musigny%20Grand%20Cru%202005&imgurl=https%3A%2F%2Fwww.wine-searcher.com%2Fimages%2Flabels%2F17%2F02%2F10151702.jpg%3Fwidth%3D260%26height%3D260%26fit%3Dbounds%26canvas%3D260%2C260&imgrefurl=https%3A%2F%2Fwww.wine-searcher.com%2Ffind%2Fleroy%2Bgrand%2Bcru%2Bmusigny%2Bchambolle%2Bcote%2Bde%2Bnuit%2Bburgundy%2Bfrance%2F2005&docid=sjOG9pq4fTbSSM&tbnid=H2JgckjveehPFM&vet=12ahUKEwjggtvuwaWHAxWd5MkDHe1aCREQM3oECHAQAA..i&w=260&h=260&hcb=2&ved=2ahUKEwjggtvuwaWHAxWd5MkDHe1aCREQM3oECHAQAA",
+    linkToPurchase:
+      "https://www.google.com/imgres?q=Domaine%20Leroy%20Musigny%20Grand%20Cru%202005&imgurl=https%3A%2F%2Fwww.wine-searcher.com%2Fimages%2Flabels%2F17%2F02%2F10151702.jpg%3Fwidth%3D260%26height%3D260%26fit%3Dbounds%26canvas%3D260%2C260&imgrefurl=https%3A%2F%2Fwww.wine-searcher.com%2Ffind%2Fleroy%2Bgrand%2Bcru%2Bmusigny%2Bchambolle%2Bcote%2Bde%2Bnuit%2Bburgundy%2Bfrance%2F2005&docid=sjOG9pq4fTbSSM&tbnid=H2JgckjveehPFM&vet=12ahUKEwjggtvuwaWHAxWd5MkDHe1aCREQM3oECHAQAA..i&w=260&h=260&hcb=2&ved=2ahUKEwjggtvuwaWHAxWd5MkDHe1aCREQM3oECHAQAA",
   },
   {
     name: "Château Margaux",
@@ -2602,7 +2767,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 8000,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR6ZlyTwfwks3W2NxKoRyIto5cK8sO0s_XhP2wJIZBJFIK-1W_BtPVF3fu1pEDLpJnm8L7yII3EHq6kv6Qh_EMpbXMQt7ym_OtjdCJqAOze92mB1LmQt1O2yqp4ts5WnANwG0Cc8crTMQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjJ_OCowqWHAxVtNtQBHXJTCC8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDTGQDy18T7X2QKfNB0Z8o2O38WJAyimK01cSZtxawSoY-RHSXniXhoC-lYQAvD_BwE&sig=AOD64_2Vjzq5V0Ma5wRf0wG9fCoKN_rQlw&ctype=5&q=&nis=4&ved=2ahUKEwjIl9qowqWHAxWr6skDHX4DC4AQ9aACKAB6BAgCEA8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjJ_OCowqWHAxVtNtQBHXJTCC8YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDTGQDy18T7X2QKfNB0Z8o2O38WJAyimK01cSZtxawSoY-RHSXniXhoC-lYQAvD_BwE&sig=AOD64_2Vjzq5V0Ma5wRf0wG9fCoKN_rQlw&ctype=5&q=&nis=4&ved=2ahUKEwjIl9qowqWHAxWr6skDHX4DC4AQ9aACKAB6BAgCEA8&adurl=",
   },
   {
     name: "Château Latour",
@@ -2617,7 +2783,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 12000,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT969wEVKjSlrwzvvv7lfSOhnSIbdARoBnYyCUQCgqdkDjVYJ6THBMPPphKPoC-HRzaN5Wio_U5d7IiDLaIrSTIdsURHxGbjgNyAlXXWaZ3G2DvUwCgz3A8GoWUUk-dQi572ifNoA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiLtui1wqWHAxUAOtQBHeF0DX4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJsCAAFzLcfFBp-AcMa5FGgZ_FGP_JV8i7z-v6vSLw8G0IaPp_yglRoCHFcQAvD_BwE&sig=AOD64_3FLfJaZX8zXFRN39H0rbIx6x2fyQ&ctype=5&q=&nis=4&ved=2ahUKEwi3qOK1wqWHAxUAMdAFHfbcCDUQ9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiLtui1wqWHAxUAOtQBHeF0DX4YABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGJsCAAFzLcfFBp-AcMa5FGgZ_FGP_JV8i7z-v6vSLw8G0IaPp_yglRoCHFcQAvD_BwE&sig=AOD64_3FLfJaZX8zXFRN39H0rbIx6x2fyQ&ctype=5&q=&nis=4&ved=2ahUKEwi3qOK1wqWHAxUAMdAFHfbcCDUQ9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Domaine de la Romanée-Conti La Tâche",
@@ -2632,7 +2799,8 @@ const wines = [
     grape: "Pinot Noir",
     avgPrice: 18000,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTMkc7Uon9LNbX3sYpw2BBhLjfqIQE8DWeZZBTXA8no1CZZDbSdQNLGogss1AdmPuIFuxKYOyMq4qRyDpWe0fkTNZA_yq5V9bZmXnDbHX4nm5xnycuRuYAlJBwpyJqtsaJNZyXC_Vs&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiMxe_CwqWHAxXwdH8AHV7ADnoYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMUiXRGsswsVkCHEtNjjX1yh9jQmaduglyk9oVR7WVXFJKsH5i28xhoCxn0QAvD_BwE&sig=AOD64_3avX6MoVf2ig68kW49PQc7ZkFHLQ&ctype=5&q=&nis=4&ved=2ahUKEwiKmujCwqWHAxVFG9AFHctADV8Q9aACKAB6BAgCEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiMxe_CwqWHAxXwdH8AHV7ADnoYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMUiXRGsswsVkCHEtNjjX1yh9jQmaduglyk9oVR7WVXFJKsH5i28xhoCxn0QAvD_BwE&sig=AOD64_3avX6MoVf2ig68kW49PQc7ZkFHLQ&ctype=5&q=&nis=4&ved=2ahUKEwiKmujCwqWHAxVFG9AFHctADV8Q9aACKAB6BAgCEA4&adurl=",
   },
   {
     name: "Château Palmer",
@@ -2647,7 +2815,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 9000,
     img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTuWZ_wnh6NTzJZ2LZfjwp3DOvrFpb6vmJeBywIqU0PxeBP8J0oP1EmZOn3w3hTjZ-JDQSjdsEO_DQzFESeemPlbd3ZoMauceTB8bifLlp9KCyCyGJJkWvD4BOkpo4TCDu7VMoayXMF1cM&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjYq-nPwqWHAxV2NtQBHSx2CNkYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGORKumt8FzVEby9lDQtmFfsHxNJ546D9Rez_kmCm-3YFSWU8gCQzdRoCAlYQAvD_BwE&sig=AOD64_3AQW_8Y9xm7yrlT-VVpEbSuf-obg&ctype=5&q=&nis=4&ved=2ahUKEwjvu-LPwqWHAxVS8MkDHea3DTQQ9aACKAB6BAgBEAw&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjYq-nPwqWHAxV2NtQBHSx2CNkYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGORKumt8FzVEby9lDQtmFfsHxNJ546D9Rez_kmCm-3YFSWU8gCQzdRoCAlYQAvD_BwE&sig=AOD64_3AQW_8Y9xm7yrlT-VVpEbSuf-obg&ctype=5&q=&nis=4&ved=2ahUKEwjvu-LPwqWHAxVS8MkDHea3DTQQ9aACKAB6BAgBEAw&adurl=",
   },
   {
     name: "Dom Pérignon",
@@ -2662,7 +2831,8 @@ const wines = [
     grape: "Chardonnay",
     avgPrice: 6000,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSrbF7cIhDg9e7yi7hB41AbGHTFrSWP8sjt8pqiCConykP_5ih9VrDziXLyY14PXOKU8gUZSG7bkruISuoCTk648BDMFLDTlIUJ-6HcjtBY97IRA1OVx0HVTtEqRaFluPy43iUBWS4avuw&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjNlLfdwqWHAxVFS38AHYtBB3wYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGA_UHWDhRXAMHcAFNppO7sDtJKPetJ6D7uQio_rczArDs73Vj7FU1BoCn5MQAvD_BwE&sig=AOD64_06dmtchQM7L841NsQEGHKZvQY45Q&ctype=5&q=&nis=4&ved=2ahUKEwjY36_dwqWHAxXY38kDHemxBLgQ9aACKAB6BAgCEA8&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjNlLfdwqWHAxVFS38AHYtBB3wYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGA_UHWDhRXAMHcAFNppO7sDtJKPetJ6D7uQio_rczArDs73Vj7FU1BoCn5MQAvD_BwE&sig=AOD64_06dmtchQM7L841NsQEGHKZvQY45Q&ctype=5&q=&nis=4&ved=2ahUKEwjY36_dwqWHAxXY38kDHemxBLgQ9aACKAB6BAgCEA8&adurl=",
   },
   {
     name: "Château Lafite Rothschild",
@@ -2677,7 +2847,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 11000,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS7HHqOpaPnNbeSQ2ErmaKmlPrVrJQbVqo_wbY1Ts_2-6LiokEeG9J5Esb3654assDuP-aKSfhnadR-7DhBgECc4nf4fYauJ_mVOk7z72rZI1255VDc7ruZ5rI8aW_umNMI9zYi1PTbNA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiLs5nrwqWHAxWQMtQBHR2GDCkYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOsUuOve19HE9emxkJhNL5PU8K_hOhG_ujyzU2pBfnLHJtpt1v57MBoCanIQAvD_BwE&sig=AOD64_2JAVodpf0lVnpZLJAq5RKeVD26Yw&ctype=5&q=&nis=4&ved=2ahUKEwiogJLrwqWHAxUj8MkDHV09CtkQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiLs5nrwqWHAxWQMtQBHR2GDCkYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGOsUuOve19HE9emxkJhNL5PU8K_hOhG_ujyzU2pBfnLHJtpt1v57MBoCanIQAvD_BwE&sig=AOD64_2JAVodpf0lVnpZLJAq5RKeVD26Yw&ctype=5&q=&nis=4&ved=2ahUKEwiogJLrwqWHAxUj8MkDHV09CtkQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Château Cheval Blanc",
@@ -2692,7 +2863,8 @@ const wines = [
     grape: "Merlot",
     avgPrice: 20000,
     img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQEgu6jZLDyP6gpbh6qw7kOUWra2lEd81dG282bdS1nSo70vP1UDZHWVYN3e_KhY1xaxEHlUgnmGQzKvweWWHB9lbhwrcBPBfWkJDqZBmwaR45pgXrudRqLUYbSBLt8oAHTGllFxuD6&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwjT6LX5wqWHAxWpbn8AHZvSAhEYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLB1t-bRZzJMG0yfiNL8GBIdk7FSzaf0EQXB-bdpMidO2fD5GW5XMxoC8O8QAvD_BwE&sig=AOD64_1miBqVJp8I6kaqwmY_KvIVQQhcNQ&ctype=5&q=&nis=4&ved=2ahUKEwjRu675wqWHAxV878kDHV-1AIQQ9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwjT6LX5wqWHAxWpbn8AHZvSAhEYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGLB1t-bRZzJMG0yfiNL8GBIdk7FSzaf0EQXB-bdpMidO2fD5GW5XMxoC8O8QAvD_BwE&sig=AOD64_1miBqVJp8I6kaqwmY_KvIVQQhcNQ&ctype=5&q=&nis=4&ved=2ahUKEwjRu675wqWHAxV878kDHV-1AIQQ9aACKAB6BAgBEA4&adurl=",
   },
   {
     name: "Château Mouton Rothschild",
@@ -2707,7 +2879,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 25000,
     img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSzOFXunlr3S5AdpFuCUd5p7TlKruxMUqZjIWvI0NZZN_7dLyIpf3u9tAIemV7CgsO7AUC61TZclfSeYxaUriPu1nXf8TMdviu9NxSyNzES94anBfxbS-aqxQPetrH2fwebEnRvlLCePA&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiulpyKw6WHAxWwoAMAHfOXBQMYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDdT8xsaDl1fzBM9WjIsF4qkyWVac037fl7ReauGnZ8sxvHO71gfmRoCNEwQAvD_BwE&sig=AOD64_0R2gD7mVCUviSgEkcOdVKDBETdoA&ctype=5&q=&nis=4&ved=2ahUKEwj4kZWKw6WHAxUI8MkDHSTHCgYQ9aACKAB6BAgEEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiulpyKw6WHAxWwoAMAHfOXBQMYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDdT8xsaDl1fzBM9WjIsF4qkyWVac037fl7ReauGnZ8sxvHO71gfmRoCNEwQAvD_BwE&sig=AOD64_0R2gD7mVCUviSgEkcOdVKDBETdoA&ctype=5&q=&nis=4&ved=2ahUKEwj4kZWKw6WHAxUI8MkDHSTHCgYQ9aACKAB6BAgEEA4&adurl=",
   },
   {
     name: "Giacomo Conterno Monfortino",
@@ -2722,7 +2895,8 @@ const wines = [
     grape: "Nebbiolo",
     avgPrice: 7000,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQERK8-3qgFgzX0bQdSVjzXr3x3sPiXc-mY9_jSh53lcKu5u2HZplXxCobhXV-3XdzQNHLaIcexfbHUxIPEWubBRyb2jaM8gIhu0zH1Z3C5pvOovCeTHCkELk4BSBBUvm5c5D6Qzj_ftVQ&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiVgKSYw6WHAxVwOdQBHZuABp4YABALGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMP4GPY_wKZXpuqZxolD5MXRShWMLMdJtoYLqeuHanLFAhFFXRDqQBoC9A4QAvD_BwE&sig=AOD64_156QqJi7IL0eSm7739IOv02z8lhg&ctype=5&q=&nis=4&ved=2ahUKEwjjmp2Yw6WHAxX4GtAFHbZCADwQ9aACKAB6BAgCEDM&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiVgKSYw6WHAxVwOdQBHZuABp4YABALGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGMP4GPY_wKZXpuqZxolD5MXRShWMLMdJtoYLqeuHanLFAhFFXRDqQBoC9A4QAvD_BwE&sig=AOD64_156QqJi7IL0eSm7739IOv02z8lhg&ctype=5&q=&nis=4&ved=2ahUKEwjjmp2Yw6WHAxX4GtAFHbZCADwQ9aACKAB6BAgCEDM&adurl=",
   },
   {
     name: "Sassicaia",
@@ -2737,7 +2911,8 @@ const wines = [
     grape: "Cabernet Sauvignon",
     avgPrice: 5000,
     img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRp_UIOpV5VVLhYKgP8lNjtslekCXR-Y8xmdv7RosconD2xcUMpJ-I01skQLK5n21i7Dejhk5HRL0wQ3qBhPYsRIspWJVsMNED1s90jgfnL7QenoHSqEnxbTJcWtZ8he7wOZAv8Z80&usqp=CAc",
-    linkToPurchase: "https://www.google.com/aclk?sa=l&ai=DChcSEwiBzP2mw6WHAxVTd38AHZvSAvQYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDQOx6nzRrINaVvbP1fuDINcgzrNZ_F2r7R44FlD-c5bc0nk1nzy4BoC_TkQAvD_BwE&sig=AOD64_2AUwyzPRMezYTbjFpKgmtavodYXA&ctype=5&q=&nis=4&ved=2ahUKEwjFw_emw6WHAxXWHNAFHfl2B04Q9aACKAB6BAgBEA4&adurl=",
+    linkToPurchase:
+      "https://www.google.com/aclk?sa=l&ai=DChcSEwiBzP2mw6WHAxVTd38AHZvSAvQYABABGgJvYQ&ase=2&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGDQOx6nzRrINaVvbP1fuDINcgzrNZ_F2r7R44FlD-c5bc0nk1nzy4BoC_TkQAvD_BwE&sig=AOD64_2AUwyzPRMezYTbjFpKgmtavodYXA&ctype=5&q=&nis=4&ved=2ahUKEwjFw_emw6WHAxXWHNAFHfl2B04Q9aACKAB6BAgBEA4&adurl=",
   },
 ];
 module.exports = wines;

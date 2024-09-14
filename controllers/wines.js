@@ -1,9 +1,15 @@
 const WineModel = require("../models/wine");
 const diacritics = require("diacritics");
+
+///////////////////////////
+// GET | Wine Category Page
+///////////////////////////
 const getWineCategoryPage = (req, res) => {};
 
+///////////////////////////
+// GET | All Wines
+///////////////////////////
 const getAllWines = async (req, res) => {
-  //   res.status(200).json({ message: "hit" });
   try {
     const allWines = await WineModel.find({});
     res.status(200).json(allWines);
@@ -13,6 +19,9 @@ const getAllWines = async (req, res) => {
   }
 };
 
+///////////////////////////
+// GET | Selected Wine by ID
+///////////////////////////
 const getSelectedWine = async (req, res) => {
   const { wineId } = req.params;
   try {
@@ -23,11 +32,13 @@ const getSelectedWine = async (req, res) => {
     res.status(200).json(selectedWine);
   } catch (err) {
     console.error(err);
-
     res.status(500).json({ error: `Unable to retrieve selected wine` });
   }
 };
 
+///////////////////////////
+// ? POST | Filter Wine Results
+///////////////////////////
 const postFilterWineResults = async (req, res) => {
   const { grape, region, style, price, rating, query } = req.body;
 
@@ -75,10 +86,14 @@ const postFilterWineResults = async (req, res) => {
     res.status(500).json({ error: `Unable to filter wine data` });
   }
 };
+
+///////////////////////////
+// GET | Wines by Style
+///////////////////////////
 const getWinesByStyle = async (req, res) => {
   let { style } = req.params;
+  // capitalize first letter to match data keys
   const firstLetter = style.split("")[0].toUpperCase();
-  // console.log(firstLetter);
   style = style.split("");
   style.splice(0, 1, firstLetter);
   style = style.join("");
@@ -90,15 +105,19 @@ const getWinesByStyle = async (req, res) => {
         .status(404)
         .json({ error: "Could not find any wines in specified category" });
     }
-    // console.log(wines.length);
     res.status(200).json(wines);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: `Error getting wines by their style` });
   }
 };
+
+///////////////////////////
+// GET | Wines by Grape
+///////////////////////////
 const getWinesByGrape = async (req, res) => {
   let { grape } = req.params;
+  // if the grape has multiple words in its name then handle the split of the grape name
   if (grape.includes("-")) {
     grape = handleSplitParam(grape);
   } else {
@@ -111,17 +130,20 @@ const getWinesByGrape = async (req, res) => {
         .status(404)
         .json({ error: "Could not find any wines in specified grape" });
     }
-    // console.log(wines.length);
+
     res.status(200).json(wines);
-    // res.status(200).json({ message: "hit" });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: `Error getting wines by their grape` });
-
   }
 };
+
+///////////////////////////
+// GET | Wines by Region
+///////////////////////////
 const getWinesByRegion = async (req, res) => {
   let { region } = req.params;
+  // if the region has multiple words in its name then handle the split of the region name
   if (region.includes("-")) {
     region = handleSplitParam(region);
   } else {
@@ -134,15 +156,14 @@ const getWinesByRegion = async (req, res) => {
         .status(404)
         .json({ error: "Could not find any wines in specified region" });
     }
-    // console.log(wines.length);
+
     res.status(200).json(wines);
-    // res.status(200).json({ message: "hit" });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: `Error getting wines by their region` });
-
   }
 };
+
 module.exports = {
   getWineCategoryPage,
   getAllWines,
@@ -154,9 +175,10 @@ module.exports = {
 };
 
 ///////////////////////////
-// functions
+// Helper Functions
 ///////////////////////////
 
+// *  Handle Split Parameter
 const handleSplitParam = (param) => {
   param = param.split("-");
   let firstWord = param[0];
@@ -166,6 +188,7 @@ const handleSplitParam = (param) => {
   return firstWord + " " + secondWord;
 };
 
+// * Transform First Letter to Uppercase
 const transformFirstLetterToUpperCase = (word) => {
   word = word.split("");
 

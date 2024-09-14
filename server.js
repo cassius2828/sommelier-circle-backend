@@ -8,7 +8,6 @@ const cookieParser = require("cookie-parser");
 const passport = require("./config/googlePassport"); // Require the Passport config
 const session = require("express-session");
 const PORT = process.env.PORT || 3000;
-const UserModel = require("./models/user");
 ///////////////////////////
 // Connect to DB
 ///////////////////////////
@@ -31,7 +30,6 @@ const wineRouter = require("./routes/wines");
 const favRouter = require("./routes/favorites");
 const googlePlacesRouter = require("./routes/google-places");
 // const morgan = require("morgan");
-const CriticModel = require("./models/critic");
 
 ///////////////////////////
 // Google Passport
@@ -62,7 +60,6 @@ app.use(cookieParser());
 ///////////////////////////
 app.use("/test-jwt", testJWTRouter);
 app.use("/auth", authRouter);
-
 app.use("/profiles", profileRouter);
 app.use("/events", eventRouter);
 app.use("/blogs", blogRouter);
@@ -77,22 +74,3 @@ app.use("/google", googlePlacesRouter);
 app.listen(PORT, () => {
   console.log(`Running on port ${PORT}`);
 });
-// const UserModel = require('./models/user')
-// async function addFieldsToExistingUsers() {
-//   try {
-//     await UserModel.updateMany(
-//       {},
-//       {
-//         $set: {
-
-//           googleId: '',
-//         },
-//       }
-//     );
-//     console.log('Updated all users with new fields.');
-//   } catch (err) {
-//     console.error('Error updating users:', err);
-//   }
-// }
-// addFieldsToExistingUsers()
-// Function to update user favorites

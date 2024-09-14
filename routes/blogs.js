@@ -46,5 +46,3 @@ router.delete("/:blogId", verifyToken, blogsRouter.deleteBlog);
 router.get("/user-blogs/:userId", verifyToken, blogsRouter.getMyBlogs);
 
 module.exports = router;
-
-module.exports = router;

@@ -12,21 +12,6 @@ function verify(req, res) {
   res.json({ token });
 }
 
-function sign(req, res) {
-  console.log('=======================\n================')
-  // simulating a created user from the db
-  const user = {
-    id: 1,
-    username: "test",
-  };
-  // after we create a user in the database or find a user in the database
-  // (login/signup) we create our JWT TOKEN
-
-  const token = jwt.sign({ user }, process.env.JWT_SECRET);
-// console.log('SIGNING TOKEN!!!', token)
-  res.json({ token });
-}
-
 const refresh = () => {
   const user = req.user;
   const newToken = jwt.sign({ user }, process.env.JWT_SECRET, {
@@ -36,7 +21,6 @@ const refresh = () => {
 };
 
 module.exports = {
-  sign,
   verify,
   refresh,
 };

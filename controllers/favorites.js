@@ -1,8 +1,9 @@
 const User = require("../models/user");
 const axios = require("axios");
-
+// google creds
 const GOOGLE_PLACES_BASE_URL = `https://maps.googleapis.com/maps/api/place`;
 const GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
+
 ///////////////////////////
 // GET | User Favorites
 ///////////////////////////
@@ -10,7 +11,7 @@ const getUserFavorites = async (req, res, favoriteType) => {
   const { userId } = req.query;
   let user;
   try {
-    // get user
+    // get user | These favorites needs to have some owner fields populated
     if (favoriteType === "blogs" || favoriteType === "events") {
       user = await User.findById(userId).populate({
         path: `favorites.${favoriteType}`,
@@ -244,11 +245,8 @@ const getLocationsUserFavorites = async (req, res) => {
         message: `Cannot find user with id of ${userId}`,
       });
     }
-    console.log(user.favorites, ' <-- user.favorites')
-
     // Extract placeIdArray from user's favorites
     const placeIdArray = user.favorites?.locations;
-    console.log(placeIdArray, ' <-- place id array')
     if (!placeIdArray || placeIdArray.length < 1) {
       return res.status(404).json({
         message: "Favorite locations list is empty",
@@ -261,7 +259,6 @@ const getLocationsUserFavorites = async (req, res) => {
         const response = await axios.post(
           `${GOOGLE_PLACES_BASE_URL}/details/json?place_id=${place}&key=${GOOGLE_PLACES_API_KEY}`
         );
-        console.log(response.data, ' <-- indv response from google place locaiton api')
         return response.data;
       })
     );
