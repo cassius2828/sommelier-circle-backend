@@ -50,7 +50,14 @@ const getExploreEvents = async (req, res) => {
   const { userId, searchQuery } = req.query;
 
   try {
-    let query = { owner: { $ne: userId } };
+    // allows non signed in users to see all events
+    // signed in users will not see their events in the explore page
+    let query;
+    if (userId !== "undefined") {
+      query = { owner: { $ne: userId } };
+    } else {
+      query = {};
+    }
 
     if (searchQuery) {
       // Normalize the event names in the database query
@@ -151,7 +158,6 @@ const getEventDetails = async (req, res) => {
     res.status(500).json({ error: "unable to get all user events " });
   }
 };
-
 
 ///////////////////////////
 // * PUT | Edit Event
