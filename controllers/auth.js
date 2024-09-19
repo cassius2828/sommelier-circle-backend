@@ -125,7 +125,7 @@ const getGoogleCallback = async (req, res) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
   });
-  res.redirect("http://localhost:5173/");
+  res.redirect(process.env.PROD_PORT || "http://localhost:5173/");
 };
 module.exports = {
   signup,
