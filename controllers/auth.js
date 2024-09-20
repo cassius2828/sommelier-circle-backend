@@ -94,7 +94,9 @@ async function signup(req, res) {
       // Handle any errors with the S3 upload and respond with a 500 status code
       return res
         .status(500)
-        .json({ error: "Check back later, server issues with AWS upload" });
+        .json({
+          error: `Check back later, server issues with AWS upload. Error: ${err}`,
+        });
     }
   } catch (err) {
     console.log(err);
