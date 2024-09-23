@@ -35,10 +35,7 @@ const getUserFavorites = async (req, res, favoriteType) => {
     if (favorites.length > 0) {
       return res.status(200).json(favorites);
     } else {
-      // else send message that no favorites were found
-      return res.status(400).json({
-        message: `No ${favoriteType} were found in this user's favorites list`,
-      });
+      return res.status(200).json([]);
     }
   } catch (err) {
     console.error(err);
@@ -248,7 +245,7 @@ const getLocationsUserFavorites = async (req, res) => {
     // Extract placeIdArray from user's favorites
     const placeIdArray = user.favorites?.locations;
     if (!placeIdArray || placeIdArray.length < 1) {
-      return res.status(404).json({
+      return res.status(200).json({
         message: "Favorite locations list is empty",
       });
     }

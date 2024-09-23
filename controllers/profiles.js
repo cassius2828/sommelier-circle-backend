@@ -11,6 +11,7 @@ const s3 = new S3Client({ region: process.env.AWS_REGION });
 ///////////////////////////
 async function profile(req, res) {
   const { userId } = req.params;
+  console.log(userId, ' <-- user Id')
   try {
     // find the user by their id!
     const userDoc = await UserModel.findById(userId).select("-password");
@@ -25,7 +26,7 @@ async function profile(req, res) {
     if (res.statusCode === 404) {
       res.status(404).json({ error: err.message });
     } else {
-      res.status(500).json({ error: err.message });
+      res.status(500).json({ error: `----${err.message}----` });
     }
   }
 }
