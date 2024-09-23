@@ -50,28 +50,28 @@ async function signup(req, res) {
     if (userDoc) {
       return res.status(400).json({ error: "Username already taken." });
     }
+    let profileImg;
+    if (req.file) {
+      // Create the file path and parameters for S3 upload
+      const filePath = `sommelier-circle/profile-imgs/${uuidv4()}-${
+        req.file?.originalname
+      }`;
+      const params = {
+        Bucket: process.env.BUCKET_NAME,
+        Key: filePath,
+        Body: req.file?.buffer,
+      };
 
-    // Check if a photo file is submitted
-    if (!req.file)
-      return res.status(400).json({ error: "Please Submit a Photo!" });
-
-    // Create the file path and parameters for S3 upload
-    const filePath = `sommelier-circle/profile-imgs/${uuidv4()}-${
-      req.file.originalname
-    }`;
-    const params = {
-      Bucket: process.env.BUCKET_NAME,
-      Key: filePath,
-      Body: req.file.buffer,
-    };
-
-    // Initialize the S3 PutObjectCommand
-    const command = new PutObjectCommand(params);
+      // Initialize the S3 PutObjectCommand
+      const command = new PutObjectCommand(params); // Upload the file to S3
+      const data = await s3Client.send(command);
+      profileImg = `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`;
+    } else {
+      profileImg =
+        "https://5-06-sei.s3.us-west-1.amazonaws.com/sommelier-circle/profile-imgs/default-profile-img.jpg";
+    }
 
     try {
-      // Upload the file to S3
-      const data = await s3Client.send(command);
-
       // Hash the password
       password = bcrypt.hashSync(password, 10);
 
@@ -80,7 +80,7 @@ async function signup(req, res) {
         username,
         email,
         password,
-        profileImg: `https://${params.Bucket}.s3.${process.env.AWS_REGION}.amazonaws.com/${filePath}`,
+        profileImg,
       });
 
       // Generate a JWT token with the created user data
@@ -92,11 +92,9 @@ async function signup(req, res) {
       console.log("Error uploading to S3:", err);
 
       // Handle any errors with the S3 upload and respond with a 500 status code
-      return res
-        .status(500)
-        .json({
-          error: `Check back later, server issues with AWS upload. Error: ${err}`,
-        });
+      return res.status(500).json({
+        error: `Check back later, server issues with AWS upload. Error: ${err}`,
+      });
     }
   } catch (err) {
     console.log(err);

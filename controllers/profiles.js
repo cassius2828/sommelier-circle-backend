@@ -11,7 +11,6 @@ const s3 = new S3Client({ region: process.env.AWS_REGION });
 ///////////////////////////
 async function profile(req, res) {
   const { userId } = req.params;
-  console.log(userId, ' <-- user Id')
   try {
     // find the user by their id!
     const userDoc = await UserModel.findById(userId).select("-password");
