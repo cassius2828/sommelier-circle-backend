@@ -25,7 +25,7 @@ async function profile(req, res) {
     if (res.statusCode === 404) {
       res.status(404).json({ error: err.message });
     } else {
-      res.status(500).json({ error: err.message });
+      res.status(500).json({ error: `----${err.message}----` });
     }
   }
 }
