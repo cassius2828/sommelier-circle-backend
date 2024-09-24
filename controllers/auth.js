@@ -109,6 +109,7 @@ async function signup(req, res) {
 ///////////////////////////
 const getTokenFromOAuthLogin = async (req, res) => {
   const token = req.cookies.jwt;
+  console.log(token, ' <-- google auth token')
   if (token) {
     res.status(200).json({ token });
   } else {
