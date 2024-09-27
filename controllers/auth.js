@@ -109,7 +109,7 @@ async function signup(req, res) {
 ///////////////////////////
 const getTokenFromOAuthLogin = async (req, res) => {
   const token = req.cookies.jwt;
-  console.log(token, ' <-- google auth token')
+  console.log(token, " <-- google auth token");
   if (token) {
     res.status(200).json(token);
   } else {
@@ -123,9 +123,10 @@ const getTokenFromOAuthLogin = async (req, res) => {
 const getGoogleCallback = async (req, res) => {
   const token = jwt.sign({ user: req.user }, process.env.JWT_SECRET);
   res.cookie("jwt", token, {
-    httpOnly: true,  
-    secure: process.env.NODE_ENV === "production", 
-    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",  
+    httpOnly: false,
+    secure: process.env.NODE_ENV === "production",
+    path: "/",
+    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
   });
   res.redirect(process.env.PROD_CLIENT_URL || "http://localhost:5173/");
 };
