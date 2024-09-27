@@ -1,5 +1,5 @@
 const UserModel = require("../models/user");
-
+const bcrypt = require("bcrypt");
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 const { v4: uuidv4 } = require("uuid");
 
@@ -130,8 +130,8 @@ const putEditUserInfo = async (req, res) => {
     facebookUsername,
     instagramLink,
     instagramUsername,
-    linkedInLink,
-    linkedInUsername,
+    linkedinLink,
+    linkedinUsername,
     twitterLink,
     twitterUsername,
     username,
@@ -143,16 +143,20 @@ const putEditUserInfo = async (req, res) => {
       return res.status(404).json({ message: "No user was found" });
     }
     // set up s3 variables
-    const filePath = `sommelier-circle/profile-imgs/${uuidv4()}-${
-      req.file.originalname
-    }`;
-    const params = {
-      Bucket: process.env.BUCKET_NAME,
-      Key: filePath,
-      Body: req.file.buffer,
-    };
-    const command = new PutObjectCommand(params);
-    const data = await s3.send(command);
+    let filePath;
+    let params;
+    if (req.file) {
+      filePath = `sommelier-circle/profile-imgs/${uuidv4()}-${
+        req.file?.originalname
+      }`;
+      params = {
+        Bucket: process.env.BUCKET_NAME,
+        Key: filePath,
+        Body: req.file?.buffer,
+      };
+      const command = new PutObjectCommand(params);
+      const data = await s3.send(command);
+    }
 
     const formData = {
       profileImg: req.file
@@ -162,10 +166,37 @@ const putEditUserInfo = async (req, res) => {
       displayedName,
       email,
       socialMedia: {
-        twitter: { username: twitterUsername, link: twitterLink },
-        instagram: { username: instagramUsername, link: instagramLink },
-        facebook: { username: facebookUsername, link: facebookLink },
-        linkedIn: { username: linkedInUsername, link: linkedInLink },
+        twitter: {
+          username:
+            twitterUsername && twitterUsername !== "undefined"
+              ? twitterUsername
+              : "",
+          link: twitterLink && twitterLink !== "undefined" ? twitterLink : "",
+        },
+        instagram: {
+          username:
+            instagramUsername && instagramUsername !== "undefined"
+              ? instagramUsername
+              : "",
+          link:
+            instagramLink && instagramLink !== "undefined" ? instagramLink : "",
+        },
+        facebook: {
+          username:
+            facebookUsername && facebookUsername !== "undefined"
+              ? facebookUsername
+              : "",
+          link:
+            facebookLink && facebookLink !== "undefined" ? facebookLink : "",
+        },
+        linkedIn: {
+          username:
+            linkedinUsername && linkedinUsername !== "undefined"
+              ? linkedinUsername
+              : "",
+          link:
+            linkedinLink && linkedinLink !== "undefined" ? linkedinLink : "",
+        },
       },
     };
 
@@ -178,10 +209,56 @@ const putEditUserInfo = async (req, res) => {
   }
 };
 
+///////////////////////////
+// * PUT | Update Passowrd
+///////////////////////////
+
+const putUpdatePassword = async (req, res) => {
+  const { password, confirmPassword, newPassword } = req.body;
+  const { userId } = req.params;
+  try {
+    // if user does not exist
+    const user = await UserModel.findById(userId);
+    if (!user) {
+      return res.status(404).json({ error: "User does not exist" });
+    }
+    // if a field is missing
+    if (!password || !confirmPassword || !newPassword) {
+      return res.status(404).json({
+        error: "Missing necessary password fields to update password",
+      });
+    }
+    // if original typed password does not equal user current password
+    const isUsersPassword = bcrypt.compareSync(password, user.password);
+
+    if (!isUsersPassword) {
+      return res.status(400).json({
+        error: "Original password does not match this user's recorded password",
+      });
+    }
+    // if new password and confirm do not match
+    console.log("here");
+    if (newPassword !== confirmPassword) {
+      return res
+        .status(400)
+        .json({ error: "New password and confirm password must match" });
+    }
+    // hash updated password and save user
+
+    user.password = confirmPassword;
+    await user.save();
+
+    res.status(200).json({ message: "Successfully updated password" });
+  } catch (err) {
+    res.status(500).json({ error: "Unable to update password" });
+  }
+};
+
 module.exports = {
   profile,
   postFollowUser,
   postUnfollowUser,
   getSearchUsers,
   putEditUserInfo,
+  putUpdatePassword,
 };
