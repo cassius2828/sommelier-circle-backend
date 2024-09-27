@@ -38,7 +38,7 @@ passport.use(
           });
           //   save so we can use the user to access the email property and send the password
           await user.save();
-          await sendPasswordEmail(user.email, randomPassword);
+          await sendPasswordEmail(user.email, randomUsername, randomPassword);
         } else if (user && !user.googleId) {
           // if user exists but does not have googleid yet then add it
           user.googleId = profile.id;
@@ -55,7 +55,7 @@ passport.use(
 ///////////////////////////
 // Send Password Email
 ///////////////////////////
-async function sendPasswordEmail(email, password) {
+async function sendPasswordEmail(email, username, password) {
   let transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
@@ -69,7 +69,7 @@ async function sendPasswordEmail(email, password) {
     from: process.env.ADMIN_EMAIL,
     to: email,
     subject: "Sommelier Circle | Your Account Password",
-    text: `Welcome to our service! Your password is ${password}\n This will be used to sign in with username or email instead of an OAuth system (e.g Google). We encourage you to change your password after logging in.`,
+    text: `Welcome to our service! \nUsername: ${username}\nPassword: ${password}\n This will be used to sign in with username or email instead of an OAuth system (e.g Google). We encourage you to change your password after logging in.`,
   };
   await transporter.sendMail(mailOptions);
 }

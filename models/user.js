@@ -76,12 +76,6 @@ userSchema.set("toObject", {
   },
 });
 
-userSchema.set("toJSON", {
-  transform: (doc, ret) => {
-    delete ret.password;
-    return ret;
-  },
-});
 
 // Pre-save middleware to set displayedName to username if not provided
 userSchema.pre("save", async function (next) {
@@ -90,8 +84,7 @@ userSchema.pre("save", async function (next) {
   }
   // Hash password if it's new or modified
   if (this.isModified("password")) {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
+    this.password =  bcrypt.hashSync(this.password, 10);
   }
   next();
 });
