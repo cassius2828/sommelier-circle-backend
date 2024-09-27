@@ -125,6 +125,7 @@ const getGoogleCallback = async (req, res) => {
   res.cookie("jwt", token, {
     httpOnly: false,
     secure: process.env.NODE_ENV === "production",
+    sameSite: "None",
   });
   res.redirect(process.env.PROD_CLIENT_URL || "http://localhost:5173/");
 };
