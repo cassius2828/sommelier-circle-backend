@@ -123,9 +123,9 @@ const getTokenFromOAuthLogin = async (req, res) => {
 const getGoogleCallback = async (req, res) => {
   const token = jwt.sign({ user: req.user }, process.env.JWT_SECRET);
   res.cookie("jwt", token, {
-    httpOnly: false,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "None",
+    httpOnly: true,  
+    secure: process.env.NODE_ENV === "production", 
+    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",  
   });
   res.redirect(process.env.PROD_CLIENT_URL || "http://localhost:5173/");
 };
