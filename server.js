@@ -29,7 +29,7 @@ const criticRouter = require("./routes/critics");
 const wineRouter = require("./routes/wines");
 const favRouter = require("./routes/favorites");
 const googlePlacesRouter = require("./routes/google-places");
-// const morgan = require("morgan");
+const morgan = require("morgan");
 
 ///////////////////////////
 // Google Passport
@@ -50,10 +50,15 @@ app.use(passport.session());
 ///////////////////////////
 // Middleware
 ///////////////////////////
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
-// app.use(morgan());
+app.use(morgan());
 
 ///////////////////////////
 // Routes
