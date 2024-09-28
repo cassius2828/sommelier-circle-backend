@@ -50,9 +50,22 @@ app.use(passport.session());
 ///////////////////////////
 // Middleware
 ///////////////////////////
+const allowedOrigins = [
+  process.env.PROD_CLIENT_URL, 
+  "http://localhost:5173",
+];
+
 app.use(
   cors({
-    origin: process.env.PROD_CLIENT_URL || "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true); 
+      } else {
+        callback(new Error("Not allowed by CORS")); 
+      }
+    },
     credentials: true,
   })
 );
