@@ -29,7 +29,7 @@ const criticRouter = require("./routes/critics");
 const wineRouter = require("./routes/wines");
 const favRouter = require("./routes/favorites");
 const googlePlacesRouter = require("./routes/google-places");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 
 ///////////////////////////
 // Google Passport
@@ -50,28 +50,11 @@ app.use(passport.session());
 ///////////////////////////
 // Middleware
 ///////////////////////////
-const allowedOrigins = [
-  process.env.PROD_CLIENT_URL, 
-  "http://localhost:5173",
-];
 
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.includes(origin)) {
-        callback(null, true); 
-      } else {
-        callback(new Error("Not allowed by CORS")); 
-      }
-    },
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
-app.use(morgan());
+// app.use(morgan());
 
 ///////////////////////////
 // Routes
