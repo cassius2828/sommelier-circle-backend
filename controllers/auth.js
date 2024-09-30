@@ -45,12 +45,17 @@ async function signup(req, res) {
 
   console.log(req.body, req.file);
   try {
-    // Check if the username already exists
-    const userDoc = await UserModel.findOne({ username });
-    if (userDoc) {
+    // Check if the username or email already exists
+    const foundByUsername = await UserModel.findOne({ username });
+    if (foundByUsername) {
       return res.status(400).json({ error: "Username already taken." });
     }
+    const foundByEmail = await UserModel.findOne({ email });
+    if (foundByEmail) {
+      return res.status(400).json({ error: "Email already taken." });
+    }
     let profileImg;
+
     if (req.file) {
       // Create the file path and parameters for S3 upload
       const filePath = `sommelier-circle/profile-imgs/${uuidv4()}-${
